@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "fir",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "fir"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

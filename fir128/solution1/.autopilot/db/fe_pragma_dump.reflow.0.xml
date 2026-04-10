@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="fir.cpp" line="27" pragmaType="pipeline" parentfunction="fir" off="0" ii="2" rewind="0" style=""/>
+<pragma file="fir.cpp" line="8" pragmaType="interface" parentfunction="fir" mode="ap_none" port="x" name="" register="0"/>
+<pragma file="fir.cpp" line="9" pragmaType="interface" parentfunction="fir" mode="ap_vld" port="y" name="" register="0"/>
+<pragma file="fir.cpp" line="17" pragmaType="array_partition" parentfunction="fir" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ3firPiiE9shift_reg"/>
+</pragmas>
