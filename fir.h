@@ -1,9 +1,4 @@
-/*
-	Filename: fir.h
-		Header file
-		FIR lab wirtten for WES/CSE237C class at UCSD.
 
-*/
 #ifndef FIR_H_
 #define FIR_H_
 
