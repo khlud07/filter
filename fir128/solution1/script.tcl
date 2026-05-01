@@ -8,11 +8,11 @@ open_project fir128
 set_top fir
 add_files fir.cpp
 add_files fir.h
-add_files -tb fir_test.cpp
+add_files -tb fir_test.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
-set_part {xc7z010clg400-1}
+set_part {xc7z010-clg400-1}
 create_clock -period 10 -name default
-#source "./fir128/solution1/directives.tcl"
+source "./fir128/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design

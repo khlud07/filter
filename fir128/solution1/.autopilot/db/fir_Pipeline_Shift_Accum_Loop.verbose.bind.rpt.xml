@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir_Pipeline_Shift_Accum_Loop'" level="0">
-<item name = "Date">Fri Apr 10 19:29:45 2026
+<item name = "Date">Fri May  1 13:35:30 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">fir128</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.912 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.168 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Shift_Accum_Loop">258, 258, 5, 2, 2, 128, yes</column>
+<column name="- Shift_Accum_Loop">258, 258, 4, 2, 2, 128, yes</column>
 </table>
 </item>
 </section>

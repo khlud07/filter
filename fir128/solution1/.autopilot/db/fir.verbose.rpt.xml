@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir'" level="0">
-<item name = "Date">Fri Apr 10 19:29:46 2026
+<item name = "Date">Fri May  1 13:35:30 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">fir128</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.912 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.168 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">262, 262, 2.620 us, 2.620 us, 263, 263, no</column>
+<column name="">263, 263, 2.630 us, 2.630 us, 264, 264, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_307">fir_Pipeline_Shift_Accum_Loop, 260, 260, 2.600 us, 2.600 us, 260, 260, no</column>
+<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_353">fir_Pipeline_Shift_Accum_Loop, 260, 260, 2.600 us, 2.600 us, 260, 260, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -48,21 +48,21 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 39, -</column>
+<column name="Expression">-, -, 0, 29, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, 2, 4457, 891, -</column>
+<column name="Instance">0, 1, 2176, 833, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 20, -</column>
-<column name="Register">-, -, 35, -, -</column>
+<column name="Multiplexer">-, -, -, 43, -</column>
+<column name="Register">-, -, 59, -, -</column>
 <specialColumn name="Available">120, 80, 35200, 17600, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 2, 12, 5, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, 6, 5, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_307">fir_Pipeline_Shift_Accum_Loop, 0, 2, 4457, 891, 0</column>
+<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_353">fir_Pipeline_Shift_Accum_Loop, 0, 1, 2176, 833, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -79,19 +79,26 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="mul_fu_583_p2">+, 0, 0, 39, 32, 32</column>
+<column name="mul_i29_fu_653_p2">+, 0, 0, 27, 20, 20</column>
+<column name="ap_block_state4">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">20, 4, 1, 4</column>
+<column name="ap_NS_fsm">25, 5, 1, 5</column>
+<column name="x_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="y_TDATA_blk_n">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">3, 0, 3, 0</column>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_307_ap_start_reg">1, 0, 1, 0</column>
-<column name="mul_reg_605">31, 0, 32, 1</column>
+<column name="acc_loc_fu_320">16, 0, 16, 0</column>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start_reg">1, 0, 1, 0</column>
+<column name="in_sample_data_reg_670">16, 0, 16, 0</column>
+<column name="in_sample_keep_reg_675">2, 0, 2, 0</column>
+<column name="in_sample_last_reg_680">1, 0, 1, 0</column>
+<column name="mul_i29_reg_685">19, 0, 20, 1</column>
 </table>
 </item>
 </section>
@@ -101,15 +108,20 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="ap_clk">in, 1, ap_ctrl_hs, fir, return value</column>
-<column name="ap_rst">in, 1, ap_ctrl_hs, fir, return value</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, fir, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, fir, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, fir, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, fir, return value</column>
-<column name="y">out, 32, ap_vld, y, pointer</column>
-<column name="y_ap_vld">out, 1, ap_vld, y, pointer</column>
-<column name="x">in, 32, ap_none, x, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, fir, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, fir, return value</column>
+<column name="y_TDATA">out, 16, axis, y_V_data_V, pointer</column>
+<column name="y_TVALID">out, 1, axis, y_V_last_V, pointer</column>
+<column name="y_TREADY">in, 1, axis, y_V_last_V, pointer</column>
+<column name="y_TLAST">out, 1, axis, y_V_last_V, pointer</column>
+<column name="y_TKEEP">out, 2, axis, y_V_keep_V, pointer</column>
+<column name="y_TSTRB">out, 2, axis, y_V_strb_V, pointer</column>
+<column name="x_TDATA">in, 16, axis, x_V_data_V, pointer</column>
+<column name="x_TVALID">in, 1, axis, x_V_last_V, pointer</column>
+<column name="x_TREADY">out, 1, axis, x_V_last_V, pointer</column>
+<column name="x_TLAST">in, 1, axis, x_V_last_V, pointer</column>
+<column name="x_TKEEP">in, 2, axis, x_V_keep_V, pointer</column>
+<column name="x_TSTRB">in, 2, axis, x_V_strb_V, pointer</column>
 </table>
 </item>
 </section>

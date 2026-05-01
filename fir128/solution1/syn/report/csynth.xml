@@ -15,18 +15,18 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>6.912</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.168</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>262</Best-caseLatency>
-            <Average-caseLatency>262</Average-caseLatency>
-            <Worst-caseLatency>262</Worst-caseLatency>
-            <Best-caseRealTimeLatency>2.620 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>2.620 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>2.620 us</Worst-caseRealTimeLatency>
-            <Interval-min>263</Interval-min>
-            <Interval-max>263</Interval-max>
+            <Best-caseLatency>263</Best-caseLatency>
+            <Average-caseLatency>263</Average-caseLatency>
+            <Worst-caseLatency>263</Worst-caseLatency>
+            <Best-caseRealTimeLatency>2.630 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>2.630 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>2.630 us</Worst-caseRealTimeLatency>
+            <Interval-min>264</Interval-min>
+            <Interval-max>264</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
@@ -37,9 +37,9 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>0</BRAM_18K>
-            <DSP>2</DSP>
-            <FF>4492</FF>
-            <LUT>950</LUT>
+            <DSP>1</DSP>
+            <FF>2235</FF>
+            <LUT>905</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -56,100 +56,164 @@
             <Object>fir</Object>
             <Type>return value</Type>
             <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_rst</name>
+            <name>ap_rst_n</name>
             <Object>fir</Object>
             <Type>return value</Type>
             <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_start</name>
-            <Object>fir</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_done</name>
-            <Object>fir</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_idle</name>
-            <Object>fir</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_ready</name>
-            <Object>fir</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>y</name>
-            <Object>y</Object>
+            <name>y_TDATA</name>
+            <Object>y_V_data_V</Object>
             <Type>pointer</Type>
             <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
-            <Bits>32</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>y_ap_vld</name>
-            <Object>y</Object>
+            <name>y_TVALID</name>
+            <Object>y_V_last_V</Object>
             <Type>pointer</Type>
             <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>x</name>
-            <Object>x</Object>
-            <Type>scalar</Type>
+            <name>y_TREADY</name>
+            <Object>y_V_last_V</Object>
+            <Type>pointer</Type>
             <Scope/>
-            <IOProtocol>ap_none</IOProtocol>
-            <IOConfig/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>32</Bits>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>y_TLAST</name>
+            <Object>y_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>y_TKEEP</name>
+            <Object>y_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>y_TSTRB</name>
+            <Object>y_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>x_TDATA</name>
+            <Object>x_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>x_TVALID</name>
+            <Object>x_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>x_TREADY</name>
+            <Object>x_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>x_TLAST</name>
+            <Object>x_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>x_TKEEP</name>
+            <Object>x_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>x_TSTRB</name>
+            <Object>x_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -159,14 +223,14 @@
             <ModuleName>fir</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_fir_Pipeline_Shift_Accum_Loop_fu_307</InstName>
+                    <InstName>grp_fir_Pipeline_Shift_Accum_Loop_fu_353</InstName>
                     <ModuleName>fir_Pipeline_Shift_Accum_Loop</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>307</ID>
-                    <BindInstances>add_ln19_fu_633_p2 mul_5s_32s_32_2_1_U2 acc_1_fu_2446_p2 c_U</BindInstances>
+                    <ID>353</ID>
+                    <BindInstances>add_ln24_fu_637_p2 mul_5s_16s_20_1_1_U2 acc_3_fu_2463_p2 c_U</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>mul_fu_583_p2</BindInstances>
+            <BindInstances>mul_i29_fu_653_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -179,7 +243,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>6.912</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.168</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>260</Best-caseLatency>
@@ -199,7 +263,7 @@
                         <Latency>258</Latency>
                         <AbsoluteTimeLatency>2.580 us</AbsoluteTimeLatency>
                         <PipelineII>2</PipelineII>
-                        <PipelineDepth>5</PipelineDepth>
+                        <PipelineDepth>4</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </Shift_Accum_Loop>
@@ -207,13 +271,13 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>fir.cpp:19</SourceLocation>
+                    <SourceLocation>fir.cpp:24</SourceLocation>
                     <SummaryOfLoopViolations>
                         <Shift_Accum_Loop>
                             <Name>Shift_Accum_Loop</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>fir.cpp:19</SourceLocation>
+                            <SourceLocation>fir.cpp:27</SourceLocation>
                         </Shift_Accum_Loop>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -223,24 +287,24 @@
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>2</DSP>
+                    <DSP>1</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
-                    <UTIL_DSP>2</UTIL_DSP>
-                    <FF>4457</FF>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>2176</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
-                    <UTIL_FF>12</UTIL_FF>
-                    <LUT>891</LUT>
+                    <UTIL_FF>6</UTIL_FF>
+                    <LUT>833</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>5</UTIL_LUT>
+                    <UTIL_LUT>4</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_fu_633_p2" SOURCE="fir.cpp:19" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln19"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="1" LOOP="Shift_Accum_Loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5s_32s_32_2_1_U2" SOURCE="fir.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="add" PRAGMA="" RTLNAME="acc_1_fu_2446_p2" SOURCE="fir.cpp:19" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_fu_637_p2" SOURCE="fir.cpp:24" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5s_16s_20_1_1_U2" SOURCE="fir.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="add" PRAGMA="" RTLNAME="acc_3_fu_2463_p2" SOURCE="fir.cpp:24" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_3"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="c_U" SOURCE="" STORAGESIZE="5 128 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="c"/>
             </BindNodes>
         </Module>
@@ -250,16 +314,16 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>6.912</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.168</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>262</Best-caseLatency>
-                    <Average-caseLatency>262</Average-caseLatency>
-                    <Worst-caseLatency>262</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>2.620 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>2.620 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.620 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>263</PipelineInitiationInterval>
+                    <Best-caseLatency>263</Best-caseLatency>
+                    <Average-caseLatency>263</Average-caseLatency>
+                    <Worst-caseLatency>263</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.630 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.630 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.630 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>264</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfViolations>
@@ -273,13 +337,13 @@
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>2</DSP>
+                    <DSP>1</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
-                    <UTIL_DSP>2</UTIL_DSP>
-                    <FF>4492</FF>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>2235</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
-                    <UTIL_FF>12</UTIL_FF>
-                    <LUT>950</LUT>
+                    <UTIL_FF>6</UTIL_FF>
+                    <LUT>905</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
                     <UTIL_LUT>5</UTIL_LUT>
                     <URAM>0</URAM>
@@ -288,29 +352,29 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_fu_583_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_i29_fu_653_p2" SOURCE="fir.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_i29"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands/>
     <Args>
-        <Arg ArgName="y" index="0" direction="out" srcType="int*" srcSize="32">
+        <Arg ArgName="y" index="0" direction="out" srcType="stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 0, 0, 0, '8', false&gt;, 0&gt;&amp;" srcSize="64">
             <hwRefs>
-                <hwRef type="port" interface="y" name="y" usage="data" direction="out"/>
-                <hwRef type="port" interface="y_ap_vld" name="y_ap_vld" usage="control" direction="out"/>
+                <hwRef type="interface" interface="y" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="x" index="1" direction="in" srcType="int" srcSize="32">
+        <Arg ArgName="x" index="1" direction="in" srcType="stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 0, 0, 0, '8', false&gt;, 0&gt;&amp;" srcSize="64">
             <hwRefs>
-                <hwRef type="port" interface="x" name="x" usage="data" direction="in"/>
+                <hwRef type="interface" interface="x" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
     </Args>
     <Interfaces>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
-                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+                <busParam busParamName="ASSOCIATED_BUSIF">y:x</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
             </busParams>
             <portMaps>
                 <portMap portMapName="ap_clk">CLK</portMap>
@@ -319,69 +383,59 @@
                 <port>ap_clk</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
             <busParams>
-                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
             </busParams>
             <portMaps>
-                <portMap portMapName="ap_rst">RST</portMap>
+                <portMap portMapName="ap_rst_n">RST</portMap>
             </portMaps>
             <ports>
-                <port>ap_rst</port>
+                <port>ap_rst_n</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
-            <portMaps>
-                <portMap portMapName="ap_start">start</portMap>
-                <portMap portMapName="ap_done">done</portMap>
-                <portMap portMapName="ap_idle">idle</portMap>
-                <portMap portMapName="ap_ready">ready</portMap>
-            </portMaps>
+        <Interface InterfaceName="y" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="y_">
             <ports>
-                <port>ap_done</port>
-                <port>ap_idle</port>
-                <port>ap_ready</port>
-                <port>ap_start</port>
-            </ports>
-        </Interface>
-        <Interface InterfaceName="y" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="32">
-            <portMaps>
-                <portMap portMapName="y">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>y</port>
+                <port>y_TDATA</port>
+                <port>y_TKEEP</port>
+                <port>y_TLAST</port>
+                <port>y_TREADY</port>
+                <port>y_TSTRB</port>
+                <port>y_TVALID</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_vld" register_option="0" argName="y"/>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="y"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="x" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
-            <portMaps>
-                <portMap portMapName="x">DATA</portMap>
-            </portMaps>
+        <Interface InterfaceName="x" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="x_">
             <ports>
-                <port>x</port>
+                <port>x_TDATA</port>
+                <port>x_TKEEP</port>
+                <port>x_TLAST</port>
+                <port>x_TREADY</port>
+                <port>x_TSTRB</port>
+                <port>x_TVALID</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="x"/>
             </constraints>
         </Interface>
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
-            <item name="Other Ports">
+            <item name="AXIS">
                 <table>
-                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
-                    <column name="x">ap_none, in, 32</column>
-                    <column name="y">ap_vld, out, 32</column>
+                    <keys size="9">Interface, Direction, Register Mode, TDATA, TKEEP, TLAST, TREADY, TSTRB, TVALID</keys>
+                    <column name="x">in, both, 16, 2, 1, 1, 2, 1</column>
+                    <column name="y">out, both, 16, 2, 1, 1, 2, 1</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
                 <table>
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk</column>
-                    <column name="ap_rst">reset, ap_rst</column>
-                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_none, </column>
                 </table>
             </item>
         </section>
@@ -391,26 +445,26 @@
             <item name="Top Function Arguments">
                 <table>
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="y">out, int*</column>
-                    <column name="x">in, int</column>
+                    <column name="y">out, stream&lt;hls::axis&lt;ap_int&lt;16&gt; 0 0 0 '8' false&gt; 0&gt;&amp;</column>
+                    <column name="x">in, stream&lt;hls::axis&lt;ap_int&lt;16&gt; 0 0 0 '8' false&gt; 0&gt;&amp;</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table>
                     <keys size="3">Argument, HW Interface, HW Type</keys>
-                    <column name="y">y, port</column>
-                    <column name="y">y_ap_vld, port</column>
-                    <column name="x">x, port</column>
+                    <column name="y">y, interface</column>
+                    <column name="x">x, interface</column>
                 </table>
             </item>
         </section>
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="interface" location="fir.cpp:8" status="valid" parentFunction="fir" variable="x" isDirective="0" options="ap_none port=x"/>
-        <Pragma type="interface" location="fir.cpp:9" status="valid" parentFunction="fir" variable="y" isDirective="0" options="ap_vld port=y"/>
-        <Pragma type="array_partition" location="fir.cpp:17" status="valid" parentFunction="fir" variable="shift_reg" isDirective="0" options="variable=shift_reg complete"/>
-        <Pragma type="pipeline" location="fir.cpp:27" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=2"/>
+        <Pragma type="interface" location="fir.cpp:4" status="valid" parentFunction="fir" variable="x" isDirective="0" options="axis port=x"/>
+        <Pragma type="interface" location="fir.cpp:5" status="valid" parentFunction="fir" variable="y" isDirective="0" options="axis port=y"/>
+        <Pragma type="interface" location="fir.cpp:6" status="valid" parentFunction="fir" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="array_partition" location="fir.cpp:18" status="valid" parentFunction="fir" variable="shift_reg" isDirective="0" options="variable=shift_reg complete"/>
+        <Pragma type="pipeline" location="fir.cpp:28" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=2"/>
     </PragmaReport>
 </profile>
 

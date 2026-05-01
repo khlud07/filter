@@ -4,15 +4,16 @@
     "calls": "",
     "file": "fir.cpp",
     "fileloc": 3,
-    "instructions": 410,
+    "instructions": 466,
     "loads": {
-      "G": 129
+      "G": 129,
+      "L": 3
     },
     "name": "fir",
     "stores": {
       "G": 129,
-      "T": 1
+      "L": 3
     },
-    "total_instructions": 410
+    "total_instructions": 466
   }
 }

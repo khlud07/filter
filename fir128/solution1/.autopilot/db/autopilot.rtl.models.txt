@@ -1,6 +1,14 @@
-fir_sparsemux_255_7_32_1_1
-fir_mul_5s_32s_32_2_1
+fir_sparsemux_255_7_16_1_1
+fir_mul_5s_16s_20_1_1
 fir_fir_Pipeline_Shift_Accum_Loop_c_ROM_AUTO_1R
 fir_flow_control_loop_pipe_sequential_init
+fir_regslice_both
+fir_regslice_both
+fir_regslice_both
+fir_regslice_both
+fir_regslice_both
+fir_regslice_both
+fir_regslice_both
+fir_regslice_both
 fir_Pipeline_Shift_Accum_Loop
 fir

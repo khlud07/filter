@@ -1,13 +1,13 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler fir_sparsemux_255_7_32_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
+	::AP::rtl_comp_handler fir_sparsemux_255_7_16_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
 }
 
 
-set name fir_mul_5s_32s_32_2_1
+set name fir_mul_5s_16s_20_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
@@ -27,14 +27,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 6 \
-    name mul \
+    name mul_i29 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul \
+    corename dc_mul_i29 \
     op interface \
-    ports { mul { I 32 vector } } \
+    ports { mul_i29 { I 20 vector } } \
 } "
 }
 
@@ -42,14 +42,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 7 \
-    name x \
+    name in_sample_data \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_x \
+    corename dc_in_sample_data \
     op interface \
-    ports { x { I 32 vector } } \
+    ports { in_sample_data { I 16 vector } } \
 } "
 }
 
@@ -64,7 +64,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_acc_out \
     op interface \
-    ports { acc_out { O 32 vector } acc_out_ap_vld { O 1 bit } } \
+    ports { acc_out { O 16 vector } acc_out_ap_vld { O 1 bit } } \
 } "
 }
 

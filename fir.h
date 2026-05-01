@@ -1,16 +1,19 @@
+#ifndef FIR_H
+#define FIR_H
 
-#ifndef FIR_H_
-#define FIR_H_
+#include "ap_int.h"
+#include "hls_stream.h"
+#include "ap_axi_sdata.h"
 
-const int N=128;
+#define N 128
 
-typedef int	coef_t;
-typedef int	data_t;
-typedef int	acc_t;
+typedef ap_int<16> data_t;
+typedef ap_int<16> coef_t;
+typedef ap_int<32> acc_t;
 
-void fir (
-  data_t *y,
-  data_t x
-  );
+typedef hls::axis<data_t, 0, 0, 0> stream_t;
+typedef hls::stream<stream_t> fir_stream_t;
+
+void fir(fir_stream_t &y, fir_stream_t &x);
 
 #endif
