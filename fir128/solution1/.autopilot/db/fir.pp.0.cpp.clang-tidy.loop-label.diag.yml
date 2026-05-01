@@ -46,4 +46,9 @@ Diagnostics:
         Offset:          567584
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, mul + dsp is invalid combination for bind_op'
+    FileOffset:      30
+    FilePath:        fir.cpp
+    Replacements:    
 ...

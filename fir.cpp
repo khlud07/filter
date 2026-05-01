@@ -15,30 +15,27 @@ void fir(fir_stream_t &y, fir_stream_t &x) {
         10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
 
     static data_t shift_reg[N];
-#pragma HLS ARRAY_PARTITION variable=shift_reg complete
+    static int ptr = 0;
+//  #pragma HLS ARRAY_PARTITION variable=shift_reg complete
 
-    // read input sample from stream
     stream_t in_sample = x.read();
-
     data_t x_val = in_sample.data;
+    shift_reg[ptr] = in_sample.data;
+
     acc_t acc = 0;
 
-    Shift_Accum_Loop:
-    for (int i = N-1; i >= 0; i--) {
-#pragma HLS PIPELINE II=2
-        if (i == 0) {
-            acc += x_val * c[0];
-            shift_reg[0] = x_val;
-        } else {
-            shift_reg[i] = shift_reg[i-1];
-            acc += shift_reg[i] * c[i];
-        }
+    MAC_Loop:
+    for (int i = 0; i < N; i++) {
+#pragma HLS PIPELINE II=1
+#pragma HLS BIND_OP variable=acc op=mul impl=dsp
+    	int idx = (ptr - i + N) & (N - 1);
+    	acc += shift_reg[idx] * c[i];
     }
+    ptr = (ptr + 1) & (N - 1);
 
-    // write output sample to stream
     stream_t out_sample;
     out_sample.data = (data_t)acc;
-    out_sample.last = in_sample.last;  // propagate tlast for packet framing
+    out_sample.last = in_sample.last;
     out_sample.keep = in_sample.keep;
     y.write(out_sample);
 }

@@ -1,7 +1,7 @@
-fir_sparsemux_255_7_16_1_1
-fir_mul_5s_16s_20_1_1
-fir_fir_Pipeline_Shift_Accum_Loop_c_ROM_AUTO_1R
+fir_mac_muladd_5s_16s_27s_27_4_1
+fir_fir_Pipeline_MAC_Loop_c_ROM_AUTO_1R
 fir_flow_control_loop_pipe_sequential_init
+fir_shift_reg_RAM_AUTO_1R1W
 fir_regslice_both
 fir_regslice_both
 fir_regslice_both
@@ -10,5 +10,5 @@ fir_regslice_both
 fir_regslice_both
 fir_regslice_both
 fir_regslice_both
-fir_Pipeline_Shift_Accum_Loop
+fir_Pipeline_MAC_Loop
 fir

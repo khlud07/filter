@@ -1,29 +1,29 @@
 <pragmas>
-<pragma file="fir.cpp" line="28" pragmaType="pipeline" parentfunction="fir" off="0" ii="2" rewind="0" style=""/>
-<pragma file="fir.cpp" line="4" pragmaType="interface" parentfunction="fir" mode="axis" port="x" register="0" register_mode="both" name="" depth="-1"/>
-<pragma file="fir.cpp" line="5" pragmaType="interface" parentfunction="fir" mode="axis" port="y" register="0" register_mode="both" name="" depth="-1"/>
-<pragma file="fir.cpp" line="6" pragmaType="interface" parentfunction="fir" mode="ap_ctrl_none" port="return" name=""/>
-<pragma file="fir.cpp" line="18" pragmaType="array_partition" parentfunction="fir" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ3firRN3hls6streamINS_4axisI6ap_intILi16EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E9shift_reg"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
 <pragma file="/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<16, true>::ssdm_int(short)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<16>::ap_int<32>(ap_int<32> const&)" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<16>::ap_int(int)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::RType<16, true>::mult operator*<16, true, 16, true>(ap_int_base<16, true> const&, ap_int_base<16, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="fir.cpp" line="29" pragmaType="pipeline" parentfunction="fir" off="0" ii="1" rewind="0" style=""/>
+<pragma file="fir.cpp" line="4" pragmaType="interface" parentfunction="fir" mode="axis" port="x" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="fir.cpp" line="5" pragmaType="interface" parentfunction="fir" mode="axis" port="y" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="fir.cpp" line="6" pragmaType="interface" parentfunction="fir" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="fir.cpp" line="30" pragmaType="bind_op" parentfunction="fir" op="12" impl="3" latency="-1"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
 <pragma file="/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base<16, true>(ap_int_base<16, true> const&)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>

@@ -15,18 +15,18 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.168</EstimatedClockPeriod>
+            <EstimatedClockPeriod>6.712</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>263</Best-caseLatency>
-            <Average-caseLatency>263</Average-caseLatency>
-            <Worst-caseLatency>263</Worst-caseLatency>
-            <Best-caseRealTimeLatency>2.630 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>2.630 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>2.630 us</Worst-caseRealTimeLatency>
-            <Interval-min>264</Interval-min>
-            <Interval-max>264</Interval-max>
+            <Best-caseLatency>137</Best-caseLatency>
+            <Average-caseLatency>137</Average-caseLatency>
+            <Worst-caseLatency>137</Worst-caseLatency>
+            <Best-caseRealTimeLatency>1.370 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>1.370 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>1.370 us</Worst-caseRealTimeLatency>
+            <Interval-min>138</Interval-min>
+            <Interval-max>138</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
@@ -36,10 +36,10 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>0</BRAM_18K>
+            <BRAM_18K>1</BRAM_18K>
             <DSP>1</DSP>
-            <FF>2235</FF>
-            <LUT>905</LUT>
+            <FF>153</FF>
+            <LUT>234</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -223,62 +223,62 @@
             <ModuleName>fir</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_fir_Pipeline_Shift_Accum_Loop_fu_353</InstName>
-                    <ModuleName>fir_Pipeline_Shift_Accum_Loop</ModuleName>
+                    <InstName>grp_fir_Pipeline_MAC_Loop_fu_112</InstName>
+                    <ModuleName>fir_Pipeline_MAC_Loop</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>353</ID>
-                    <BindInstances>add_ln24_fu_637_p2 mul_5s_16s_20_1_1_U2 acc_3_fu_2463_p2 c_U</BindInstances>
+                    <ID>112</ID>
+                    <BindInstances>add_ln28_fu_118_p2 idx_fu_133_p2 mac_muladd_5s_16s_27s_27_4_1_U1 mac_muladd_5s_16s_27s_27_4_1_U1 c_U</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>mul_i29_fu_653_p2</BindInstances>
+            <BindInstances>add_ln34_fu_144_p2 shift_reg_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>fir_Pipeline_Shift_Accum_Loop</Name>
+            <Name>fir_Pipeline_MAC_Loop</Name>
             <Loops>
-                <Shift_Accum_Loop/>
+                <MAC_Loop/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.168</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.712</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>260</Best-caseLatency>
-                    <Average-caseLatency>260</Average-caseLatency>
-                    <Worst-caseLatency>260</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>2.600 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>2.600 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.600 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>260</PipelineInitiationInterval>
+                    <Best-caseLatency>133</Best-caseLatency>
+                    <Average-caseLatency>133</Average-caseLatency>
+                    <Worst-caseLatency>133</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.330 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.330 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.330 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>133</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <Shift_Accum_Loop>
-                        <Name>Shift_Accum_Loop</Name>
+                    <MAC_Loop>
+                        <Name>MAC_Loop</Name>
                         <Slack>7.30</Slack>
                         <TripCount>128</TripCount>
-                        <Latency>258</Latency>
-                        <AbsoluteTimeLatency>2.580 us</AbsoluteTimeLatency>
-                        <PipelineII>2</PipelineII>
-                        <PipelineDepth>4</PipelineDepth>
+                        <Latency>131</Latency>
+                        <AbsoluteTimeLatency>1.310 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </Shift_Accum_Loop>
+                    </MAC_Loop>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>fir.cpp:24</SourceLocation>
+                    <SourceLocation>fir.cpp:25</SourceLocation>
                     <SummaryOfLoopViolations>
-                        <Shift_Accum_Loop>
-                            <Name>Shift_Accum_Loop</Name>
+                        <MAC_Loop>
+                            <Name>MAC_Loop</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>fir.cpp:27</SourceLocation>
-                        </Shift_Accum_Loop>
+                            <SourceLocation>fir.cpp:28</SourceLocation>
+                        </MAC_Loop>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
@@ -290,21 +290,22 @@
                     <DSP>1</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
                     <UTIL_DSP>1</UTIL_DSP>
-                    <FF>2176</FF>
+                    <FF>114</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
-                    <UTIL_FF>6</UTIL_FF>
-                    <LUT>833</LUT>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>141</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>4</UTIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_fu_637_p2" SOURCE="fir.cpp:24" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln24"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5s_16s_20_1_1_U2" SOURCE="fir.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accum_Loop" OPTYPE="add" PRAGMA="" RTLNAME="acc_3_fu_2463_p2" SOURCE="fir.cpp:24" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_118_p2" SOURCE="fir.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop" OPTYPE="sub" PRAGMA="" RTLNAME="idx_fu_133_p2" SOURCE="fir.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="idx"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop" OPTYPE="mul" PRAGMA="yes" RTLNAME="mac_muladd_5s_16s_27s_27_4_1_U1" SOURCE="fir.cpp:32" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_5s_16s_27s_27_4_1_U1" SOURCE="fir.cpp:32" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_3"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="c_U" SOURCE="" STORAGESIZE="5 128 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="c"/>
             </BindNodes>
         </Module>
@@ -314,16 +315,16 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.168</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.712</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>263</Best-caseLatency>
-                    <Average-caseLatency>263</Average-caseLatency>
-                    <Worst-caseLatency>263</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>2.630 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>2.630 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.630 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>264</PipelineInitiationInterval>
+                    <Best-caseLatency>137</Best-caseLatency>
+                    <Average-caseLatency>137</Average-caseLatency>
+                    <Worst-caseLatency>137</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.370 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.370 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.370 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>138</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfViolations>
@@ -334,25 +335,26 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>0</BRAM_18K>
+                    <BRAM_18K>1</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
                     <DSP>1</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
                     <UTIL_DSP>1</UTIL_DSP>
-                    <FF>2235</FF>
+                    <FF>153</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
-                    <UTIL_FF>6</UTIL_FF>
-                    <LUT>905</LUT>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>234</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>5</UTIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_i29_fu_653_p2" SOURCE="fir.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_i29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_144_p2" SOURCE="fir.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="shift_reg_U" SOURCE="" STORAGESIZE="16 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p" URAM="0" VARIABLE="shift_reg"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -463,8 +465,8 @@
         <Pragma type="interface" location="fir.cpp:4" status="valid" parentFunction="fir" variable="x" isDirective="0" options="axis port=x"/>
         <Pragma type="interface" location="fir.cpp:5" status="valid" parentFunction="fir" variable="y" isDirective="0" options="axis port=y"/>
         <Pragma type="interface" location="fir.cpp:6" status="valid" parentFunction="fir" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
-        <Pragma type="array_partition" location="fir.cpp:18" status="valid" parentFunction="fir" variable="shift_reg" isDirective="0" options="variable=shift_reg complete"/>
-        <Pragma type="pipeline" location="fir.cpp:28" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=2"/>
+        <Pragma type="pipeline" location="fir.cpp:29" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="bind_op" location="fir.cpp:30" status="valid" parentFunction="fir" variable="acc" isDirective="0" options="variable=acc op=mul impl=dsp"/>
     </PragmaReport>
 </profile>
 

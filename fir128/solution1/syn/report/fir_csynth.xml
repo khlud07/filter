@@ -18,18 +18,18 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.168</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>263</Best-caseLatency>
-<Average-caseLatency>263</Average-caseLatency>
-<Worst-caseLatency>263</Worst-caseLatency>
-<Best-caseRealTimeLatency>2.630 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>2.630 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>2.630 us</Worst-caseRealTimeLatency>
-<Interval-min>264</Interval-min>
-<Interval-max>264</Interval-max>
+<Best-caseLatency>137</Best-caseLatency>
+<Average-caseLatency>137</Average-caseLatency>
+<Worst-caseLatency>137</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.370 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.370 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.370 us</Worst-caseRealTimeLatency>
+<Interval-min>138</Interval-min>
+<Interval-max>138</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
@@ -40,10 +40,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>0</BRAM_18K>
+<BRAM_18K>1</BRAM_18K>
 <DSP>1</DSP>
-<FF>2235</FF>
-<LUT>905</LUT>
+<FF>153</FF>
+<LUT>234</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

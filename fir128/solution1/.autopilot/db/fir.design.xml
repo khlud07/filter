@@ -5,10 +5,10 @@
 <ModuleName>fir</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_fir_Pipeline_Shift_Accum_Loop_fu_353</InstName>
-<ModuleName>fir_Pipeline_Shift_Accum_Loop</ModuleName>
+<InstName>grp_fir_Pipeline_MAC_Loop_fu_112</InstName>
+<ModuleName>fir_Pipeline_MAC_Loop</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>353</ID>
+<ID>112</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -16,51 +16,51 @@
 
 <ModuleInformation>
 <Module>
-<Name>fir_Pipeline_Shift_Accum_Loop</Name>
+<Name>fir_Pipeline_MAC_Loop</Name>
 <Loops>
-<Shift_Accum_Loop></Shift_Accum_Loop>
+<MAC_Loop></MAC_Loop>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.168</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>260</Best-caseLatency>
-<Average-caseLatency>260</Average-caseLatency>
-<Worst-caseLatency>260</Worst-caseLatency>
-<Best-caseRealTimeLatency>2.600 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>2.600 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>2.600 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>260</PipelineInitiationInterval>
+<Best-caseLatency>133</Best-caseLatency>
+<Average-caseLatency>133</Average-caseLatency>
+<Worst-caseLatency>133</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.330 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.330 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.330 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>133</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<Shift_Accum_Loop>
-<Name>Shift_Accum_Loop</Name>
+<MAC_Loop>
+<Name>MAC_Loop</Name>
 <Slack>7.30</Slack>
 <TripCount>128</TripCount>
-<Latency>258</Latency>
-<AbsoluteTimeLatency>2.580 us</AbsoluteTimeLatency>
-<PipelineII>2</PipelineII>
-<PipelineDepth>4</PipelineDepth>
+<Latency>131</Latency>
+<AbsoluteTimeLatency>1.310 us</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>5</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</Shift_Accum_Loop>
+</MAC_Loop>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>fir.cpp:24</SourceLocation>
+<SourceLocation>fir.cpp:25</SourceLocation>
 <SummaryOfLoopViolations>
-<Shift_Accum_Loop>
-<Name>Shift_Accum_Loop</Name>
+<MAC_Loop>
+<Name>MAC_Loop</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>fir.cpp:27</SourceLocation>
-</Shift_Accum_Loop>
+<SourceLocation>fir.cpp:28</SourceLocation>
+</MAC_Loop>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -72,12 +72,12 @@
 <DSP>1</DSP>
 <AVAIL_DSP>80</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>2176</FF>
+<FF>114</FF>
 <AVAIL_FF>35200</AVAIL_FF>
-<UTIL_FF>6</UTIL_FF>
-<LUT>833</LUT>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>141</LUT>
 <AVAIL_LUT>17600</AVAIL_LUT>
-<UTIL_LUT>4</UTIL_LUT>
+<UTIL_LUT>~0</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -86,7 +86,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>fir_Pipeline_Shift_Accum_Loop</Object>
+<Object>fir_Pipeline_MAC_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -97,7 +97,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>fir_Pipeline_Shift_Accum_Loop</Object>
+<Object>fir_Pipeline_MAC_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -108,7 +108,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>fir_Pipeline_Shift_Accum_Loop</Object>
+<Object>fir_Pipeline_MAC_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -119,7 +119,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>fir_Pipeline_Shift_Accum_Loop</Object>
+<Object>fir_Pipeline_MAC_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -130,7 +130,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>fir_Pipeline_Shift_Accum_Loop</Object>
+<Object>fir_Pipeline_MAC_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -141,7 +141,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>fir_Pipeline_Shift_Accum_Loop</Object>
+<Object>fir_Pipeline_MAC_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -151,25 +151,14 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mul_i29</name>
-<Object>mul_i29</Object>
+<name>ptr_load</name>
+<Object>ptr_load</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>in_sample_data</name>
-<Object>in_sample_data</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>16</Bits>
+<Bits>7</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -194,6 +183,39 @@
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
+<RtlPorts>
+<name>shift_reg_address0</name>
+<Object>shift_reg</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>7</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>shift_reg_ce0</name>
+<Object>shift_reg</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>shift_reg_q0</name>
+<Object>shift_reg</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
 </InterfaceSummary>
 </Module>
 <Module>
@@ -202,16 +224,16 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.168</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>263</Best-caseLatency>
-<Average-caseLatency>263</Average-caseLatency>
-<Worst-caseLatency>263</Worst-caseLatency>
-<Best-caseRealTimeLatency>2.630 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>2.630 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>2.630 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>264</PipelineInitiationInterval>
+<Best-caseLatency>137</Best-caseLatency>
+<Average-caseLatency>137</Average-caseLatency>
+<Worst-caseLatency>137</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.370 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.370 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.370 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>138</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
@@ -222,18 +244,18 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>0</BRAM_18K>
+<BRAM_18K>1</BRAM_18K>
 <AVAIL_BRAM>120</AVAIL_BRAM>
-<UTIL_BRAM>0</UTIL_BRAM>
+<UTIL_BRAM>~0</UTIL_BRAM>
 <DSP>1</DSP>
 <AVAIL_DSP>80</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>2235</FF>
+<FF>153</FF>
 <AVAIL_FF>35200</AVAIL_FF>
-<UTIL_FF>6</UTIL_FF>
-<LUT>905</LUT>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>234</LUT>
 <AVAIL_LUT>17600</AVAIL_LUT>
-<UTIL_LUT>5</UTIL_LUT>
+<UTIL_LUT>1</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

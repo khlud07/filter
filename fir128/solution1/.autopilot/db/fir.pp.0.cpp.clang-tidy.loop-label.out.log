@@ -23,3 +23,6 @@
       ^~~
       VITIS_LOOP_1247_1: 
 /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp:3949:7: note: FIX-IT applied suggested code changes
+/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp:9062:9: error: Invalid Directive: for current device, mul + dsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=acc op=mul impl=dsp
+        ^

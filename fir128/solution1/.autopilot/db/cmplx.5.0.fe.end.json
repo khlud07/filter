@@ -1,33 +1,36 @@
 {
-    "1": {
-        "name": "fir_Pipeline_Shift_Accum_Loop",
-        "file": "fir.cpp",
-        "fileloc": "24",
-        "instructions": "417",
-        "total_instructions": "417",
-        "calls": "",
-        "basicblocks": "134",
-        "loads": {
-            "G": "128",
-            "L": "2"
-        },
-        "stores": {
-            "G": "127",
-            "L": "4"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
     "0": {
         "name": "fir",
         "file": "fir.cpp",
         "fileloc": "3",
-        "instructions": "28",
-        "total_instructions": "445",
+        "instructions": "29",
+        "total_instructions": "65",
         "calls": "1",
         "basicblocks": "1",
         "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "G": "2"
+        }
+    },
+    "1": {
+        "name": "fir_Pipeline_MAC_Loop",
+        "file": "fir.cpp",
+        "fileloc": "25",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "2",
+            "L": "2"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
             "L": "1"
         }
     }

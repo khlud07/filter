@@ -30,59 +30,66 @@ end;
 architecture behav of fir is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "fir_fir,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.168000,HLS_SYN_LAT=263,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=2235,HLS_SYN_LUT=905,HLS_VERSION=2023_2}";
+    "fir_fir,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.712000,HLS_SYN_LAT=137,HLS_SYN_TPT=none,HLS_SYN_MEM=1,HLS_SYN_DSP=0,HLS_SYN_FF=153,HLS_SYN_LUT=234,HLS_VERSION=2023_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
-    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (3 downto 0) := "0010";
-    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (3 downto 0) := "0100";
-    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (3 downto 0) := "1000";
+    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (4 downto 0) := "00001";
+    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (4 downto 0) := "00010";
+    constant ap_ST_fsm_state3 : STD_LOGIC_VECTOR (4 downto 0) := "00100";
+    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (4 downto 0) := "01000";
+    constant ap_ST_fsm_state5 : STD_LOGIC_VECTOR (4 downto 0) := "10000";
     constant ap_const_boolean_1 : BOOLEAN := true;
-    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
+    constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
-    constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
+    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
+    constant ap_const_lv7_1 : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
 
     signal ap_rst_n_inv : STD_LOGIC;
+    signal ptr : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
+    signal shift_reg_address0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal shift_reg_ce0 : STD_LOGIC;
+    signal shift_reg_we0 : STD_LOGIC;
+    signal shift_reg_q0 : STD_LOGIC_VECTOR (15 downto 0);
     signal y_TDATA_blk_n : STD_LOGIC;
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (3 downto 0) := "0001";
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (4 downto 0) := "00001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
-    signal ap_CS_fsm_state3 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
+    signal ap_CS_fsm_state5 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
     signal x_TDATA_blk_n : STD_LOGIC;
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal in_sample_data_reg_670 : STD_LOGIC_VECTOR (15 downto 0);
-    signal in_sample_keep_reg_675 : STD_LOGIC_VECTOR (1 downto 0);
-    signal in_sample_last_reg_680 : STD_LOGIC_VECTOR (0 downto 0);
-    signal mul_i29_fu_653_p2 : STD_LOGIC_VECTOR (19 downto 0);
-    signal mul_i29_reg_685 : STD_LOGIC_VECTOR (19 downto 0);
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_done : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_idle : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_ready : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_353_acc_out : STD_LOGIC_VECTOR (15 downto 0);
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_353_acc_out_ap_vld : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start_reg : STD_LOGIC := '0';
+    signal in_sample_keep_reg_166 : STD_LOGIC_VECTOR (1 downto 0);
+    signal in_sample_last_reg_171 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ptr_load_reg_176 : STD_LOGIC_VECTOR (6 downto 0);
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_ap_start : STD_LOGIC;
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_ap_done : STD_LOGIC;
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_ap_idle : STD_LOGIC;
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_ap_ready : STD_LOGIC;
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_acc_out : STD_LOGIC_VECTOR (15 downto 0);
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_acc_out_ap_vld : STD_LOGIC;
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_address0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_ce0 : STD_LOGIC;
+    signal grp_fir_Pipeline_MAC_Loop_fu_112_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal acc_loc_fu_320 : STD_LOGIC_VECTOR (15 downto 0);
-    signal p_shl_fu_629_p3 : STD_LOGIC_VECTOR (18 downto 0);
-    signal p_shl1_fu_641_p3 : STD_LOGIC_VECTOR (16 downto 0);
-    signal p_shl_cast_fu_637_p1 : STD_LOGIC_VECTOR (19 downto 0);
-    signal p_shl1_cast_fu_649_p1 : STD_LOGIC_VECTOR (19 downto 0);
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_CS_fsm_state3 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
+    signal acc_loc_fu_66 : STD_LOGIC_VECTOR (15 downto 0);
+    signal zext_ln23_fu_139_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal add_ln34_fu_144_p2 : STD_LOGIC_VECTOR (6 downto 0);
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
     signal ap_ST_fsm_state3_blk : STD_LOGIC;
     signal ap_ST_fsm_state4_blk : STD_LOGIC;
+    signal ap_ST_fsm_state5_blk : STD_LOGIC;
     signal regslice_both_y_V_data_V_U_apdone_blk : STD_LOGIC;
-    signal ap_block_state4 : BOOLEAN;
+    signal ap_block_state5 : BOOLEAN;
     signal y_TVALID_int_regslice : STD_LOGIC;
     signal y_TREADY_int_regslice : STD_LOGIC;
     signal regslice_both_y_V_data_V_U_vld_out : STD_LOGIC;
@@ -115,7 +122,7 @@ architecture behav of fir is
     signal regslice_both_x_V_last_V_U_ack_in : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
-    component fir_fir_Pipeline_Shift_Accum_Loop IS
+    component fir_fir_Pipeline_MAC_Loop IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -123,10 +130,28 @@ architecture behav of fir is
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        mul_i29 : IN STD_LOGIC_VECTOR (19 downto 0);
-        in_sample_data : IN STD_LOGIC_VECTOR (15 downto 0);
+        ptr_load : IN STD_LOGIC_VECTOR (6 downto 0);
         acc_out : OUT STD_LOGIC_VECTOR (15 downto 0);
-        acc_out_ap_vld : OUT STD_LOGIC );
+        acc_out_ap_vld : OUT STD_LOGIC;
+        shift_reg_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        shift_reg_ce0 : OUT STD_LOGIC;
+        shift_reg_q0 : IN STD_LOGIC_VECTOR (15 downto 0) );
+    end component;
+
+
+    component fir_shift_reg_RAM_AUTO_1R1W IS
+    generic (
+        DataWidth : INTEGER;
+        AddressRange : INTEGER;
+        AddressWidth : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        address0 : IN STD_LOGIC_VECTOR (6 downto 0);
+        ce0 : IN STD_LOGIC;
+        we0 : IN STD_LOGIC;
+        d0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        q0 : OUT STD_LOGIC_VECTOR (15 downto 0) );
     end component;
 
 
@@ -148,18 +173,34 @@ architecture behav of fir is
 
 
 begin
-    grp_fir_Pipeline_Shift_Accum_Loop_fu_353 : component fir_fir_Pipeline_Shift_Accum_Loop
+    shift_reg_U : component fir_shift_reg_RAM_AUTO_1R1W
+    generic map (
+        DataWidth => 16,
+        AddressRange => 128,
+        AddressWidth => 7)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        address0 => shift_reg_address0,
+        ce0 => shift_reg_ce0,
+        we0 => shift_reg_we0,
+        d0 => x_TDATA_int_regslice,
+        q0 => shift_reg_q0);
+
+    grp_fir_Pipeline_MAC_Loop_fu_112 : component fir_fir_Pipeline_MAC_Loop
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start,
-        ap_done => grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_done,
-        ap_idle => grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_idle,
-        ap_ready => grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_ready,
-        mul_i29 => mul_i29_reg_685,
-        in_sample_data => in_sample_data_reg_670,
-        acc_out => grp_fir_Pipeline_Shift_Accum_Loop_fu_353_acc_out,
-        acc_out_ap_vld => grp_fir_Pipeline_Shift_Accum_Loop_fu_353_acc_out_ap_vld);
+        ap_start => grp_fir_Pipeline_MAC_Loop_fu_112_ap_start,
+        ap_done => grp_fir_Pipeline_MAC_Loop_fu_112_ap_done,
+        ap_idle => grp_fir_Pipeline_MAC_Loop_fu_112_ap_idle,
+        ap_ready => grp_fir_Pipeline_MAC_Loop_fu_112_ap_ready,
+        ptr_load => ptr_load_reg_176,
+        acc_out => grp_fir_Pipeline_MAC_Loop_fu_112_acc_out,
+        acc_out_ap_vld => grp_fir_Pipeline_MAC_Loop_fu_112_acc_out_ap_vld,
+        shift_reg_address0 => grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_address0,
+        shift_reg_ce0 => grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_ce0,
+        shift_reg_q0 => shift_reg_q0);
 
     regslice_both_y_V_data_V_U : component fir_regslice_both
     generic map (
@@ -167,7 +208,7 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => acc_loc_fu_320,
+        data_in => acc_loc_fu_66,
         vld_in => y_TVALID_int_regslice,
         ack_in => y_TREADY_int_regslice,
         data_out => y_TDATA,
@@ -181,7 +222,7 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => in_sample_keep_reg_675,
+        data_in => in_sample_keep_reg_166,
         vld_in => y_TVALID_int_regslice,
         ack_in => regslice_both_y_V_keep_V_U_ack_in_dummy,
         data_out => y_TKEEP,
@@ -209,7 +250,7 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => in_sample_last_reg_680,
+        data_in => in_sample_last_reg_171,
         vld_in => y_TVALID_int_regslice,
         ack_in => regslice_both_y_V_last_V_U_ack_in_dummy,
         data_out => y_TLAST,
@@ -289,16 +330,16 @@ begin
     end process;
 
 
-    grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start_reg_assign_proc : process(ap_clk)
+    grp_fir_Pipeline_MAC_Loop_fu_112_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start_reg <= ap_const_logic_0;
+                grp_fir_Pipeline_MAC_Loop_fu_112_ap_start_reg <= ap_const_logic_0;
             else
-                if (((x_TVALID_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                    grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_ready = ap_const_logic_1)) then 
-                    grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start_reg <= ap_const_logic_0;
+                if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+                    grp_fir_Pipeline_MAC_Loop_fu_112_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_fir_Pipeline_MAC_Loop_fu_112_ap_ready = ap_const_logic_1)) then 
+                    grp_fir_Pipeline_MAC_Loop_fu_112_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -307,8 +348,8 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_353_acc_out_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                acc_loc_fu_320 <= grp_fir_Pipeline_Shift_Accum_Loop_fu_353_acc_out;
+            if (((grp_fir_Pipeline_MAC_Loop_fu_112_acc_out_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                acc_loc_fu_66 <= grp_fir_Pipeline_MAC_Loop_fu_112_acc_out;
             end if;
         end if;
     end process;
@@ -316,16 +357,22 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                in_sample_data_reg_670 <= x_TDATA_int_regslice;
-                in_sample_keep_reg_675 <= x_TKEEP_int_regslice;
-                in_sample_last_reg_680 <= x_TLAST_int_regslice;
-                    mul_i29_reg_685(19 downto 1) <= mul_i29_fu_653_p2(19 downto 1);
+                in_sample_keep_reg_166 <= x_TKEEP_int_regslice;
+                in_sample_last_reg_171 <= x_TLAST_int_regslice;
+                ptr_load_reg_176 <= ptr;
             end if;
         end if;
     end process;
-    mul_i29_reg_685(0) <= '0';
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((x_TVALID_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
+                ptr <= add_ln34_fu_144_p2;
+            end if;
+        end if;
+    end process;
 
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state1, grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_done, ap_CS_fsm_state2, ap_block_state4, y_TREADY_int_regslice, x_TVALID_int_regslice)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state1, grp_fir_Pipeline_MAC_Loop_fu_112_ap_done, ap_CS_fsm_state3, ap_block_state5, y_TREADY_int_regslice, x_TVALID_int_regslice)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -335,31 +382,35 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                    ap_NS_fsm <= ap_ST_fsm_state3;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_state2;
-                end if;
+                ap_NS_fsm <= ap_ST_fsm_state3;
             when ap_ST_fsm_state3 => 
-                if (((y_TREADY_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                if (((grp_fir_Pipeline_MAC_Loop_fu_112_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
                     ap_NS_fsm <= ap_ST_fsm_state4;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
                 end if;
             when ap_ST_fsm_state4 => 
-                if ((not(((y_TREADY_int_regslice = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state4))) and (ap_const_logic_1 = ap_CS_fsm_state4))) then
-                    ap_NS_fsm <= ap_ST_fsm_state1;
+                if (((ap_const_logic_1 = ap_CS_fsm_state4) and (y_TREADY_int_regslice = ap_const_logic_1))) then
+                    ap_NS_fsm <= ap_ST_fsm_state5;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state4;
                 end if;
+            when ap_ST_fsm_state5 => 
+                if ((not(((ap_const_boolean_1 = ap_block_state5) or (y_TREADY_int_regslice = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
+                    ap_NS_fsm <= ap_ST_fsm_state1;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state5;
+                end if;
             when others =>  
-                ap_NS_fsm <= "XXXX";
+                ap_NS_fsm <= "XXXXX";
         end case;
     end process;
+    add_ln34_fu_144_p2 <= std_logic_vector(unsigned(ptr) + unsigned(ap_const_lv7_1));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
     ap_CS_fsm_state4 <= ap_CS_fsm(3);
+    ap_CS_fsm_state5 <= ap_CS_fsm(4);
 
     ap_ST_fsm_state1_blk_assign_proc : process(x_TVALID_int_regslice)
     begin
@@ -370,20 +421,11 @@ begin
         end if; 
     end process;
 
+    ap_ST_fsm_state2_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state2_blk_assign_proc : process(grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_done)
+    ap_ST_fsm_state3_blk_assign_proc : process(grp_fir_Pipeline_MAC_Loop_fu_112_ap_done)
     begin
-        if ((grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_done = ap_const_logic_0)) then 
-            ap_ST_fsm_state2_blk <= ap_const_logic_1;
-        else 
-            ap_ST_fsm_state2_blk <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    ap_ST_fsm_state3_blk_assign_proc : process(y_TREADY_int_regslice)
-    begin
-        if ((y_TREADY_int_regslice = ap_const_logic_0)) then 
+        if ((grp_fir_Pipeline_MAC_Loop_fu_112_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state3_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state3_blk <= ap_const_logic_0;
@@ -391,9 +433,9 @@ begin
     end process;
 
 
-    ap_ST_fsm_state4_blk_assign_proc : process(ap_block_state4, y_TREADY_int_regslice)
+    ap_ST_fsm_state4_blk_assign_proc : process(y_TREADY_int_regslice)
     begin
-        if (((y_TREADY_int_regslice = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state4))) then 
+        if ((y_TREADY_int_regslice = ap_const_logic_0)) then 
             ap_ST_fsm_state4_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state4_blk <= ap_const_logic_0;
@@ -401,9 +443,19 @@ begin
     end process;
 
 
-    ap_block_state4_assign_proc : process(regslice_both_y_V_data_V_U_apdone_blk, y_TREADY_int_regslice)
+    ap_ST_fsm_state5_blk_assign_proc : process(ap_block_state5, y_TREADY_int_regslice)
     begin
-                ap_block_state4 <= ((y_TREADY_int_regslice = ap_const_logic_0) or (regslice_both_y_V_data_V_U_apdone_blk = ap_const_logic_1));
+        if (((ap_const_boolean_1 = ap_block_state5) or (y_TREADY_int_regslice = ap_const_logic_0))) then 
+            ap_ST_fsm_state5_blk <= ap_const_logic_1;
+        else 
+            ap_ST_fsm_state5_blk <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_block_state5_assign_proc : process(regslice_both_y_V_data_V_U_apdone_blk, y_TREADY_int_regslice)
+    begin
+                ap_block_state5 <= ((y_TREADY_int_regslice = ap_const_logic_0) or (regslice_both_y_V_data_V_U_apdone_blk = ap_const_logic_1));
     end process;
 
 
@@ -412,14 +464,41 @@ begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start <= grp_fir_Pipeline_Shift_Accum_Loop_fu_353_ap_start_reg;
-    mul_i29_fu_653_p2 <= std_logic_vector(signed(p_shl_cast_fu_637_p1) + signed(p_shl1_cast_fu_649_p1));
-        p_shl1_cast_fu_649_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_shl1_fu_641_p3),20));
+    grp_fir_Pipeline_MAC_Loop_fu_112_ap_start <= grp_fir_Pipeline_MAC_Loop_fu_112_ap_start_reg;
 
-    p_shl1_fu_641_p3 <= (x_TDATA_int_regslice & ap_const_lv1_0);
-        p_shl_cast_fu_637_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_shl_fu_629_p3),20));
+    shift_reg_address0_assign_proc : process(ap_CS_fsm_state1, grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_address0, ap_CS_fsm_state3, zext_ln23_fu_139_p1)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state1)) then 
+            shift_reg_address0 <= zext_ln23_fu_139_p1(7 - 1 downto 0);
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
+            shift_reg_address0 <= grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_address0;
+        else 
+            shift_reg_address0 <= "XXXXXXX";
+        end if; 
+    end process;
 
-    p_shl_fu_629_p3 <= (x_TDATA_int_regslice & ap_const_lv3_0);
+
+    shift_reg_ce0_assign_proc : process(ap_CS_fsm_state1, grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_ce0, ap_CS_fsm_state3, x_TVALID_int_regslice)
+    begin
+        if (((x_TVALID_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            shift_reg_ce0 <= ap_const_logic_1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
+            shift_reg_ce0 <= grp_fir_Pipeline_MAC_Loop_fu_112_shift_reg_ce0;
+        else 
+            shift_reg_ce0 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    shift_reg_we0_assign_proc : process(ap_CS_fsm_state1, x_TVALID_int_regslice)
+    begin
+        if (((x_TVALID_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            shift_reg_we0 <= ap_const_logic_1;
+        else 
+            shift_reg_we0 <= ap_const_logic_0;
+        end if; 
+    end process;
+
 
     x_TDATA_blk_n_assign_proc : process(ap_CS_fsm_state1, x_TVALID_int_regslice)
     begin
@@ -442,9 +521,9 @@ begin
     end process;
 
 
-    y_TDATA_blk_n_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, y_TREADY_int_regslice)
+    y_TDATA_blk_n_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state5, y_TREADY_int_regslice)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state4))) then 
             y_TDATA_blk_n <= y_TREADY_int_regslice;
         else 
             y_TDATA_blk_n <= ap_const_logic_1;
@@ -454,13 +533,14 @@ begin
     y_TSTRB_int_regslice <= "XX";
     y_TVALID <= regslice_both_y_V_data_V_U_vld_out;
 
-    y_TVALID_int_regslice_assign_proc : process(ap_CS_fsm_state3, y_TREADY_int_regslice)
+    y_TVALID_int_regslice_assign_proc : process(ap_CS_fsm_state4, y_TREADY_int_regslice)
     begin
-        if (((y_TREADY_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state4) and (y_TREADY_int_regslice = ap_const_logic_1))) then 
             y_TVALID_int_regslice <= ap_const_logic_1;
         else 
             y_TVALID_int_regslice <= ap_const_logic_0;
         end if; 
     end process;
 
+    zext_ln23_fu_139_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ptr),64));
 end behav;
