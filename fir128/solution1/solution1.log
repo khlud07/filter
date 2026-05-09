@@ -4146,3 +4146,1345 @@ INFO: [VLOG 209-307] Generating Verilog RTL for fir.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 104.61 MHz
 INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 7.25 seconds. CPU system time: 0.71 seconds. Elapsed time: 11.73 seconds; current allocated memory: 133.020 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file .git/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 8.32 seconds. CPU system time: 0.5 seconds. Elapsed time: 11.7 seconds; current allocated memory: 7.762 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2.15 seconds. CPU system time: 0.25 seconds. Elapsed time: 2.41 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 258.336 MB.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.73 seconds. CPU system time: 0.32 seconds. Elapsed time: 2.03 seconds; current allocated memory: 259.473 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 207 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 139 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.65 seconds. CPU system time: 0.26 seconds. Elapsed time: 6.64 seconds; current allocated memory: 262.055 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.055 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 262.262 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 262.305 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 284.965 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 295.148 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'MAC_Loop_0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 296.664 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 296.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'MAC_Loop_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 297.348 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.348 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.836 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.836 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_0' pipeline 'MAC_Loop_0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.836 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_1' pipeline 'MAC_Loop_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 299.352 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [RTMG 210-278] Implementing memory 'fir_shift_i_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'fir_c_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 301.125 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 305.594 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 314.473 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 116.58 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.96 seconds. CPU system time: 0.64 seconds. Elapsed time: 9.32 seconds; current allocated memory: 56.375 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.22 seconds. CPU system time: 0.17 seconds. Elapsed time: 1.38 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 258.336 MB.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.72 seconds. CPU system time: 0.27 seconds. Elapsed time: 2 seconds; current allocated memory: 259.438 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,983 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,712 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,418 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,418 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,418 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72,250 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,052 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,052 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,051 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,103 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,109 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,103 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,074 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,063 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,038 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,031 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'MAC_Sample1' (fir.cpp:55:5) in function 'fir' completely with a factor of 128 (fir.cpp:3:0)
+INFO: [HLS 214-186] Unrolling loop 'MAC_Sample0' (fir.cpp:47:5) in function 'fir' completely with a factor of 128 (fir.cpp:3:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7shift_i': Complete partitioning on dimension 1. (fir.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7shift_q': Complete partitioning on dimension 1. (fir.cpp:20:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.53 seconds. CPU system time: 0.33 seconds. Elapsed time: 11.68 seconds; current allocated memory: 262.074 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.074 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 271.457 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 271.664 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir' (fir.cpp:3:1)...174 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.07 seconds; current allocated memory: 328.641 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 3.67 seconds. CPU system time: 0.07 seconds. Elapsed time: 3.75 seconds; current allocated memory: 614.043 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 258.336 MB.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.72 seconds. CPU system time: 0.29 seconds. Elapsed time: 2 seconds; current allocated memory: 259.438 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,983 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,712 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,418 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,418 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,418 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72,250 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,052 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,052 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,051 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,103 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,109 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,103 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,074 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,063 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,038 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,031 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'MAC_Sample1' (fir.cpp:55:5) in function 'fir' completely with a factor of 128 (fir.cpp:3:0)
+INFO: [HLS 214-186] Unrolling loop 'MAC_Sample0' (fir.cpp:47:5) in function 'fir' completely with a factor of 128 (fir.cpp:3:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7shift_i': Complete partitioning on dimension 1. (fir.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7shift_q': Complete partitioning on dimension 1. (fir.cpp:20:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.45 seconds. CPU system time: 0.32 seconds. Elapsed time: 11.68 seconds; current allocated memory: 262.074 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.074 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 271.477 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 271.668 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir' (fir.cpp:3:1)...174 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.09 seconds; current allocated memory: 328.910 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 3.66 seconds. CPU system time: 0.09 seconds. Elapsed time: 3.75 seconds; current allocated memory: 614.039 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln50_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln50) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 522.07 seconds. CPU system time: 0.27 seconds. Elapsed time: 522.37 seconds; current allocated memory: 1.065 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 119.95 seconds. CPU system time: 0.02 seconds. Elapsed time: 119.97 seconds; current allocated memory: 1.065 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_235' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_353' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_246' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_364' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_257' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_266' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_267' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_268' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_269' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_270' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_271' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_272' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_273' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_274' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_275' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_276' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_277' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_278' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_279' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_280' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_281' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_282' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_283' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_284' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_285' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_286' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_287' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_288' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_289' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_290' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_291' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_292' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_293' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_294' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_295' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_296' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_297' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_298' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_299' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_300' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_301' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_302' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_303' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_304' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_305' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_306' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_307' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_308' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_309' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_310' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_311' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_312' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_313' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_314' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_315' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_316' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_317' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_318' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_319' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_320' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_321' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_322' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_323' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_324' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_325' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_326' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_327' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_328' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_329' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_330' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_331' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_332' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_333' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_334' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_335' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_336' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_337' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_338' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_339' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_340' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_341' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_342' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_343' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_344' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_345' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_346' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_347' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_348' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_349' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_350' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_351' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_352' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_236' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_354' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_237' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_355' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_238' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_356' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_239' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_357' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_240' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_358' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_241' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_359' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_242' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_360' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_243' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_361' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_244' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_362' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_245' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_363' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_247' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_365' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_248' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_366' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_249' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_367' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_250' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_368' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_251' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_369' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_252' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_370' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_253' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_254' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_255' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_256' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_258' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_259' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_260' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_261' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_262' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_263' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_264' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_265' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_87' is power-on initialization.
+INFO: [RTGEN 206-104] Estimated max fanout for 'fir' is 8505 from HDL expression: (1'b1 == ap_CS_fsm_state2)
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_257_7_15_1_1': 148 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_257_7_16_1_1': 108 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 36.97 seconds. CPU system time: 0.56 seconds. Elapsed time: 37.54 seconds; current allocated memory: 2.161 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 14.22 seconds. CPU system time: 0.33 seconds. Elapsed time: 14.56 seconds; current allocated memory: 2.574 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 2.584 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.55 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 710.7 seconds. CPU system time: 1.92 seconds. Elapsed time: 715.58 seconds; current allocated memory: 2.333 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.19 seconds. CPU system time: 0.18 seconds. Elapsed time: 1.37 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 258.336 MB.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.74 seconds. CPU system time: 0.31 seconds. Elapsed time: 2.03 seconds; current allocated memory: 259.410 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,983 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 589 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 460 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 460 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 460 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,656 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,947 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,947 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,945 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,001 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,747 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,741 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,866 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,728 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,695 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,698 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-188] Unrolling loop 'MAC_Sample1' (fir.cpp:55:5) in function 'fir' partially with a factor of 8 (fir.cpp:3:0)
+INFO: [HLS 214-188] Unrolling loop 'MAC_Sample0' (fir.cpp:47:5) in function 'fir' partially with a factor of 8 (fir.cpp:3:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7shift_i': Complete partitioning on dimension 1. (fir.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7shift_q': Complete partitioning on dimension 1. (fir.cpp:20:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< MAC_Sample0> at fir.cpp:47:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< MAC_Sample1> at fir.cpp:55:5 
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=4 dim=1' for array 'fir(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)::c' due to pipeline pragma (fir.cpp:8:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E1c': Cyclic partitioning with factor 4 on dimension 1. (fir.cpp:8:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.5 seconds. CPU system time: 0.3 seconds. Elapsed time: 6.66 seconds; current allocated memory: 262.051 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.051 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 271.477 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 271.477 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir' (fir.cpp:3:19)...32 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.71 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.73 seconds; current allocated memory: 328.855 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 3.67 seconds. CPU system time: 0.11 seconds. Elapsed time: 3.77 seconds; current allocated memory: 636.977 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Sample0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln50_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln50_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln50_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln50) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Sample0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'MAC_Sample0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.87 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.93 seconds; current allocated memory: 637.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 637.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Sample1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln59_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln59_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln59_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Sample1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'MAC_Sample1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 644.066 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 644.066 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1290.03 seconds. CPU system time: 0.21 seconds. Elapsed time: 1290.28 seconds; current allocated memory: 1.104 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 137.76 seconds. CPU system time: 0.04 seconds. Elapsed time: 137.8 seconds; current allocated memory: 1.104 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Sample0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Sample0' pipeline 'MAC_Sample0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_5s_21s_21_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_5s_16s_21s_21_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_257_7_16_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Sample0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 13.45 seconds. CPU system time: 0.08 seconds. Elapsed time: 13.53 seconds; current allocated memory: 1.104 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Sample1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Sample1' pipeline 'MAC_Sample1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] RTL name 'sparsemux_257_7_16_1_1' is changed to 'sparsemux_257_7_16_1_1_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_5s_21s_21_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_5s_16s_21s_21_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_257_7_16_1_1_x': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Sample1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.42 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.104 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_i_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_235' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_246' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_257' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_266' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_267' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_268' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_269' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_270' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_271' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_272' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_273' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_274' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_275' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_276' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_277' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_278' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_279' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_280' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_281' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_282' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_283' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_284' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_285' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_286' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_287' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_288' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_289' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_290' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_291' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_292' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_293' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_294' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_295' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_296' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_297' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_298' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_299' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_300' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_301' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_302' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_303' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_304' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_305' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_306' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_307' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_308' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_309' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_310' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_311' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_312' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_313' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_314' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_315' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_316' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_317' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_318' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_319' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_320' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_321' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_322' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_323' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_324' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_325' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_326' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_327' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_328' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_329' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_330' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_331' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_332' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_333' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_334' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_335' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_336' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_337' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_338' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_339' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_340' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_341' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_342' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_343' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_344' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_345' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_346' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_347' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_348' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_349' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_350' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_351' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_352' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_236' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_237' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_238' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_239' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_240' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_241' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_242' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_243' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_244' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_245' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_247' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_248' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_249' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_250' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_251' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_252' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_253' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_254' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_255' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_256' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_258' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_259' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_260' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_261' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_262' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_263' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_264' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_265' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'fir_stream_stream_axis_0_shift_q' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_353' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_364' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_354' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_355' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_356' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_357' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_358' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_359' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_360' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_361' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_362' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_363' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_365' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_366' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_367' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_368' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_369' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_370' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7s_87' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [RTMG 210-279] Implementing memory 'fir_fir_stream_stream_axis_0_c_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fir_fir_stream_stream_axis_0_c_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fir_fir_stream_stream_axis_0_c_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fir_fir_stream_stream_axis_0_c_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 25.96 seconds. CPU system time: 1 seconds. Elapsed time: 26.96 seconds; current allocated memory: 3.848 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 14.96 seconds. CPU system time: 0.33 seconds. Elapsed time: 15.31 seconds; current allocated memory: 4.255 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 4.266 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 99.98 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1497.07 seconds. CPU system time: 2.48 seconds. Elapsed time: 1501.47 seconds; current allocated memory: 4.015 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.26 seconds. CPU system time: 0.19 seconds. Elapsed time: 1.44 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 258.336 MB.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.71 seconds. CPU system time: 0.3 seconds. Elapsed time: 2.01 seconds; current allocated memory: 259.500 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 207 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 139 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.74 seconds. CPU system time: 0.28 seconds. Elapsed time: 6.74 seconds; current allocated memory: 261.742 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 261.742 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 262.254 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 262.297 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 284.973 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 295.145 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'MAC_Loop_0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 296.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 296.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'MAC_Loop_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.348 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.348 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.832 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 297.832 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_0' pipeline 'MAC_Loop_0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.832 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_1' pipeline 'MAC_Loop_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 299.348 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [RTMG 210-278] Implementing memory 'fir_shift_i_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'fir_c_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 301.125 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 305.594 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 314.473 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 116.58 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.03 seconds. CPU system time: 0.62 seconds. Elapsed time: 9.39 seconds; current allocated memory: 56.375 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 258.336 MB.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.73 seconds. CPU system time: 0.31 seconds. Elapsed time: 2.04 seconds; current allocated memory: 259.484 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 207 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 139 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.68 seconds. CPU system time: 0.25 seconds. Elapsed time: 6.66 seconds; current allocated memory: 262.117 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.117 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 262.270 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 262.312 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 284.973 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 295.145 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'MAC_Loop_0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 296.684 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 296.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'MAC_Loop_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 297.395 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.828 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_0' pipeline 'MAC_Loop_0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_1' pipeline 'MAC_Loop_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 299.406 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [RTMG 210-278] Implementing memory 'fir_shift_i_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'fir_c_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 301.199 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 305.625 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 314.594 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 148.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 0.62 seconds. Elapsed time: 9.34 seconds; current allocated memory: 56.496 MB.

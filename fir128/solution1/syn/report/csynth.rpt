@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fir'
 ================================================================
 + General Information: 
-    * Date:           Sat May  9 15:18:03 2026
+    * Date:           Sat May  9 16:31:00 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        fir128
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,14 +15,16 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +--------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+------------+-------------+-----+
-    |          Modules         | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |          |            |             |     |
-    |          & Loops         | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF     |     LUT     | URAM|
-    +--------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+------------+-------------+-----+
-    |+ fir                     |     -|   1.39|       23|  345.000|         -|       24|     -|        no|     -|  16 (20%)|  8782 (24%)|  13862 (78%)|    -|
-    | + fir_Pipeline_MAC_Loop  |     -|   1.39|       20|  300.000|         -|       20|     -|        no|     -|  16 (20%)|    534 (1%)|  11499 (65%)|    -|
-    |  o MAC_Loop              |     -|  10.95|       18|  270.000|         3|        1|    16|       yes|     -|         -|           -|            -|    -|
-    +--------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+------------+-------------+-----+
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+----------+-----+
+    |           Modules          | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |        |           |          |     |
+    |           & Loops          | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP  |     FF    |    LUT   | URAM|
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+----------+-----+
+    |+ fir                       |     -|  0.59|      273|  2.730e+03|         -|      274|     -|        no|  2 (1%)|  4 (5%)|   565 (1%)|  644 (3%)|    -|
+    | + fir_Pipeline_MAC_Loop_0  |     -|  0.59|      133|  1.330e+03|         -|      133|     -|        no|       -|  2 (2%)|  212 (~0%)|  199 (1%)|    -|
+    |  o MAC_Loop_0              |     -|  7.30|      131|  1.310e+03|         4|        1|   128|       yes|       -|       -|          -|         -|    -|
+    | + fir_Pipeline_MAC_Loop_1  |     -|  0.59|      133|  1.330e+03|         -|      133|     -|        no|       -|  2 (2%)|  212 (~0%)|  199 (1%)|    -|
+    |  o MAC_Loop_1              |     -|  7.30|      131|  1.310e+03|         4|        1|   128|       yes|       -|       -|          -|         -|    -|
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+----------+-----+
 
 
 ================================================================
@@ -32,8 +34,8 @@
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
 | Interface | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
-| x         | in        | both          | 32    | 4     | 1     | 1      | 4     | 1      |
-| y         | out       | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| x         | in        | both          | 64    | 8     | 1     | 1      | 8     | 1      |
+| y         | out       | both          | 64    | 8     | 1     | 1      | 8     | 1      |
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
 
 * TOP LEVEL CONTROL
@@ -50,12 +52,12 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+----------+-----------+--------------------------------------------------------+
-| Argument | Direction | Datatype                                               |
-+----------+-----------+--------------------------------------------------------+
-| y        | out       | stream<hls::axis<ap_int<32>, 0, 0, 0, '8', false>, 0>& |
-| x        | in        | stream<hls::axis<ap_int<32>, 0, 0, 0, '8', false>, 0>& |
-+----------+-----------+--------------------------------------------------------+
++----------+-----------+---------------------------------------------------------+
+| Argument | Direction | Datatype                                                |
++----------+-----------+---------------------------------------------------------+
+| y        | out       | stream<hls::axis<ap_uint<64>, 0, 0, 0, '8', false>, 0>& |
+| x        | in        | stream<hls::axis<ap_uint<64>, 0, 0, 0, '8', false>, 0>& |
++----------+-----------+---------------------------------------------------------+
 
 * SW-to-HW Mapping
 +----------+--------------+-----------+
@@ -69,89 +71,61 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+---------------------------+-----+--------+------------+-----+--------+---------+
-| Name                      | DSP | Pragma | Variable   | Op  | Impl   | Latency |
-+---------------------------+-----+--------+------------+-----+--------+---------+
-| + fir                     | 16  |        |            |     |        |         |
-|   add_ln46_fu_3995_p2     |     |        | add_ln46   | add | fabric | 0       |
-|  + fir_Pipeline_MAC_Loop  | 16  |        |            |     |        |         |
-|    sub_ln41_fu_2592_p2    |     |        | sub_ln41   | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U17  | 1   | yes    | mul_ln42   | mul | dsp    | 0       |
-|    mul_16s_5s_21_1_1_U18  | 1   | yes    | mul_ln43   | mul | dsp    | 0       |
-|    sub_ln41_1_fu_3644_p2  |     |        | sub_ln41_1 | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U19  | 1   | yes    | mul_ln42_1 | mul | dsp    | 0       |
-|    mul_16s_5s_21_1_1_U20  | 1   | yes    | mul_ln43_1 | mul | dsp    | 0       |
-|    sub_ln41_2_fu_4696_p2  |     |        | sub_ln41_2 | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U21  | 1   | yes    | mul_ln42_2 | mul | dsp    | 0       |
-|    mul_16s_5s_21_1_1_U22  | 1   | yes    | mul_ln43_2 | mul | dsp    | 0       |
-|    sub_ln41_3_fu_5748_p2  |     |        | sub_ln41_3 | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U23  | 1   | yes    | mul_ln42_3 | mul | dsp    | 0       |
-|    mul_16s_5s_21_1_1_U24  | 1   | yes    | mul_ln43_3 | mul | dsp    | 0       |
-|    add_ln41_fu_6794_p2    |     |        | add_ln41   | add | fabric | 0       |
-|    sub_ln41_4_fu_6815_p2  |     |        | sub_ln41_4 | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U25  | 1   | yes    | mul_ln42_4 | mul | dsp    | 0       |
-|    mul_16s_5s_21_1_1_U26  | 1   | yes    | mul_ln43_4 | mul | dsp    | 0       |
-|    add_ln41_1_fu_7861_p2  |     |        | add_ln41_1 | add | fabric | 0       |
-|    sub_ln41_5_fu_7882_p2  |     |        | sub_ln41_5 | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U27  | 1   | yes    | mul_ln42_5 | mul | dsp    | 0       |
-|    mul_16s_5s_21_1_1_U28  | 1   | yes    | mul_ln43_5 | mul | dsp    | 0       |
-|    sub_ln41_6_fu_8946_p2  |     |        | sub_ln41_6 | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U29  | 1   | yes    | mul_ln42_6 | mul | dsp    | 0       |
-|    mul_16s_5s_21_1_1_U30  | 1   | yes    | mul_ln43_6 | mul | dsp    | 0       |
-|    sub_ln41_7_fu_9998_p2  |     |        | sub_ln41_7 | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U31  | 1   | yes    | mul_ln42_7 | mul | dsp    | 0       |
-|    add_ln42_fu_11342_p2   |     |        | add_ln42   | add | fabric | 0       |
-|    add_ln42_1_fu_11348_p2 |     |        | add_ln42_1 | add | fabric | 0       |
-|    add_ln42_2_fu_11429_p2 |     |        | add_ln42_2 | add | fabric | 0       |
-|    add_ln42_3_fu_11354_p2 |     |        | add_ln42_3 | add | fabric | 0       |
-|    add_ln42_4_fu_11360_p2 |     |        | add_ln42_4 | add | fabric | 0       |
-|    add_ln42_5_fu_11445_p2 |     |        | add_ln42_5 | add | fabric | 0       |
-|    add_ln42_6_fu_11455_p2 |     |        | add_ln42_6 | add | fabric | 0       |
-|    acc_i_3_fu_11465_p2    |     |        | acc_i_3    | add | fabric | 0       |
-|    mul_16s_5s_21_1_1_U32  | 1   | yes    | mul_ln43_7 | mul | dsp    | 0       |
-|    add_ln43_fu_11383_p2   |     |        | add_ln43   | add | fabric | 0       |
-|    add_ln43_1_fu_11389_p2 |     |        | add_ln43_1 | add | fabric | 0       |
-|    add_ln43_2_fu_11477_p2 |     |        | add_ln43_2 | add | fabric | 0       |
-|    add_ln43_3_fu_11395_p2 |     |        | add_ln43_3 | add | fabric | 0       |
-|    add_ln43_4_fu_11401_p2 |     |        | add_ln43_4 | add | fabric | 0       |
-|    add_ln43_5_fu_11493_p2 |     |        | add_ln43_5 | add | fabric | 0       |
-|    add_ln43_6_fu_11503_p2 |     |        | add_ln43_6 | add | fabric | 0       |
-|    acc_q_3_fu_11513_p2    |     |        | acc_q_3    | add | fabric | 0       |
-|    add_ln37_fu_11044_p2   |     |        | add_ln37   | add | fabric | 0       |
-+---------------------------+-----+--------+------------+-----+--------+---------+
++----------------------------+-----+--------+----------+-----+--------+---------+
+| Name                       | DSP | Pragma | Variable | Op  | Impl   | Latency |
++----------------------------+-----+--------+----------+-----+--------+---------+
+| + fir                      | 4   |        |          |     |        |         |
+|   add_ln53_fu_287_p2       |     |        | add_ln53 | add | fabric | 0       |
+|   add_ln71_fu_275_p2       |     |        | add_ln71 | add | fabric | 0       |
+|  + fir_Pipeline_MAC_Loop_0 | 2   |        |          |     |        |         |
+|    add_ln45_fu_159_p2      |     |        | add_ln45 | add | fabric | 0       |
+|    idx_fu_174_p2           |     |        | idx      | sub | fabric | 0       |
+|    mul_5s_16s_21_1_1_U1    | 1   | yes    | mul_ln50 | mul | dsp    | 0       |
+|    acc_i0_3_fu_239_p2      |     |        | acc_i0_3 | add | fabric | 0       |
+|    mul_16s_5s_21_1_1_U2    | 1   | yes    | mul_ln51 | mul | dsp    | 0       |
+|    acc_q0_3_fu_248_p2      |     |        | acc_q0_3 | add | fabric | 0       |
+|  + fir_Pipeline_MAC_Loop_1 | 2   |        |          |     |        |         |
+|    add_ln63_fu_159_p2      |     |        | add_ln63 | add | fabric | 0       |
+|    idx_fu_174_p2           |     |        | idx      | sub | fabric | 0       |
+|    mul_5s_16s_21_1_1_U11   | 1   | yes    | mul_ln68 | mul | dsp    | 0       |
+|    acc_i1_3_fu_239_p2      |     |        | acc_i1_3 | add | fabric | 0       |
+|    mul_16s_5s_21_1_1_U12   | 1   | yes    | mul_ln69 | mul | dsp    | 0       |
+|    acc_q1_3_fu_248_p2      |     |        | acc_q1_3 | add | fabric | 0       |
++----------------------------+-----+--------+----------+-----+--------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+-----------------------------------------------------------------------------+--------+------+------+------+--------+------------------------------------------------------------------------+------+---------+------------------+
-| Name                                                                        | Usage  | Type | BRAM | URAM | Pragma | Variable                                                               | Impl | Latency | Bitwidth, Depth, |
-|                                                                             |        |      |      |      |        |                                                                        |      |         | Banks            |
-+-----------------------------------------------------------------------------+--------+------+------+------+--------+------------------------------------------------------------------------+------+---------+------------------+
-| + fir                                                                       |        |      | 0    | 0    |        |                                                                        |      |         |                  |
-|  + fir_Pipeline_MAC_Loop                                                    |        |      | 0    | 0    |        |                                                                        |      |         |                  |
-|    fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c_3_U | rom_2p |      |      |      |        | fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c_3 | auto | 1       | 5, 32, 1         |
-|    fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c_2_U | rom_2p |      |      |      |        | fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c_2 | auto | 1       | 5, 32, 1         |
-|    fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c_1_U | rom_2p |      |      |      |        | fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c_1 | auto | 1       | 5, 32, 1         |
-|    fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c_U   | rom_2p |      |      |      |        | fir_stream_stream_axis_ap_int_0ul_0ul_0ul_unsigned_char_56_false_0_c   | auto | 1       | 5, 32, 1         |
-+-----------------------------------------------------------------------------+--------+------+------+------+--------+------------------------------------------------------------------------+------+---------+------------------+
++-------------+--------+------+------+------+--------+----------+------+---------+------------------+
+| Name        | Usage  | Type | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|             |        |      |      |      |        |          |      |         | Banks            |
++-------------+--------+------+------+------+--------+----------+------+---------+------------------+
+| + fir       |        |      | 2    | 0    |        |          |      |         |                  |
+|   shift_i_U | ram_2p |      | 1    |      | pragma | shift_i  | bram | 1       | 16, 128, 1       |
+|   shift_q_U | ram_2p |      | 1    |      | pragma | shift_q  | bram | 1       | 16, 128, 1       |
+|   c_U       | rom_1p |      |      |      |        | c        | auto | 1       | 5, 128, 1        |
++-------------+--------+------+------+------+--------+----------+------+---------+------------------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------------+--------------------------------+----------------------------+
-| Type            | Options                        | Location                   |
-+-----------------+--------------------------------+----------------------------+
-| interface       | axis port=x                    | fir.cpp:4 in fir, x        |
-| interface       | axis port=y                    | fir.cpp:5 in fir, y        |
-| interface       | ap_ctrl_none port=return       | fir.cpp:6 in fir, return   |
-| array_partition | variable=shift_i complete      | fir.cpp:21 in fir, shift_i |
-| array_partition | variable=shift_q complete      | fir.cpp:22 in fir, shift_q |
-| unroll          | factor = 8                     | fir.cpp:38 in fir          |
-| bind_op         | variable=acc_i op=mul impl=dsp | fir.cpp:39 in fir, acc_i   |
-| bind_op         | variable=acc_q op=mul impl=dsp | fir.cpp:40 in fir, acc_q   |
-+-----------------+--------------------------------+----------------------------+
++--------------+----------------------------------------+----------------------------+
+| Type         | Options                                | Location                   |
++--------------+----------------------------------------+----------------------------+
+| interface    | axis port=x                            | fir.cpp:4 in fir, x        |
+| interface    | axis port=y                            | fir.cpp:5 in fir, y        |
+| interface    | ap_ctrl_none port=return               | fir.cpp:6 in fir, return   |
+| bind_storage | variable=shift_i type=ram_2p impl=bram | fir.cpp:22 in fir, shift_i |
+| bind_storage | variable=shift_q type=ram_2p impl=bram | fir.cpp:23 in fir, shift_q |
+| pipeline     | II=1                                   | fir.cpp:46 in fir          |
+| bind_op      | variable=acc_i0 op=mul impl=dsp        | fir.cpp:47 in fir, acc_i0  |
+| bind_op      | variable=acc_q0 op=mul impl=dsp        | fir.cpp:48 in fir, acc_q0  |
+| pipeline     | II=1                                   | fir.cpp:64 in fir          |
+| bind_op      | variable=acc_i1 op=mul impl=dsp        | fir.cpp:65 in fir, acc_i1  |
+| bind_op      | variable=acc_q1 op=mul impl=dsp        | fir.cpp:66 in fir, acc_q1  |
++--------------+----------------------------------------+----------------------------+
 
 

@@ -1,19 +1,19 @@
 {
   "0": {
-    "basicblocks": 9,
+    "basicblocks": 15,
     "calls": "",
     "file": "fir.cpp",
     "fileloc": 3,
-    "instructions": 317,
+    "instructions": 468,
     "loads": {
-      "G": 5,
-      "L": 5
+      "G": 9,
+      "L": 8
     },
     "name": "fir",
     "stores": {
-      "G": 4,
-      "L": 3
+      "G": 7,
+      "L": 4
     },
-    "total_instructions": 3226
+    "total_instructions": 3997
   }
 }

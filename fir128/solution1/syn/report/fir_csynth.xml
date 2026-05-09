@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z010-clg400-1</Part>
 <TopModelName>fir</TopModelName>
-<TargetClockPeriod>15.00</TargetClockPeriod>
-<ClockUncertainty>4.05</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,18 +18,18 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>9.559</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>23</Best-caseLatency>
-<Average-caseLatency>23</Average-caseLatency>
-<Worst-caseLatency>23</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.345 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.345 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.345 us</Worst-caseRealTimeLatency>
-<Interval-min>24</Interval-min>
-<Interval-max>24</Interval-max>
+<Best-caseLatency>273</Best-caseLatency>
+<Average-caseLatency>273</Average-caseLatency>
+<Worst-caseLatency>273</Worst-caseLatency>
+<Best-caseRealTimeLatency>2.730 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>2.730 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>2.730 us</Worst-caseRealTimeLatency>
+<Interval-min>274</Interval-min>
+<Interval-max>274</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
@@ -40,10 +40,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>0</BRAM_18K>
-<DSP>16</DSP>
-<FF>8782</FF>
-<LUT>13862</LUT>
+<BRAM_18K>2</BRAM_18K>
+<DSP>4</DSP>
+<FF>565</FF>
+<LUT>644</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -86,7 +86,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>32</Bits>
+<Bits>64</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -134,7 +134,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>4</Bits>
+<Bits>8</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -146,7 +146,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>4</Bits>
+<Bits>8</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -158,7 +158,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>32</Bits>
+<Bits>64</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -206,7 +206,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>4</Bits>
+<Bits>8</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -218,7 +218,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>4</Bits>
+<Bits>8</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

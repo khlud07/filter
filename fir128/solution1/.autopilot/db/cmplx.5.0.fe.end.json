@@ -1,30 +1,49 @@
 {
+    "1": {
+        "name": "fir_Pipeline_MAC_Loop_0",
+        "file": "fir.cpp",
+        "fileloc": "41",
+        "instructions": "55",
+        "total_instructions": "55",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "3",
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
     "0": {
         "name": "fir",
         "file": "fir.cpp",
         "fileloc": "3",
-        "instructions": "672",
-        "total_instructions": "1160",
-        "calls": "1",
-        "basicblocks": "130",
+        "instructions": "51",
+        "total_instructions": "161",
+        "calls": "1 2",
+        "basicblocks": "1",
         "loads": {
-            "G": "257",
-            "L": "2"
+            "G": "1",
+            "L": "4"
         },
         "stores": {
-            "G": "257"
+            "G": "5"
         }
     },
-    "1": {
-        "name": "fir_Pipeline_MAC_Loop",
+    "2": {
+        "name": "fir_Pipeline_MAC_Loop_1",
         "file": "fir.cpp",
-        "fileloc": "33",
-        "instructions": "488",
-        "total_instructions": "488",
+        "fileloc": "59",
+        "instructions": "55",
+        "total_instructions": "55",
         "calls": "",
         "basicblocks": "4",
         "loads": {
-            "G": "8",
+            "G": "3",
             "L": "3"
         },
         "stores": {
