@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir_Pipeline_MAC_Loop'" level="0">
-<item name = "Date">Fri May  1 13:57:34 2026
+<item name = "Date">Sat May  9 15:18:02 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">fir128</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.712 ns, 2.70 ns</column>
+<column name="ap_clk">15.00 ns, 9.559 ns, 4.05 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="">20, 20, 0.300 us, 0.300 us, 20, 20, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- MAC_Loop">131, 131, 5, 1, 1, 128, yes</column>
+<column name="- MAC_Loop">18, 18, 3, 1, 1, 16, yes</column>
 </table>
 </item>
 </section>

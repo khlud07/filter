@@ -3,32 +3,32 @@
         "name": "fir",
         "file": "fir.cpp",
         "fileloc": "3",
-        "instructions": "29",
-        "total_instructions": "65",
+        "instructions": "672",
+        "total_instructions": "1160",
         "calls": "1",
-        "basicblocks": "1",
+        "basicblocks": "130",
         "loads": {
-            "G": "1",
-            "L": "1"
+            "G": "257",
+            "L": "2"
         },
         "stores": {
-            "G": "2"
+            "G": "257"
         }
     },
     "1": {
         "name": "fir_Pipeline_MAC_Loop",
         "file": "fir.cpp",
-        "fileloc": "25",
-        "instructions": "36",
-        "total_instructions": "36",
+        "fileloc": "33",
+        "instructions": "488",
+        "total_instructions": "488",
         "calls": "",
         "basicblocks": "4",
         "loads": {
-            "G": "2",
-            "L": "2"
+            "G": "8",
+            "L": "3"
         },
         "stores": {
-            "L": "4"
+            "L": "6"
         },
         "loops": {
             "L": "1"

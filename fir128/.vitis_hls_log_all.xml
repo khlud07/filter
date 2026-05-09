@@ -3,22 +3,24 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-01T12:57:34.910+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="fir128" solutionName="solution1" date="2026-05-01T12:57:34.903+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_87' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.180+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_265' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.119+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_88' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.117+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_264' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.115+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_89' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.114+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_263' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.112+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_90' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.110+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_262' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.108+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_91' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.107+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_261' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.105+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_92' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.103+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ3firRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_E7sh_260' is power-on initialization." projectName="fir128" solutionName="solution1" date="2026-05-09T14:18:03.101+0200" type="Warning"/>
       </synLog>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

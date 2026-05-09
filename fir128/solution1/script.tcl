@@ -11,8 +11,8 @@ add_files fir.h
 add_files -tb fir_test.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z010-clg400-1}
-create_clock -period 10 -name default
-config_export -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+create_clock -period 15 -name default
+config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog
 source "./fir128/solution1/directives.tcl"
 csim_design
 csynth_design

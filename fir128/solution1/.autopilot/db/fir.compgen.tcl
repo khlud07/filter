@@ -1,10 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler fir_shift_reg_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -17,14 +12,14 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 8 \
+    id 299 \
     name y_V_data_V \
     reset_level 0 \
     sync_rst true \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TDATA { O 16 vector } } \
+    ports { y_TDATA { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_data_V'"
@@ -36,14 +31,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 9 \
+    id 300 \
     name y_V_keep_V \
     reset_level 0 \
     sync_rst true \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TKEEP { O 2 vector } } \
+    ports { y_TKEEP { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_keep_V'"
@@ -55,14 +50,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 10 \
+    id 301 \
     name y_V_strb_V \
     reset_level 0 \
     sync_rst true \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TSTRB { O 2 vector } } \
+    ports { y_TSTRB { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_strb_V'"
@@ -74,7 +69,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 11 \
+    id 302 \
     name y_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -93,14 +88,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 12 \
+    id 303 \
     name x_V_data_V \
     reset_level 0 \
     sync_rst true \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TDATA { I 16 vector } } \
+    ports { x_TDATA { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_data_V'"
@@ -112,14 +107,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 13 \
+    id 304 \
     name x_V_keep_V \
     reset_level 0 \
     sync_rst true \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TKEEP { I 2 vector } } \
+    ports { x_TKEEP { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_keep_V'"
@@ -131,14 +126,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 14 \
+    id 305 \
     name x_V_strb_V \
     reset_level 0 \
     sync_rst true \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TSTRB { I 2 vector } } \
+    ports { x_TSTRB { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_strb_V'"
@@ -150,7 +145,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 15 \
+    id 306 \
     name x_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -216,7 +211,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 16
+set ID 307
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
@@ -239,7 +234,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 17
+set ID 308
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
@@ -262,7 +257,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 18
+set ID 309
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
@@ -285,7 +280,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 19
+set ID 310
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
@@ -308,7 +303,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 20
+set ID 311
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
@@ -331,7 +326,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 21
+set ID 312
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
@@ -354,7 +349,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 22
+set ID 313
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
@@ -377,7 +372,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 23
+set ID 314
 set RegSliceName fir_regslice_both
 set RegSliceInstName fir_regslice_both_U
 set CoreName ap_simcore_fir_regslice_both
