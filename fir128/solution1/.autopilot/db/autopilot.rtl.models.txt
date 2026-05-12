@@ -1,9 +1,8 @@
-fir_mul_5s_16s_21_1_1
-fir_mul_16s_5s_21_1_1
+fir_mac_muladd_16s_16s_32ns_32_4_1
 fir_flow_control_loop_pipe_sequential_init
 fir_flow_control_loop_pipe_sequential_init
 fir_shift_i_RAM_2P_BRAM_1R1W
-fir_c_ROM_AUTO_1R
+fir_control_s_axi
 fir_regslice_both
 fir_regslice_both
 fir_regslice_both

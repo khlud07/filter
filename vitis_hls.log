@@ -1,10 +1,10 @@
 INFO: [HLS 200-10] Running '/home/paket/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'paket' on host 'paketpc' (Linux_x86_64 version 6.8.0-111-generic) on Sat May 09 16:30:50 EEST 2026
+INFO: [HLS 200-10] For user 'paket' on host 'paketpc' (Linux_x86_64 version 6.8.0-111-generic) on Tue May 12 23:58:45 EEST 2026
 INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128'
 INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
-Sourcing Tcl script '/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/csynth.tcl'
-INFO: [HLS 200-1510] Running: source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/csynth.tcl
+Sourcing Tcl script '/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/cosim.tcl
 INFO: [HLS 200-1510] Running: open_project fir128 
 INFO: [HLS 200-10] Opening project '/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128'.
 INFO: [HLS 200-1510] Running: set_top fir 
@@ -17,127 +17,1951 @@ INFO: [HLS 200-10] Adding test bench file 'fir_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg225-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
 INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z010clg225-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
 INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 258.336 MB.
-INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.73 seconds. CPU system time: 0.31 seconds. Elapsed time: 2.04 seconds; current allocated memory: 259.484 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 3,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 207 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 138 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 139 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.68 seconds. CPU system time: 0.25 seconds. Elapsed time: 6.66 seconds; current allocated memory: 262.117 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.117 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 262.270 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 262.312 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 284.973 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 295.145 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'fir' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_0' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_0'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'MAC_Loop_0'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 296.684 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 296.684 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'fir_Pipeline_MAC_Loop_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'MAC_Loop_1'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 297.395 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.395 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'fir' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.828 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.828 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_0' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_0' pipeline 'MAC_Loop_0' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_0'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.828 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_1' pipeline 'MAC_Loop_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 299.406 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_keep_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_strb_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_keep_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_strb_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_none'.
-WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
-INFO: [RTMG 210-278] Implementing memory 'fir_shift_i_RAM_2P_BRAM_1R1W' using block RAMs.
-INFO: [RTMG 210-279] Implementing memory 'fir_c_ROM_AUTO_1R' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 301.199 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 305.625 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 314.594 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for fir.
-INFO: [VLOG 209-307] Generating Verilog RTL for fir.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 148.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 0.62 seconds. Elapsed time: 9.34 seconds; current allocated memory: 56.496 MB.
-INFO: [HLS 200-112] Total CPU user time: 4.99 seconds. Total CPU system time: 0.77 seconds. Total elapsed time: 12.46 seconds; peak allocated memory: 314.832 MB.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/paket/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_fir.cpp
+   Compiling apatb_fir_util.cpp
+   Compiling fir.cpp_pre.cpp.tb.cpp
+   Compiling fir_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_fir_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+0 1000
+1 1080
+2 78
+3 -192
+4 297
+5 -256
+6 -1179
+7 -651
+8 56
+9 -624
+10 -895
+11 -127
+12 -410
+13 -906
+14 -212
+15 -357
+16 -934
+17 -190
+18 -355
+19 -984
+20 -113
+21 -435
+22 -985
+23 9
+24 -643
+25 -824
+26 46
+27 -942
+28 -447
+29 -219
+30 -1004
+31 -47
+32 -753
+33 -617
+34 -347
+35 -597
+36 725
+37 79
+38 817
+39 549
+40 509
+41 511
+42 149
+43 1134
+44 -13
+45 861
+46 137
+47 1057
+48 -54
+49 977
+50 398
+51 414
+52 -560
+53 -134
+54 -820
+55 -422
+56 -822
+57 28
+58 -883
+59 -256
+60 -895
+61 139
+62 -1114
+63 -94
+64 -787
+65 -352
+66 -764
+67 -319
+68 700
+69 -134
+70 1064
+71 282
+72 640
+73 413
+74 68
+75 1140
+76 -47
+77 453
+78 780
+79 48
+80 852
+81 385
+82 454
+83 639
+84 -771
+85 -402
+86 -106
+87 -1177
+88 -386
+89 134
+90 -923
+91 -658
+92 105
+93 -771
+94 -775
+95 29
+96 -633
+97 -981
+98 -304
+99 42
+100 -60
+101 202
+102 1107
+103 724
+104 -126
+105 391
+106 957
+107 747
+108 -333
+109 259
+110 1364
+111 627
+112 -240
+113 -17
+114 1184
+115 1206
+116 59
+117 -78
+118 226
+119 1027
+120 1282
+121 423
+122 1
+123 -223
+124 539
+125 1099
+126 1346
+127 1240
+128 -1139
+129 -1865
+130 -638
+131 290
+132 914
+133 1893
+134 2252
+135 -612
+136 -3277
+137 -2602
+138 -1806
+139 -561
+140 2394
+141 4914
+142 3919
+143 2108
+144 784
+145 -2672
+146 -4858
+147 -5016
+148 -5636
+149 -4155
+150 -1631
+151 8
+152 2767
+153 4159
+154 4627
+155 6805
+156 6973
+157 6294
+158 6063
+159 4220
+160 4054
+161 3459
+162 3128
+163 2590
+164 -452
+165 -1496
+166 -3329
+167 -3579
+168 -3648
+169 -4154
+170 -5632
+171 -10157
+172 -13215
+173 -16836
+174 -17005
+175 -17845
+176 -15568
+177 -14687
+178 -12199
+179 -9953
+180 -6309
+181 -4947
+182 -4894
+183 -8038
+184 -12045
+185 -17780
+186 -19768
+187 -19931
+188 -15900
+189 -12995
+190 -8691
+191 -7970
+192 -7486
+193 -8966
+194 -8507
+195 -6965
+196 -4858
+197 -72
+198 3076
+199 7770
+200 11466
+201 15965
+202 18946
+203 17751
+204 17256
+205 15860
+206 16036
+207 16806
+208 14466
+209 12741
+210 10308
+211 6617
+212 3277
+213 -2073
+214 -6550
+215 -9155
+216 -14151
+217 -17817
+218 -16580
+219 -15254
+220 -15266
+221 -14696
+222 -15524
+223 -17788
+224 -17239
+225 -13460
+226 -9730
+227 -5817
+228 -928
+229 1999
+230 4055
+231 9681
+232 15141
+233 16339
+234 16870
+235 16640
+236 14809
+237 14805
+238 15331
+239 16479
+240 17912
+241 14387
+242 9564
+243 5679
+244 1191
+245 -1540
+246 -6308
+247 -10942
+248 -13578
+249 -15464
+250 -14516
+251 -15607
+252 -16376
+253 -18030
+254 -19009
+255 -17923
+256 -15802
+257 -10559
+258 -7358
+259 -2886
+260 -501
+261 3377
+262 5016
+263 8398
+264 10158
+265 11500
+266 10472
+267 10385
+268 9918
+269 11793
+270 13753
+271 16926
+272 16777
+273 16234
+274 13325
+275 12600
+276 10246
+277 10701
+278 10234
+279 10630
+280 10214
+281 10109
+282 11770
+283 11137
+284 11653
+285 9257
+286 6546
+287 4038
+288 1975
+289 3292
+290 2923
+291 2713
+292 2250
+293 -457
+294 -1623
+295 -2771
+296 -3031
+297 -1819
+298 -2593
+299 -2765
+300 -1854
+301 -2168
+302 -850
+303 1472
+304 1512
+305 1192
+306 2047
+307 1243
+308 -212
+309 -357
+310 -1130
+311 -1952
+312 -1066
+313 535
+314 1153
+315 632
+316 761
+317 347
+318 -1240
+319 -1507
+320 -162
+321 1528
+322 754
+323 -556
+324 -345
+325 -136
+326 -113
+327 -131
+328 488
+329 620
+330 -449
+331 -527
+332 -136
+333 196
+334 213
+335 -168
+336 410
+337 208
+338 -631
+339 -1225
+340 -159
+341 1915
+342 1286
+343 -547
+344 -1167
+345 -1260
+346 -1358
+347 -368
+348 2670
+349 3488
+350 1055
+351 -457
+352 -1978
+353 -4032
+354 -4071
+355 -913
+356 1560
+357 2955
+358 5378
+359 5204
+360 3272
+361 2030
+362 -975
+363 -3699
+364 -4841
+365 -6451
+366 -6154
+367 -5416
+368 -5989
+369 -4164
+370 -2270
+371 -1134
+372 965
+373 994
+374 1701
+375 2141
+376 2984
+377 5321
+378 4851
+379 5075
+380 3765
+381 3065
+382 3366
+383 4937
+384 8544
+385 9856
+386 11732
+387 11253
+388 13012
+389 13328
+390 16311
+391 17750
+392 19101
+393 18302
+394 18316
+395 17236
+396 16882
+397 15758
+398 15923
+399 14087
+400 13762
+401 12396
+402 13026
+403 10755
+404 9422
+405 6150
+406 4912
+407 3610
+408 3652
+409 3168
+410 -898
+411 -4258
+412 -8605
+413 -9775
+414 -10248
+415 -9272
+416 -6809
+417 -6907
+418 -6381
+419 -8183
+420 -11088
+421 -11323
+422 -11107
+423 -8960
+424 -7028
+425 -5921
+426 -517
+427 5673
+428 9053
+429 12185
+430 13460
+431 11373
+432 8000
+433 4733
+434 4162
+435 7074
+436 9811
+437 11354
+438 12560
+439 11431
+440 7776
+441 3667
+442 -711
+443 -5035
+444 -9077
+445 -12407
+446 -12304
+447 -10310
+448 -9431
+449 -6397
+450 -3354
+451 -5536
+452 -9230
+453 -12571
+454 -13820
+455 -10614
+456 -7849
+457 -3864
+458 1760
+459 5555
+460 9430
+461 10180
+462 10375
+463 10514
+464 9288
+465 9192
+466 6988
+467 6750
+468 6710
+469 8851
+470 10157
+471 9436
+472 7997
+473 4099
+474 901
+475 -3411
+476 -4459
+477 -7128
+478 -7307
+479 -8420
+480 -6904
+481 -7789
+482 -7558
+483 -11016
+484 -14284
+485 -19868
+486 -21825
+487 -22795
+488 -20846
+489 -18872
+490 -15924
+491 -13559
+492 -12511
+493 -10222
+494 -9513
+495 -8003
+496 -9510
+497 -9829
+498 -10757
+499 -10861
+500 -8095
+501 -6483
+502 -4276
+503 -4590
+504 -5453
+505 -4948
+506 -5440
+507 -3813
+508 -1294
+509 -659
+510 327
+511 808
+512 664
+513 2044
+514 2665
+515 2217
+516 2360
+517 756
+518 -1062
+519 -448
+520 -1214
+521 -2275
+522 -1086
+523 239
+524 294
+525 1018
+526 1982
+527 702
+528 -1168
+529 -1053
+530 -330
+531 -411
+532 19
+533 1119
+534 1446
+535 -549
+536 -1793
+537 -589
+538 1044
+539 1160
+540 -208
+541 -1168
+542 -510
+543 716
+544 887
+545 -294
+546 -1114
+547 -421
+548 810
+549 1317
+550 -249
+551 -1433
+552 -813
+553 595
+554 1094
+555 664
+556 495
+557 -59
+558 -1645
+559 -2277
+560 -270
+561 2345
+562 2608
+563 1723
+564 941
+565 -1880
+566 -4162
+567 -3666
+568 -2030
+569 -26
+570 3106
+571 4905
+572 4674
+573 4510
+574 2709
+575 -665
+576 -2256
+577 -4453
+578 -6634
+579 -5532
+580 -5967
+581 -5979
+582 -4278
+583 -3556
+584 -1026
+585 256
+586 614
+587 2047
+588 1274
+589 2999
+590 4499
+591 4942
+592 5441
+593 3598
+594 3767
+595 2492
+596 4556
+597 7111
+598 9588
+599 11314
+Comparing against output data
+*******************************************
+PASS: The output matches the golden output!
+*******************************************
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 300
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/paket/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_fir_top glbl -Oenable_linking_all_libraries -prj fir.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_16 -L floating_point_v7_0_21 --lib ieee_proposed=./ieee_proposed -s fir 
+Multi-threading is on. Using 10 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_regslice_both
+INFO: [VRFC 10-311] analyzing module fir_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_control_s_axi
+INFO: [VRFC 10-311] analyzing module fir_control_s_axi_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_axi_s_y.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_y
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_mac_muladd_16s_16s_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_16s_16s_32ns_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_16s_16s_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_fir_Pipeline_MAC_Loop_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_fir_Pipeline_MAC_Loop_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_shift_i_RAM_2P_BRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_shift_i_RAM_2P_BRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_axi_s_x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_x
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_fir_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_fir_Pipeline_MAC_Loop_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_fir_Pipeline_MAC_Loop_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9543] actual bit length 16 differs from formal bit length 32 for port 'd0' [/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir_control_s_axi.v:141]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.fir_shift_i_RAM_2P_BRAM_1R1W
+Compiling module xil_defaultlib.fir_mac_muladd_16s_16s_32ns_32_4...
+Compiling module xil_defaultlib.fir_mac_muladd_16s_16s_32ns_32_4...
+Compiling module xil_defaultlib.fir_flow_control_loop_pipe_seque...
+Compiling module xil_defaultlib.fir_fir_Pipeline_MAC_Loop_0
+Compiling module xil_defaultlib.fir_fir_Pipeline_MAC_Loop_1
+Compiling module xil_defaultlib.fir_control_s_axi_ram(MEM_TYPE="...
+Compiling module xil_defaultlib.fir_control_s_axi
+Compiling module xil_defaultlib.fir_regslice_both(DataWidth=64)
+Compiling module xil_defaultlib.fir_regslice_both(DataWidth=8)
+Compiling module xil_defaultlib.fir_regslice_both(DataWidth=1)
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.fifo(DEPTH=2,WIDTH=64)
+Compiling module xil_defaultlib.fifo(DEPTH=2)
+Compiling module xil_defaultlib.fifo(DEPTH=2,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_y
+Compiling module xil_defaultlib.AESL_axi_s_x
+Compiling module xil_defaultlib.AESL_axi_slave_control
+WARNING: [XSIM 43-3373] "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_axi_slave_control.v" Line 552. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_axi_slave_control.v" Line 561. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/AESL_axi_slave_control.v" Line 602. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_fir_top
+Compiling module work.glbl
+Built simulation snapshot fir
+
+****** xsim v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/fir/xsim_script.tcl
+# xsim {fir} -autoloadwcfg -tclbatch {fir.tcl}
+Time resolution is 1 ps
+source fir.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 300 [0.00%] @ "125000"
+// RTL Simulation : 1 / 300 [0.00%] @ "9955000"
+// RTL Simulation : 2 / 300 [0.00%] @ "12805000"
+// RTL Simulation : 3 / 300 [0.00%] @ "15655000"
+// RTL Simulation : 4 / 300 [0.00%] @ "18505000"
+// RTL Simulation : 5 / 300 [0.00%] @ "21355000"
+// RTL Simulation : 6 / 300 [0.00%] @ "24205000"
+// RTL Simulation : 7 / 300 [0.00%] @ "27055000"
+// RTL Simulation : 8 / 300 [0.00%] @ "29905000"
+// RTL Simulation : 9 / 300 [0.00%] @ "32755000"
+// RTL Simulation : 10 / 300 [0.00%] @ "35605000"
+// RTL Simulation : 11 / 300 [0.00%] @ "38455000"
+// RTL Simulation : 12 / 300 [0.00%] @ "41305000"
+// RTL Simulation : 13 / 300 [0.00%] @ "44155000"
+// RTL Simulation : 14 / 300 [0.00%] @ "47005000"
+// RTL Simulation : 15 / 300 [0.00%] @ "49855000"
+// RTL Simulation : 16 / 300 [0.00%] @ "52705000"
+// RTL Simulation : 17 / 300 [0.00%] @ "55555000"
+// RTL Simulation : 18 / 300 [0.00%] @ "58405000"
+// RTL Simulation : 19 / 300 [0.00%] @ "61255000"
+// RTL Simulation : 20 / 300 [0.00%] @ "64105000"
+// RTL Simulation : 21 / 300 [0.00%] @ "66955000"
+// RTL Simulation : 22 / 300 [0.00%] @ "69805000"
+// RTL Simulation : 23 / 300 [0.00%] @ "72655000"
+// RTL Simulation : 24 / 300 [0.00%] @ "75505000"
+// RTL Simulation : 25 / 300 [0.00%] @ "78355000"
+// RTL Simulation : 26 / 300 [0.00%] @ "81205000"
+// RTL Simulation : 27 / 300 [0.00%] @ "84055000"
+// RTL Simulation : 28 / 300 [0.00%] @ "86905000"
+// RTL Simulation : 29 / 300 [0.00%] @ "89755000"
+// RTL Simulation : 30 / 300 [0.00%] @ "92605000"
+// RTL Simulation : 31 / 300 [0.00%] @ "95455000"
+// RTL Simulation : 32 / 300 [0.00%] @ "98305000"
+// RTL Simulation : 33 / 300 [0.00%] @ "101155000"
+// RTL Simulation : 34 / 300 [0.00%] @ "104005000"
+// RTL Simulation : 35 / 300 [0.00%] @ "106855000"
+// RTL Simulation : 36 / 300 [0.00%] @ "109705000"
+// RTL Simulation : 37 / 300 [0.00%] @ "112555000"
+// RTL Simulation : 38 / 300 [0.00%] @ "115405000"
+// RTL Simulation : 39 / 300 [0.00%] @ "118255000"
+// RTL Simulation : 40 / 300 [0.00%] @ "121105000"
+// RTL Simulation : 41 / 300 [0.00%] @ "123955000"
+// RTL Simulation : 42 / 300 [0.00%] @ "126805000"
+// RTL Simulation : 43 / 300 [0.00%] @ "129655000"
+// RTL Simulation : 44 / 300 [0.00%] @ "132505000"
+// RTL Simulation : 45 / 300 [0.00%] @ "135355000"
+// RTL Simulation : 46 / 300 [0.00%] @ "138205000"
+// RTL Simulation : 47 / 300 [0.00%] @ "141055000"
+// RTL Simulation : 48 / 300 [0.00%] @ "143905000"
+// RTL Simulation : 49 / 300 [0.00%] @ "146755000"
+// RTL Simulation : 50 / 300 [0.00%] @ "149605000"
+// RTL Simulation : 51 / 300 [0.00%] @ "152455000"
+// RTL Simulation : 52 / 300 [0.00%] @ "155305000"
+// RTL Simulation : 53 / 300 [0.00%] @ "158155000"
+// RTL Simulation : 54 / 300 [0.00%] @ "161005000"
+// RTL Simulation : 55 / 300 [0.00%] @ "163855000"
+// RTL Simulation : 56 / 300 [0.00%] @ "166705000"
+// RTL Simulation : 57 / 300 [0.00%] @ "169555000"
+// RTL Simulation : 58 / 300 [0.00%] @ "172405000"
+// RTL Simulation : 59 / 300 [0.00%] @ "175255000"
+// RTL Simulation : 60 / 300 [0.00%] @ "178105000"
+// RTL Simulation : 61 / 300 [0.00%] @ "180955000"
+// RTL Simulation : 62 / 300 [0.00%] @ "183805000"
+// RTL Simulation : 63 / 300 [0.00%] @ "186655000"
+// RTL Simulation : 64 / 300 [0.00%] @ "189505000"
+// RTL Simulation : 65 / 300 [0.00%] @ "192355000"
+// RTL Simulation : 66 / 300 [0.00%] @ "195205000"
+// RTL Simulation : 67 / 300 [0.00%] @ "198055000"
+// RTL Simulation : 68 / 300 [0.00%] @ "200905000"
+// RTL Simulation : 69 / 300 [0.00%] @ "203755000"
+// RTL Simulation : 70 / 300 [0.00%] @ "206605000"
+// RTL Simulation : 71 / 300 [0.00%] @ "209455000"
+// RTL Simulation : 72 / 300 [0.00%] @ "212305000"
+// RTL Simulation : 73 / 300 [0.00%] @ "215155000"
+// RTL Simulation : 74 / 300 [0.00%] @ "218005000"
+// RTL Simulation : 75 / 300 [0.00%] @ "220855000"
+// RTL Simulation : 76 / 300 [0.00%] @ "223705000"
+// RTL Simulation : 77 / 300 [0.00%] @ "226555000"
+// RTL Simulation : 78 / 300 [0.00%] @ "229405000"
+// RTL Simulation : 79 / 300 [0.00%] @ "232255000"
+// RTL Simulation : 80 / 300 [0.00%] @ "235105000"
+// RTL Simulation : 81 / 300 [0.00%] @ "237955000"
+// RTL Simulation : 82 / 300 [0.00%] @ "240805000"
+// RTL Simulation : 83 / 300 [0.00%] @ "243655000"
+// RTL Simulation : 84 / 300 [0.00%] @ "246505000"
+// RTL Simulation : 85 / 300 [0.00%] @ "249355000"
+// RTL Simulation : 86 / 300 [0.00%] @ "252205000"
+// RTL Simulation : 87 / 300 [0.00%] @ "255055000"
+// RTL Simulation : 88 / 300 [0.00%] @ "257905000"
+// RTL Simulation : 89 / 300 [0.00%] @ "260755000"
+// RTL Simulation : 90 / 300 [0.00%] @ "263605000"
+// RTL Simulation : 91 / 300 [0.00%] @ "266455000"
+// RTL Simulation : 92 / 300 [0.00%] @ "269305000"
+// RTL Simulation : 93 / 300 [0.00%] @ "272155000"
+// RTL Simulation : 94 / 300 [0.00%] @ "275005000"
+// RTL Simulation : 95 / 300 [0.00%] @ "277855000"
+// RTL Simulation : 96 / 300 [0.00%] @ "280705000"
+// RTL Simulation : 97 / 300 [0.00%] @ "283555000"
+// RTL Simulation : 98 / 300 [0.00%] @ "286405000"
+// RTL Simulation : 99 / 300 [0.00%] @ "289255000"
+// RTL Simulation : 100 / 300 [0.00%] @ "292105000"
+// RTL Simulation : 101 / 300 [0.00%] @ "294955000"
+// RTL Simulation : 102 / 300 [0.00%] @ "297805000"
+// RTL Simulation : 103 / 300 [0.00%] @ "300655000"
+// RTL Simulation : 104 / 300 [0.00%] @ "303505000"
+// RTL Simulation : 105 / 300 [0.00%] @ "306355000"
+// RTL Simulation : 106 / 300 [0.00%] @ "309205000"
+// RTL Simulation : 107 / 300 [0.00%] @ "312055000"
+// RTL Simulation : 108 / 300 [0.00%] @ "314905000"
+// RTL Simulation : 109 / 300 [0.00%] @ "317755000"
+// RTL Simulation : 110 / 300 [0.00%] @ "320605000"
+// RTL Simulation : 111 / 300 [0.00%] @ "323455000"
+// RTL Simulation : 112 / 300 [0.00%] @ "326305000"
+// RTL Simulation : 113 / 300 [0.00%] @ "329155000"
+// RTL Simulation : 114 / 300 [0.00%] @ "332005000"
+// RTL Simulation : 115 / 300 [0.00%] @ "334855000"
+// RTL Simulation : 116 / 300 [0.00%] @ "337705000"
+// RTL Simulation : 117 / 300 [0.00%] @ "340555000"
+// RTL Simulation : 118 / 300 [0.00%] @ "343405000"
+// RTL Simulation : 119 / 300 [0.00%] @ "346255000"
+// RTL Simulation : 120 / 300 [0.00%] @ "349105000"
+// RTL Simulation : 121 / 300 [0.00%] @ "351955000"
+// RTL Simulation : 122 / 300 [0.00%] @ "354805000"
+// RTL Simulation : 123 / 300 [0.00%] @ "357655000"
+// RTL Simulation : 124 / 300 [0.00%] @ "360505000"
+// RTL Simulation : 125 / 300 [0.00%] @ "363355000"
+// RTL Simulation : 126 / 300 [0.00%] @ "366205000"
+// RTL Simulation : 127 / 300 [0.00%] @ "369055000"
+// RTL Simulation : 128 / 300 [0.00%] @ "371905000"
+// RTL Simulation : 129 / 300 [0.00%] @ "374755000"
+// RTL Simulation : 130 / 300 [0.00%] @ "377605000"
+// RTL Simulation : 131 / 300 [0.00%] @ "380455000"
+// RTL Simulation : 132 / 300 [0.00%] @ "383305000"
+// RTL Simulation : 133 / 300 [0.00%] @ "386155000"
+// RTL Simulation : 134 / 300 [0.00%] @ "389005000"
+// RTL Simulation : 135 / 300 [0.00%] @ "391855000"
+// RTL Simulation : 136 / 300 [0.00%] @ "394705000"
+// RTL Simulation : 137 / 300 [0.00%] @ "397555000"
+// RTL Simulation : 138 / 300 [0.00%] @ "400405000"
+// RTL Simulation : 139 / 300 [0.00%] @ "403255000"
+// RTL Simulation : 140 / 300 [0.00%] @ "406105000"
+// RTL Simulation : 141 / 300 [0.00%] @ "408955000"
+// RTL Simulation : 142 / 300 [0.00%] @ "411805000"
+// RTL Simulation : 143 / 300 [0.00%] @ "414655000"
+// RTL Simulation : 144 / 300 [0.00%] @ "417505000"
+// RTL Simulation : 145 / 300 [0.00%] @ "420355000"
+// RTL Simulation : 146 / 300 [0.00%] @ "423205000"
+// RTL Simulation : 147 / 300 [0.00%] @ "426055000"
+// RTL Simulation : 148 / 300 [0.00%] @ "428905000"
+// RTL Simulation : 149 / 300 [0.00%] @ "431755000"
+// RTL Simulation : 150 / 300 [0.00%] @ "434605000"
+// RTL Simulation : 151 / 300 [0.00%] @ "437455000"
+// RTL Simulation : 152 / 300 [0.00%] @ "440305000"
+// RTL Simulation : 153 / 300 [0.00%] @ "443155000"
+// RTL Simulation : 154 / 300 [0.00%] @ "446005000"
+// RTL Simulation : 155 / 300 [0.00%] @ "448855000"
+// RTL Simulation : 156 / 300 [0.00%] @ "451705000"
+// RTL Simulation : 157 / 300 [0.00%] @ "454555000"
+// RTL Simulation : 158 / 300 [0.00%] @ "457405000"
+// RTL Simulation : 159 / 300 [0.00%] @ "460255000"
+// RTL Simulation : 160 / 300 [0.00%] @ "463105000"
+// RTL Simulation : 161 / 300 [0.00%] @ "465955000"
+// RTL Simulation : 162 / 300 [0.00%] @ "468805000"
+// RTL Simulation : 163 / 300 [0.00%] @ "471655000"
+// RTL Simulation : 164 / 300 [0.00%] @ "474505000"
+// RTL Simulation : 165 / 300 [0.00%] @ "477355000"
+// RTL Simulation : 166 / 300 [0.00%] @ "480205000"
+// RTL Simulation : 167 / 300 [0.00%] @ "483055000"
+// RTL Simulation : 168 / 300 [0.00%] @ "485905000"
+// RTL Simulation : 169 / 300 [0.00%] @ "488755000"
+// RTL Simulation : 170 / 300 [0.00%] @ "491605000"
+// RTL Simulation : 171 / 300 [0.00%] @ "494455000"
+// RTL Simulation : 172 / 300 [0.00%] @ "497305000"
+// RTL Simulation : 173 / 300 [0.00%] @ "500155000"
+// RTL Simulation : 174 / 300 [0.00%] @ "503005000"
+// RTL Simulation : 175 / 300 [0.00%] @ "505855000"
+// RTL Simulation : 176 / 300 [0.00%] @ "508705000"
+// RTL Simulation : 177 / 300 [0.00%] @ "511555000"
+// RTL Simulation : 178 / 300 [0.00%] @ "514405000"
+// RTL Simulation : 179 / 300 [0.00%] @ "517255000"
+// RTL Simulation : 180 / 300 [0.00%] @ "520105000"
+// RTL Simulation : 181 / 300 [0.00%] @ "522955000"
+// RTL Simulation : 182 / 300 [0.00%] @ "525805000"
+// RTL Simulation : 183 / 300 [0.00%] @ "528655000"
+// RTL Simulation : 184 / 300 [0.00%] @ "531505000"
+// RTL Simulation : 185 / 300 [0.00%] @ "534355000"
+// RTL Simulation : 186 / 300 [0.00%] @ "537205000"
+// RTL Simulation : 187 / 300 [0.00%] @ "540055000"
+// RTL Simulation : 188 / 300 [0.00%] @ "542905000"
+// RTL Simulation : 189 / 300 [0.00%] @ "545755000"
+// RTL Simulation : 190 / 300 [0.00%] @ "548605000"
+// RTL Simulation : 191 / 300 [0.00%] @ "551455000"
+// RTL Simulation : 192 / 300 [0.00%] @ "554305000"
+// RTL Simulation : 193 / 300 [0.00%] @ "557155000"
+// RTL Simulation : 194 / 300 [0.00%] @ "560005000"
+// RTL Simulation : 195 / 300 [0.00%] @ "562855000"
+// RTL Simulation : 196 / 300 [0.00%] @ "565705000"
+// RTL Simulation : 197 / 300 [0.00%] @ "568555000"
+// RTL Simulation : 198 / 300 [0.00%] @ "571405000"
+// RTL Simulation : 199 / 300 [0.00%] @ "574255000"
+// RTL Simulation : 200 / 300 [0.00%] @ "577105000"
+// RTL Simulation : 201 / 300 [0.00%] @ "579955000"
+// RTL Simulation : 202 / 300 [0.00%] @ "582805000"
+// RTL Simulation : 203 / 300 [0.00%] @ "585655000"
+// RTL Simulation : 204 / 300 [0.00%] @ "588505000"
+// RTL Simulation : 205 / 300 [0.00%] @ "591355000"
+// RTL Simulation : 206 / 300 [0.00%] @ "594205000"
+// RTL Simulation : 207 / 300 [0.00%] @ "597055000"
+// RTL Simulation : 208 / 300 [0.00%] @ "599905000"
+// RTL Simulation : 209 / 300 [0.00%] @ "602755000"
+// RTL Simulation : 210 / 300 [0.00%] @ "605605000"
+// RTL Simulation : 211 / 300 [0.00%] @ "608455000"
+// RTL Simulation : 212 / 300 [0.00%] @ "611305000"
+// RTL Simulation : 213 / 300 [0.00%] @ "614155000"
+// RTL Simulation : 214 / 300 [0.00%] @ "617005000"
+// RTL Simulation : 215 / 300 [0.00%] @ "619855000"
+// RTL Simulation : 216 / 300 [0.00%] @ "622705000"
+// RTL Simulation : 217 / 300 [0.00%] @ "625555000"
+// RTL Simulation : 218 / 300 [0.00%] @ "628405000"
+// RTL Simulation : 219 / 300 [0.00%] @ "631255000"
+// RTL Simulation : 220 / 300 [0.00%] @ "634105000"
+// RTL Simulation : 221 / 300 [0.00%] @ "636955000"
+// RTL Simulation : 222 / 300 [0.00%] @ "639805000"
+// RTL Simulation : 223 / 300 [0.00%] @ "642655000"
+// RTL Simulation : 224 / 300 [0.00%] @ "645505000"
+// RTL Simulation : 225 / 300 [0.00%] @ "648355000"
+// RTL Simulation : 226 / 300 [0.00%] @ "651205000"
+// RTL Simulation : 227 / 300 [0.00%] @ "654055000"
+// RTL Simulation : 228 / 300 [0.00%] @ "656905000"
+// RTL Simulation : 229 / 300 [0.00%] @ "659755000"
+// RTL Simulation : 230 / 300 [0.00%] @ "662605000"
+// RTL Simulation : 231 / 300 [0.00%] @ "665455000"
+// RTL Simulation : 232 / 300 [0.00%] @ "668305000"
+// RTL Simulation : 233 / 300 [0.00%] @ "671155000"
+// RTL Simulation : 234 / 300 [0.00%] @ "674005000"
+// RTL Simulation : 235 / 300 [0.00%] @ "676855000"
+// RTL Simulation : 236 / 300 [0.00%] @ "679705000"
+// RTL Simulation : 237 / 300 [0.00%] @ "682555000"
+// RTL Simulation : 238 / 300 [0.00%] @ "685405000"
+// RTL Simulation : 239 / 300 [0.00%] @ "688255000"
+// RTL Simulation : 240 / 300 [0.00%] @ "691105000"
+// RTL Simulation : 241 / 300 [0.00%] @ "693955000"
+// RTL Simulation : 242 / 300 [0.00%] @ "696805000"
+// RTL Simulation : 243 / 300 [0.00%] @ "699655000"
+// RTL Simulation : 244 / 300 [0.00%] @ "702505000"
+// RTL Simulation : 245 / 300 [0.00%] @ "705355000"
+// RTL Simulation : 246 / 300 [0.00%] @ "708205000"
+// RTL Simulation : 247 / 300 [0.00%] @ "711055000"
+// RTL Simulation : 248 / 300 [0.00%] @ "713905000"
+// RTL Simulation : 249 / 300 [0.00%] @ "716755000"
+// RTL Simulation : 250 / 300 [0.00%] @ "719605000"
+// RTL Simulation : 251 / 300 [0.00%] @ "722455000"
+// RTL Simulation : 252 / 300 [0.00%] @ "725305000"
+// RTL Simulation : 253 / 300 [0.00%] @ "728155000"
+// RTL Simulation : 254 / 300 [0.00%] @ "731005000"
+// RTL Simulation : 255 / 300 [0.00%] @ "733855000"
+// RTL Simulation : 256 / 300 [0.00%] @ "736705000"
+// RTL Simulation : 257 / 300 [0.00%] @ "739555000"
+// RTL Simulation : 258 / 300 [0.00%] @ "742405000"
+// RTL Simulation : 259 / 300 [0.00%] @ "745255000"
+// RTL Simulation : 260 / 300 [0.00%] @ "748105000"
+// RTL Simulation : 261 / 300 [0.00%] @ "750955000"
+// RTL Simulation : 262 / 300 [0.00%] @ "753805000"
+// RTL Simulation : 263 / 300 [0.00%] @ "756655000"
+// RTL Simulation : 264 / 300 [0.00%] @ "759505000"
+// RTL Simulation : 265 / 300 [0.00%] @ "762355000"
+// RTL Simulation : 266 / 300 [0.00%] @ "765205000"
+// RTL Simulation : 267 / 300 [0.00%] @ "768055000"
+// RTL Simulation : 268 / 300 [0.00%] @ "770905000"
+// RTL Simulation : 269 / 300 [0.00%] @ "773755000"
+// RTL Simulation : 270 / 300 [0.00%] @ "776605000"
+// RTL Simulation : 271 / 300 [0.00%] @ "779455000"
+// RTL Simulation : 272 / 300 [0.00%] @ "782305000"
+// RTL Simulation : 273 / 300 [0.00%] @ "785155000"
+// RTL Simulation : 274 / 300 [0.00%] @ "788005000"
+// RTL Simulation : 275 / 300 [0.00%] @ "790855000"
+// RTL Simulation : 276 / 300 [0.00%] @ "793705000"
+// RTL Simulation : 277 / 300 [0.00%] @ "796555000"
+// RTL Simulation : 278 / 300 [0.00%] @ "799405000"
+// RTL Simulation : 279 / 300 [0.00%] @ "802255000"
+// RTL Simulation : 280 / 300 [0.00%] @ "805105000"
+// RTL Simulation : 281 / 300 [0.00%] @ "807955000"
+// RTL Simulation : 282 / 300 [0.00%] @ "810805000"
+// RTL Simulation : 283 / 300 [0.00%] @ "813655000"
+// RTL Simulation : 284 / 300 [0.00%] @ "816505000"
+// RTL Simulation : 285 / 300 [0.00%] @ "819355000"
+// RTL Simulation : 286 / 300 [0.00%] @ "822205000"
+// RTL Simulation : 287 / 300 [0.00%] @ "825055000"
+// RTL Simulation : 288 / 300 [0.00%] @ "827905000"
+// RTL Simulation : 289 / 300 [0.00%] @ "830755000"
+// RTL Simulation : 290 / 300 [0.00%] @ "833605000"
+// RTL Simulation : 291 / 300 [0.00%] @ "836455000"
+// RTL Simulation : 292 / 300 [0.00%] @ "839305000"
+// RTL Simulation : 293 / 300 [0.00%] @ "842155000"
+// RTL Simulation : 294 / 300 [0.00%] @ "845005000"
+// RTL Simulation : 295 / 300 [0.00%] @ "847855000"
+// RTL Simulation : 296 / 300 [0.00%] @ "850705000"
+// RTL Simulation : 297 / 300 [0.00%] @ "853555000"
+// RTL Simulation : 298 / 300 [0.00%] @ "856405000"
+// RTL Simulation : 299 / 300 [0.00%] @ "859255000"
+// RTL Simulation : 300 / 300 [100.00%] @ "862105000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 862165 ns : File "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/fir.autotb.v" Line 407
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue May 12 23:59:04 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on some port, possible cause: There are uninitialized variables in the design.
+0 1000
+1 1080
+2 78
+3 -192
+4 297
+5 -256
+6 -1179
+7 -651
+8 56
+9 -624
+10 -895
+11 -127
+12 -410
+13 -906
+14 -212
+15 -357
+16 -934
+17 -190
+18 -355
+19 -984
+20 -113
+21 -435
+22 -985
+23 9
+24 -643
+25 -824
+26 46
+27 -942
+28 -447
+29 -219
+30 -1004
+31 -47
+32 -753
+33 -617
+34 -347
+35 -597
+36 725
+37 79
+38 817
+39 549
+40 509
+41 511
+42 149
+43 1134
+44 -13
+45 861
+46 137
+47 1057
+48 -54
+49 977
+50 398
+51 414
+52 -560
+53 -134
+54 -820
+55 -422
+56 -822
+57 28
+58 -883
+59 -256
+60 -895
+61 139
+62 -1114
+63 -94
+64 -787
+65 -352
+66 -764
+67 -319
+68 700
+69 -134
+70 1064
+71 282
+72 640
+73 413
+74 68
+75 1140
+76 -47
+77 453
+78 780
+79 48
+80 852
+81 385
+82 454
+83 639
+84 -771
+85 -402
+86 -106
+87 -1177
+88 -386
+89 134
+90 -923
+91 -658
+92 105
+93 -771
+94 -775
+95 29
+96 -633
+97 -981
+98 -304
+99 42
+100 -60
+101 202
+102 1107
+103 724
+104 -126
+105 391
+106 957
+107 747
+108 -333
+109 259
+110 1364
+111 627
+112 -240
+113 -17
+114 1184
+115 1206
+116 59
+117 -78
+118 226
+119 1027
+120 1282
+121 423
+122 1
+123 -223
+124 539
+125 1099
+126 1346
+127 1240
+128 -1139
+129 -1865
+130 -638
+131 290
+132 914
+133 1893
+134 2252
+135 -612
+136 -3277
+137 -2602
+138 -1806
+139 -561
+140 2394
+141 4914
+142 3919
+143 2108
+144 784
+145 -2672
+146 -4858
+147 -5016
+148 -5636
+149 -4155
+150 -1631
+151 8
+152 2767
+153 4159
+154 4627
+155 6805
+156 6973
+157 6294
+158 6063
+159 4220
+160 4054
+161 3459
+162 3128
+163 2590
+164 -452
+165 -1496
+166 -3329
+167 -3579
+168 -3648
+169 -4154
+170 -5632
+171 -10157
+172 -13215
+173 -16836
+174 -17005
+175 -17845
+176 -15568
+177 -14687
+178 -12199
+179 -9953
+180 -6309
+181 -4947
+182 -4894
+183 -8038
+184 -12045
+185 -17780
+186 -19768
+187 -19931
+188 -15900
+189 -12995
+190 -8691
+191 -7970
+192 -7486
+193 -8966
+194 -8507
+195 -6965
+196 -4858
+197 -72
+198 3076
+199 7770
+200 11466
+201 15965
+202 18946
+203 17751
+204 17256
+205 15860
+206 16036
+207 16806
+208 14466
+209 12741
+210 10308
+211 6617
+212 3277
+213 -2073
+214 -6550
+215 -9155
+216 -14151
+217 -17817
+218 -16580
+219 -15254
+220 -15266
+221 -14696
+222 -15524
+223 -17788
+224 -17239
+225 -13460
+226 -9730
+227 -5817
+228 -928
+229 1999
+230 4055
+231 9681
+232 15141
+233 16339
+234 16870
+235 16640
+236 14809
+237 14805
+238 15331
+239 16479
+240 17912
+241 14387
+242 9564
+243 5679
+244 1191
+245 -1540
+246 -6308
+247 -10942
+248 -13578
+249 -15464
+250 -14516
+251 -15607
+252 -16376
+253 -18030
+254 -19009
+255 -17923
+256 -15802
+257 -10559
+258 -7358
+259 -2886
+260 -501
+261 3377
+262 5016
+263 8398
+264 10158
+265 11500
+266 10472
+267 10385
+268 9918
+269 11793
+270 13753
+271 16926
+272 16777
+273 16234
+274 13325
+275 12600
+276 10246
+277 10701
+278 10234
+279 10630
+280 10214
+281 10109
+282 11770
+283 11137
+284 11653
+285 9257
+286 6546
+287 4038
+288 1975
+289 3292
+290 2923
+291 2713
+292 2250
+293 -457
+294 -1623
+295 -2771
+296 -3031
+297 -1819
+298 -2593
+299 -2765
+300 -1854
+301 -2168
+302 -850
+303 1472
+304 1512
+305 1192
+306 2047
+307 1243
+308 -212
+309 -357
+310 -1130
+311 -1952
+312 -1066
+313 535
+314 1153
+315 632
+316 761
+317 347
+318 -1240
+319 -1507
+320 -162
+321 1528
+322 754
+323 -556
+324 -345
+325 -136
+326 -113
+327 -131
+328 488
+329 620
+330 -449
+331 -527
+332 -136
+333 196
+334 213
+335 -168
+336 410
+337 208
+338 -631
+339 -1225
+340 -159
+341 1915
+342 1286
+343 -547
+344 -1167
+345 -1260
+346 -1358
+347 -368
+348 2670
+349 3488
+350 1055
+351 -457
+352 -1978
+353 -4032
+354 -4071
+355 -913
+356 1560
+357 2955
+358 5378
+359 5204
+360 3272
+361 2030
+362 -975
+363 -3699
+364 -4841
+365 -6451
+366 -6154
+367 -5416
+368 -5989
+369 -4164
+370 -2270
+371 -1134
+372 965
+373 994
+374 1701
+375 2141
+376 2984
+377 5321
+378 4851
+379 5075
+380 3765
+381 3065
+382 3366
+383 4937
+384 8544
+385 9856
+386 11732
+387 11253
+388 13012
+389 13328
+390 16311
+391 17750
+392 19101
+393 18302
+394 18316
+395 17236
+396 16882
+397 15758
+398 15923
+399 14087
+400 13762
+401 12396
+402 13026
+403 10755
+404 9422
+405 6150
+406 4912
+407 3610
+408 3652
+409 3168
+410 -898
+411 -4258
+412 -8605
+413 -9775
+414 -10248
+415 -9272
+416 -6809
+417 -6907
+418 -6381
+419 -8183
+420 -11088
+421 -11323
+422 -11107
+423 -8960
+424 -7028
+425 -5921
+426 -517
+427 5673
+428 9053
+429 12185
+430 13460
+431 11373
+432 8000
+433 4733
+434 4162
+435 7074
+436 9811
+437 11354
+438 12560
+439 11431
+440 7776
+441 3667
+442 -711
+443 -5035
+444 -9077
+445 -12407
+446 -12304
+447 -10310
+448 -9431
+449 -6397
+450 -3354
+451 -5536
+452 -9230
+453 -12571
+454 -13820
+455 -10614
+456 -7849
+457 -3864
+458 1760
+459 5555
+460 9430
+461 10180
+462 10375
+463 10514
+464 9288
+465 9192
+466 6988
+467 6750
+468 6710
+469 8851
+470 10157
+471 9436
+472 7997
+473 4099
+474 901
+475 -3411
+476 -4459
+477 -7128
+478 -7307
+479 -8420
+480 -6904
+481 -7789
+482 -7558
+483 -11016
+484 -14284
+485 -19868
+486 -21825
+487 -22795
+488 -20846
+489 -18872
+490 -15924
+491 -13559
+492 -12511
+493 -10222
+494 -9513
+495 -8003
+496 -9510
+497 -9829
+498 -10757
+499 -10861
+500 -8095
+501 -6483
+502 -4276
+503 -4590
+504 -5453
+505 -4948
+506 -5440
+507 -3813
+508 -1294
+509 -659
+510 327
+511 808
+512 664
+513 2044
+514 2665
+515 2217
+516 2360
+517 756
+518 -1062
+519 -448
+520 -1214
+521 -2275
+522 -1086
+523 239
+524 294
+525 1018
+526 1982
+527 702
+528 -1168
+529 -1053
+530 -330
+531 -411
+532 19
+533 1119
+534 1446
+535 -549
+536 -1793
+537 -589
+538 1044
+539 1160
+540 -208
+541 -1168
+542 -510
+543 716
+544 887
+545 -294
+546 -1114
+547 -421
+548 810
+549 1317
+550 -249
+551 -1433
+552 -813
+553 595
+554 1094
+555 664
+556 495
+557 -59
+558 -1645
+559 -2277
+560 -270
+561 2345
+562 2608
+563 1723
+564 941
+565 -1880
+566 -4162
+567 -3666
+568 -2030
+569 -26
+570 3106
+571 4905
+572 4674
+573 4510
+574 2709
+575 -665
+576 -2256
+577 -4453
+578 -6634
+579 -5532
+580 -5967
+581 -5979
+582 -4278
+583 -3556
+584 -1026
+585 256
+586 614
+587 2047
+588 1274
+589 2999
+590 4499
+591 4942
+592 5441
+593 3598
+594 3767
+595 2492
+596 4556
+597 7111
+598 9588
+599 11314
+Comparing against output data
+*******************************************
+PASS: The output matches the golden output!
+*******************************************
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 300
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 17.11 seconds. CPU system time: 1.68 seconds. Elapsed time: 18.61 seconds; current allocated memory: 18.660 MB.
+INFO: [HLS 200-112] Total CPU user time: 18.09 seconds. Total CPU system time: 1.82 seconds. Total elapsed time: 21.6 seconds; peak allocated memory: 285.008 MB.

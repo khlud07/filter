@@ -4,43 +4,73 @@
 #include "fir.h"
 
 int main() {
-    const int SAMPLES = 600;
-    FILE *fp, *fin;
-    int i;
+    const int SAMPLES   = 600;          // must be even — 2 samples per transfer
+    const int TRANSFERS = SAMPLES / 2;
+
+    FILE *fp  = fopen("/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/out.dat",   "w");
+    FILE *fin = fopen("/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/input.dat", "r");
+
+    if (!fin) { printf("ERROR: cannot open input.dat\n");  return 1; }
+    if (!fp)  { printf("ERROR: cannot open out.dat\n");    return 1; }
+
+    // Coefficients passed via AXI-Lite in HW; plain array in testbench
+    coef_t coeffs[N] = {
+        10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10,
+        -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10,
+        -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10,
+        10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10,
+        -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10,
+        10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10,
+        -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
+    };
 
     fir_stream_t input_stream, output_stream;
 
-    fin = fopen("input.dat", "r");
-    fp  = fopen("out.dat", "w");
+    // Pack two IQ samples per 64-bit transfer and push into stream
+    for (int i = 0; i < TRANSFERS; i++) {
+        int v0, v1;
+        fscanf(fin, "%d", &v0);
+        fscanf(fin, "%d", &v1);
 
-    // load all samples into input stream first
-    for (i = 0; i < SAMPLES; i++) {
-        int val;
-        fscanf(fin, "%d", &val);
+        two_iq_t packed = 0;
+        packed.range(15,  0)  = (iq_t)v0;   // I0
+        packed.range(31, 16)  = (iq_t)0;     // Q0 (real-only input → Q = 0)
+        packed.range(47, 32)  = (iq_t)v1;    // I1
+        packed.range(63, 48)  = (iq_t)0;     // Q1
+
         stream_t s;
-        s.data = (data_t)val;
+        s.data = packed;
         s.keep = -1;
-        s.last = (i == SAMPLES - 1) ? 1 : 0;
+        s.last = (i == TRANSFERS - 1) ? 1 : 0;
         input_stream.write(s);
     }
 
-    // process one sample at a time
-    for (i = 0; i < SAMPLES; i++) {
-        fir(output_stream, input_stream);
+    // One fir() call per 64-bit transfer (processes 2 samples each call)
+    for (int i = 0; i < TRANSFERS; i++) {
+        fir(output_stream, input_stream, coeffs);
     }
 
-    // read results and write to file
-    for (i = 0; i < SAMPLES; i++) {
+    // Unpack output — two samples per transfer
+    for (int i = 0; i < TRANSFERS; i++) {
         stream_t out = output_stream.read();
-        fprintf(fp, "%d\n", (int)out.data);
-        printf("%i %d\n", i, (int)out.data);
+        two_iq_t result = out.data;
+
+        int i0 = (int)(iq_t)result.range(15,  0);
+        int i1 = (int)(iq_t)result.range(47, 32);
+
+        fprintf(fp, "%d\n", i0);
+        fprintf(fp, "%d\n", i1);
+        printf("%d %d\n", i * 2,     i0);
+        printf("%d %d\n", i * 2 + 1, i1);
     }
 
     fclose(fp);
     fclose(fin);
 
     printf("Comparing against output data\n");
-    if (system("diff -w out.dat out.gold.dat")) {
+    if (system("diff -w /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/out.dat "
+           "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/out.gold.dat")) {
         printf("*******************************************\n");
         printf("FAIL: Output DOES NOT match the golden output\n");
         printf("*******************************************\n");

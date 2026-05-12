@@ -5,7 +5,7 @@
     <UserAssignments>
         <unit>ns</unit>
         <ProductFamily>zynq</ProductFamily>
-        <Part>xc7z010-clg400-1</Part>
+        <Part>xc7z010-clg225-1</Part>
         <TopModelName>fir</TopModelName>
         <TargetClockPeriod>10.00</TargetClockPeriod>
         <ClockUncertainty>2.70</ClockUncertainty>
@@ -36,10 +36,10 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>2</BRAM_18K>
+            <BRAM_18K>3</BRAM_18K>
             <DSP>4</DSP>
-            <FF>565</FF>
-            <LUT>644</LUT>
+            <FF>544</FF>
+            <LUT>646</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -52,11 +52,198 @@
     </AreaEstimates>
     <InterfaceSummary>
         <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>9</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>9</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>array</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
             <name>ap_clk</name>
             <Object>fir</Object>
             <Type>return value</Type>
             <Scope/>
-            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
@@ -67,11 +254,22 @@
             <Object>fir</Object>
             <Type>return value</Type>
             <Scope/>
-            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>fir</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
         </RtlPorts>
         <RtlPorts>
             <name>y_TDATA</name>
@@ -223,21 +421,21 @@
             <ModuleName>fir</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_fir_Pipeline_MAC_Loop_0_fu_191</InstName>
+                    <InstName>grp_fir_Pipeline_MAC_Loop_0_fu_201</InstName>
                     <ModuleName>fir_Pipeline_MAC_Loop_0</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>191</ID>
-                    <BindInstances>add_ln45_fu_159_p2 idx_fu_174_p2 mul_5s_16s_21_1_1_U1 acc_i0_3_fu_239_p2 mul_16s_5s_21_1_1_U2 acc_q0_3_fu_248_p2</BindInstances>
+                    <ID>201</ID>
+                    <BindInstances>add_ln33_fu_167_p2 idx_fu_182_p2 mac_muladd_16s_16s_32ns_32_4_1_U1 mac_muladd_16s_16s_32ns_32_4_1_U1 mac_muladd_16s_16s_32ns_32_4_1_U2 mac_muladd_16s_16s_32ns_32_4_1_U2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_fir_Pipeline_MAC_Loop_1_fu_204</InstName>
+                    <InstName>grp_fir_Pipeline_MAC_Loop_1_fu_214</InstName>
                     <ModuleName>fir_Pipeline_MAC_Loop_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>204</ID>
-                    <BindInstances>add_ln63_fu_159_p2 idx_fu_174_p2 mul_5s_16s_21_1_1_U11 acc_i1_3_fu_239_p2 mul_16s_5s_21_1_1_U12 acc_q1_3_fu_248_p2</BindInstances>
+                    <ID>214</ID>
+                    <BindInstances>add_ln51_fu_167_p2 idx_fu_182_p2 mac_muladd_16s_16s_32ns_32_4_1_U10 mac_muladd_16s_16s_32ns_32_4_1_U10 mac_muladd_16s_16s_32ns_32_4_1_U11 mac_muladd_16s_16s_32ns_32_4_1_U11</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>add_ln53_fu_287_p2 add_ln71_fu_275_p2 shift_i_U shift_q_U c_U</BindInstances>
+            <BindInstances>add_ln41_fu_297_p2 add_ln59_fu_285_p2 shift_i_U shift_q_U control_s_axi_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -270,7 +468,7 @@
                         <Latency>131</Latency>
                         <AbsoluteTimeLatency>1.310 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
-                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineDepth>5</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </MAC_Loop_0>
@@ -278,13 +476,13 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>fir.cpp:41</SourceLocation>
+                    <SourceLocation>fir.cpp:29</SourceLocation>
                     <SummaryOfLoopViolations>
                         <MAC_Loop_0>
                             <Name>MAC_Loop_0</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>fir.cpp:45</SourceLocation>
+                            <SourceLocation>fir.cpp:33</SourceLocation>
                         </MAC_Loop_0>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -294,12 +492,12 @@
                     <DSP>2</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
                     <UTIL_DSP>2</UTIL_DSP>
-                    <FF>212</FF>
+                    <FF>146</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>199</LUT>
+                    <LUT>149</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>1</UTIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -309,12 +507,12 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_159_p2" SOURCE="fir.cpp:45" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln45"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="sub" PRAGMA="" RTLNAME="idx_fu_174_p2" SOURCE="fir.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="idx"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="mul" PRAGMA="yes" RTLNAME="mul_5s_16s_21_1_1_U1" SOURCE="fir.cpp:50" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln50"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="add" PRAGMA="" RTLNAME="acc_i0_3_fu_239_p2" SOURCE="fir.cpp:50" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_i0_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="mul" PRAGMA="yes" RTLNAME="mul_16s_5s_21_1_1_U2" SOURCE="fir.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln51"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="add" PRAGMA="" RTLNAME="acc_q0_3_fu_248_p2" SOURCE="fir.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_q0_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_167_p2" SOURCE="fir.cpp:33" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_0" OPTYPE="sub" PRAGMA="" RTLNAME="idx_fu_182_p2" SOURCE="fir.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="idx"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_0" OPTYPE="mul" PRAGMA="yes" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U1" SOURCE="fir.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_0" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U1" SOURCE="fir.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_i0_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_0" OPTYPE="mul" PRAGMA="yes" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U2" SOURCE="fir.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_0" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U2" SOURCE="fir.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_q0_3"/>
             </BindNodes>
         </Module>
         <Module>
@@ -346,7 +544,7 @@
                         <Latency>131</Latency>
                         <AbsoluteTimeLatency>1.310 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
-                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineDepth>5</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </MAC_Loop_1>
@@ -354,13 +552,13 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>fir.cpp:59</SourceLocation>
+                    <SourceLocation>fir.cpp:47</SourceLocation>
                     <SummaryOfLoopViolations>
                         <MAC_Loop_1>
                             <Name>MAC_Loop_1</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>fir.cpp:63</SourceLocation>
+                            <SourceLocation>fir.cpp:51</SourceLocation>
                         </MAC_Loop_1>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -370,12 +568,12 @@
                     <DSP>2</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
                     <UTIL_DSP>2</UTIL_DSP>
-                    <FF>212</FF>
+                    <FF>146</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>199</LUT>
+                    <LUT>149</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>1</UTIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -385,12 +583,12 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln63_fu_159_p2" SOURCE="fir.cpp:63" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln63"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="sub" PRAGMA="" RTLNAME="idx_fu_174_p2" SOURCE="fir.cpp:67" STORAGESUBTYPE="" URAM="0" VARIABLE="idx"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="mul" PRAGMA="yes" RTLNAME="mul_5s_16s_21_1_1_U11" SOURCE="fir.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln68"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="add" PRAGMA="" RTLNAME="acc_i1_3_fu_239_p2" SOURCE="fir.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_i1_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="mul" PRAGMA="yes" RTLNAME="mul_16s_5s_21_1_1_U12" SOURCE="fir.cpp:69" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln69"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="add" PRAGMA="" RTLNAME="acc_q1_3_fu_248_p2" SOURCE="fir.cpp:69" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_q1_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_167_p2" SOURCE="fir.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MAC_Loop_1" OPTYPE="sub" PRAGMA="" RTLNAME="idx_fu_182_p2" SOURCE="fir.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="idx"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_1" OPTYPE="mul" PRAGMA="yes" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U10" SOURCE="fir.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U10" SOURCE="fir.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_i1_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_1" OPTYPE="mul" PRAGMA="yes" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U11" SOURCE="fir.cpp:57" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="MAC_Loop_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_32ns_32_4_1_U11" SOURCE="fir.cpp:57" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_q1_3"/>
             </BindNodes>
         </Module>
         <Module>
@@ -419,16 +617,16 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>2</BRAM_18K>
+                    <BRAM_18K>3</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
-                    <UTIL_BRAM>1</UTIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
                     <DSP>4</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
                     <UTIL_DSP>5</UTIL_DSP>
-                    <FF>565</FF>
+                    <FF>544</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>644</LUT>
+                    <LUT>646</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
                     <UTIL_LUT>3</UTIL_LUT>
                     <URAM>0</URAM>
@@ -437,11 +635,11 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_287_p2" SOURCE="fir.cpp:53" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln53"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_fu_275_p2" SOURCE="fir.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln71"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_297_p2" SOURCE="fir.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln59_fu_285_p2" SOURCE="fir.cpp:59" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln59"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="shift_i_U" SOURCE="" STORAGESIZE="16 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="shift_i"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="shift_q_U" SOURCE="" STORAGESIZE="16 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="shift_q"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="c_U" SOURCE="" STORAGESIZE="5 128 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="c"/>
+                <BindNode BINDTYPE="adapter" BRAM="1" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -460,11 +658,78 @@
                 <hwRef type="interface" interface="x" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
+        <Arg ArgName="coeffs" index="2" direction="in" srcType="ap_int&lt;16&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="memory" interface="s_axi_control" name="coeffs" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
     </Args>
     <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="9" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <memories>
+                <memorie memorieName="coeffs" offset="256" range="256"/>
+            </memories>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="256" argName="coeffs"/>
+            </constraints>
+        </Interface>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
-                <busParam busParamName="ASSOCIATED_BUSIF">y:x</busParam>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:y:x</busParam>
                 <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
             </busParams>
             <portMaps>
@@ -483,6 +748,17 @@
             </portMaps>
             <ports>
                 <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
             </ports>
         </Interface>
         <Interface InterfaceName="y" type="axi4stream" busTypeName="axis" mode="master" dataWidth="64" portPrefix="y_">
@@ -514,6 +790,21 @@
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table>
+                    <keys size="6">Interface, Data Width, Address Width, Offset, Register, Resource Estimate</keys>
+                    <column name="s_axi_control">32, 9, 256, 0, BRAM=1</column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                </table>
+            </item>
             <item name="AXIS">
                 <table>
                     <keys size="9">Interface, Direction, Register Mode, TDATA, TKEEP, TLAST, TREADY, TSTRB, TVALID</keys>
@@ -526,7 +817,8 @@
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk</column>
                     <column name="ap_rst_n">reset, ap_rst_n</column>
-                    <column name="ap_ctrl">ap_ctrl_none, </column>
+                    <column name="interrupt">interrupt, interrupt</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, </column>
                 </table>
             </item>
         </section>
@@ -538,13 +830,15 @@
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="y">out, stream&lt;hls::axis&lt;ap_uint&lt;64&gt; 0 0 0 '8' false&gt; 0&gt;&amp;</column>
                     <column name="x">in, stream&lt;hls::axis&lt;ap_uint&lt;64&gt; 0 0 0 '8' false&gt; 0&gt;&amp;</column>
+                    <column name="coeffs">in, ap_int&lt;16&gt;*</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table>
-                    <keys size="3">Argument, HW Interface, HW Type</keys>
-                    <column name="y">y, interface</column>
-                    <column name="x">x, interface</column>
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="y">y, interface, </column>
+                    <column name="x">x, interface, </column>
+                    <column name="coeffs">s_axi_control, memory, name=coeffs offset=256 range=256</column>
                 </table>
             </item>
         </section>
@@ -553,15 +847,17 @@
     <PragmaReport>
         <Pragma type="interface" location="fir.cpp:4" status="valid" parentFunction="fir" variable="x" isDirective="0" options="axis port=x"/>
         <Pragma type="interface" location="fir.cpp:5" status="valid" parentFunction="fir" variable="y" isDirective="0" options="axis port=y"/>
-        <Pragma type="interface" location="fir.cpp:6" status="valid" parentFunction="fir" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
-        <Pragma type="bind_storage" location="fir.cpp:22" status="valid" parentFunction="fir" variable="shift_i" isDirective="0" options="variable=shift_i type=ram_2p impl=bram"/>
-        <Pragma type="bind_storage" location="fir.cpp:23" status="valid" parentFunction="fir" variable="shift_q" isDirective="0" options="variable=shift_q type=ram_2p impl=bram"/>
-        <Pragma type="pipeline" location="fir.cpp:46" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="bind_op" location="fir.cpp:47" status="valid" parentFunction="fir" variable="acc_i0" isDirective="0" options="variable=acc_i0 op=mul impl=dsp"/>
-        <Pragma type="bind_op" location="fir.cpp:48" status="valid" parentFunction="fir" variable="acc_q0" isDirective="0" options="variable=acc_q0 op=mul impl=dsp"/>
-        <Pragma type="pipeline" location="fir.cpp:64" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="bind_op" location="fir.cpp:65" status="valid" parentFunction="fir" variable="acc_i1" isDirective="0" options="variable=acc_i1 op=mul impl=dsp"/>
-        <Pragma type="bind_op" location="fir.cpp:66" status="valid" parentFunction="fir" variable="acc_q1" isDirective="0" options="variable=acc_q1 op=mul impl=dsp"/>
+        <Pragma type="interface" location="fir.cpp:6" status="valid" parentFunction="fir" variable="coeffs" isDirective="0" options="s_axilite port=coeffs"/>
+        <Pragma type="interface" location="fir.cpp:7" status="valid" parentFunction="fir" variable="return" isDirective="0" options="s_axilite port=return"/>
+        <Pragma type="interface" location="fir.cpp:8" status="valid" parentFunction="fir" variable="return" isDirective="0" options="ap_ctrl_hs port=return"/>
+        <Pragma type="bind_storage" location="fir.cpp:12" status="valid" parentFunction="fir" variable="shift_i" isDirective="0" options="variable=shift_i type=ram_2p impl=bram"/>
+        <Pragma type="bind_storage" location="fir.cpp:13" status="valid" parentFunction="fir" variable="shift_q" isDirective="0" options="variable=shift_q type=ram_2p impl=bram"/>
+        <Pragma type="pipeline" location="fir.cpp:34" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="bind_op" location="fir.cpp:35" status="valid" parentFunction="fir" variable="acc_i0" isDirective="0" options="variable=acc_i0 op=mul impl=dsp"/>
+        <Pragma type="bind_op" location="fir.cpp:36" status="valid" parentFunction="fir" variable="acc_q0" isDirective="0" options="variable=acc_q0 op=mul impl=dsp"/>
+        <Pragma type="pipeline" location="fir.cpp:52" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="bind_op" location="fir.cpp:53" status="valid" parentFunction="fir" variable="acc_i1" isDirective="0" options="variable=acc_i1 op=mul impl=dsp"/>
+        <Pragma type="bind_op" location="fir.cpp:54" status="valid" parentFunction="fir" variable="acc_q1" isDirective="0" options="variable=acc_q1 op=mul impl=dsp"/>
     </PragmaReport>
 </profile>
 

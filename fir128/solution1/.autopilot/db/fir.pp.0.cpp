@@ -9018,16 +9018,17 @@ typedef ap_int<16> iq_t;
 typedef ap_int<16> coef_t;
 typedef ap_int<32> acc_t;
 typedef ap_uint<64> two_iq_t;
+typedef ap_uint<32> iq_pack_t;
 typedef iq_t data_t;
 
 typedef hls::axis<two_iq_t, 0, 0, 0> stream_t;
 typedef hls::stream<stream_t> fir_stream_t;
 
-__attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x);
+__attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x, coef_t coeffs[128]);
 # 2 "fir.cpp" 2
 
-__attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x) {
-#line 17 "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/csynth.tcl"
+__attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x, coef_t coeffs[128]) {
+#line 18 "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=fir
 # 3 "fir.cpp"
 
@@ -9037,31 +9038,19 @@ __attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x)
 
 #pragma HLS INTERFACE axis port=x
 #pragma HLS INTERFACE axis port=y
-#pragma HLS INTERFACE ap_ctrl_none port=return
+#pragma HLS INTERFACE s_axilite port=coeffs
+#pragma HLS INTERFACE s_axilite port=return
+#pragma HLS INTERFACE ap_ctrl_hs port=return
 
- static const coef_t c[128] = {
-        10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10,
-        -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10,
-        -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10,
-        10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10,
-        -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10,
-        10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10,
-        -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10,
-        10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
-    };
-
-
-    static iq_t shift_i[128];
+ static iq_t shift_i[128];
     static iq_t shift_q[128];
 #pragma HLS BIND_STORAGE variable=shift_i type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=shift_q type=ram_2p impl=bram
 
  static int ptr = 0;
 
-
     stream_t in_sample = x.read();
     two_iq_t data = in_sample.data;
-
 
     iq_t i0 = (iq_t)data.range(15, 0);
     iq_t q0 = (iq_t)data.range(31, 16);
@@ -9081,8 +9070,8 @@ __attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x)
 #pragma HLS BIND_OP variable=acc_i0 op=mul impl=dsp
 #pragma HLS BIND_OP variable=acc_q0 op=mul impl=dsp
  int idx = (ptr - i + 128) & (128 - 1);
-        acc_i0 += (acc_t)shift_i[idx] * (acc_t)c[i];
-        acc_q0 += (acc_t)shift_q[idx] * (acc_t)c[i];
+        acc_i0 += (acc_t)shift_i[idx] * (acc_t)coeffs[i];
+        acc_q0 += (acc_t)shift_q[idx] * (acc_t)coeffs[i];
     }
     ptr = (ptr + 1) & (128 - 1);
 
@@ -9099,11 +9088,10 @@ __attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x)
 #pragma HLS BIND_OP variable=acc_i1 op=mul impl=dsp
 #pragma HLS BIND_OP variable=acc_q1 op=mul impl=dsp
  int idx = (ptr - i + 128) & (128 - 1);
-        acc_i1 += (acc_t)shift_i[idx] * (acc_t)c[i];
-        acc_q1 += (acc_t)shift_q[idx] * (acc_t)c[i];
+        acc_i1 += (acc_t)shift_i[idx] * (acc_t)coeffs[i];
+        acc_q1 += (acc_t)shift_q[idx] * (acc_t)coeffs[i];
     }
     ptr = (ptr + 1) & (128 - 1);
-
 
     two_iq_t result;
     result.range(15, 0) = (iq_t)acc_i0;

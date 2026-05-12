@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir'" level="0">
-<item name = "Date">Sat May  9 16:31:00 2026
+<item name = "Date">Tue May 12 23:58:29 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">fir128</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
-<item name = "Target device">xc7z010-clg400-1</item>
+<item name = "Target device">xc7z010-clg225-1</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_fir_Pipeline_MAC_Loop_0_fu_191">fir_Pipeline_MAC_Loop_0, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
-<column name="grp_fir_Pipeline_MAC_Loop_1_fu_204">fir_Pipeline_MAC_Loop_1, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_fir_Pipeline_MAC_Loop_0_fu_201">fir_Pipeline_MAC_Loop_0, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_fir_Pipeline_MAC_Loop_1_fu_214">fir_Pipeline_MAC_Loop_1, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

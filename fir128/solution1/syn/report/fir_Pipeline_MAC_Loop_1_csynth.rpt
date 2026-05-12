@@ -3,13 +3,13 @@
 ================================================================
 == Vitis HLS Report for 'fir_Pipeline_MAC_Loop_1'
 ================================================================
-* Date:           Sat May  9 16:31:00 2026
+* Date:           Tue May 12 23:58:29 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        fir128
 * Solution:       solution1 (Vivado IP Flow Target)
 * Product family: zynq
-* Target device:  xc7z010-clg400-1
+* Target device:  xc7z010-clg225-1
 
 
 ================================================================
@@ -41,7 +41,7 @@
         |              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- MAC_Loop_1  |      131|      131|         4|          1|          1|   128|       yes|
+        |- MAC_Loop_1  |      131|      131|         5|          1|          1|   128|       yes|
         +--------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -53,34 +53,32 @@
 +-----------------+---------+----+-------+-------+-----+
 |       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
 +-----------------+---------+----+-------+-------+-----+
-|DSP              |        -|   -|      -|      -|    -|
-|Expression       |        -|   -|      0|    113|    -|
+|DSP              |        -|   2|      -|      -|    -|
+|Expression       |        -|   -|      0|     45|    -|
 |FIFO             |        -|   -|      -|      -|    -|
-|Instance         |        -|   2|      0|      0|    -|
+|Instance         |        -|   -|      -|      -|    -|
 |Memory           |        -|   -|      -|      -|    -|
-|Multiplexer      |        -|   -|      -|     54|    -|
-|Register         |        -|   -|    212|     32|    -|
+|Multiplexer      |        -|   -|      -|     72|    -|
+|Register         |        -|   -|    146|     32|    -|
 +-----------------+---------+----+-------+-------+-----+
-|Total            |        0|   2|    212|    199|    0|
+|Total            |        0|   2|    146|    149|    0|
 +-----------------+---------+----+-------+-------+-----+
 |Available        |      120|  80|  35200|  17600|    0|
 +-----------------+---------+----+-------+-------+-----+
-|Utilization (%)  |        0|   2|     ~0|      1|    0|
+|Utilization (%)  |        0|   2|     ~0|     ~0|    0|
 +-----------------+---------+----+-------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +-----------------------+-------------------+---------+----+---+----+-----+
-    |        Instance       |       Module      | BRAM_18K| DSP| FF| LUT| URAM|
-    +-----------------------+-------------------+---------+----+---+----+-----+
-    |mul_16s_5s_21_1_1_U12  |mul_16s_5s_21_1_1  |        0|   1|  0|   0|    0|
-    |mul_5s_16s_21_1_1_U11  |mul_5s_16s_21_1_1  |        0|   1|  0|   0|    0|
-    +-----------------------+-------------------+---------+----+---+----+-----+
-    |Total                  |                   |        0|   2|  0|   0|    0|
-    +-----------------------+-------------------+---------+----+---+----+-----+
+    N/A
 
     * DSP: 
-    N/A
+    +------------------------------------+--------------------------------+--------------+
+    |              Instance              |             Module             |  Expression  |
+    +------------------------------------+--------------------------------+--------------+
+    |mac_muladd_16s_16s_32ns_32_4_1_U10  |mac_muladd_16s_16s_32ns_32_4_1  |  i0 * i1 + i2|
+    |mac_muladd_16s_16s_32ns_32_4_1_U11  |mac_muladd_16s_16s_32ns_32_4_1  |  i0 * i1 + i2|
+    +------------------------------------+--------------------------------+--------------+
 
     * Memory: 
     N/A
@@ -92,54 +90,50 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |acc_i1_3_fu_239_p2   |         +|   0|  0|  34|          27|          27|
-    |acc_q1_3_fu_248_p2   |         +|   0|  0|  34|          27|          27|
-    |add_ln63_fu_159_p2   |         +|   0|  0|  15|           8|           1|
-    |idx_fu_174_p2        |         -|   0|  0|  14|           7|           7|
-    |icmp_ln63_fu_153_p2  |      icmp|   0|  0|  14|           8|           9|
+    |add_ln51_fu_167_p2   |         +|   0|  0|  15|           8|           1|
+    |idx_fu_182_p2        |         -|   0|  0|  14|           7|           7|
+    |icmp_ln51_fu_161_p2  |      icmp|   0|  0|  14|           8|           9|
     |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
     +---------------------+----------+----+---+----+------------+------------+
-    |Total                |          |   0|  0| 113|          78|          73|
+    |Total                |          |   0|  0|  45|          24|          19|
     +---------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +----------------------------------+----+-----------+-----+-----------+
-    |               Name               | LUT| Input Size| Bits| Total Bits|
-    +----------------------------------+----+-----------+-----+-----------+
-    |acc_i1_fu_64                      |   9|          2|   27|         54|
-    |acc_q1_fu_68                      |   9|          2|   27|         54|
-    |ap_done_int                       |   9|          2|    1|          2|
-    |ap_loop_exit_ready_pp0_iter3_reg  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i_1              |   9|          2|    8|         16|
-    |i_fu_72                           |   9|          2|    8|         16|
-    +----------------------------------+----+-----------+-----+-----------+
-    |Total                             |  54|         12|   72|        144|
-    +----------------------------------+----+-----------+-----+-----------+
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |acc_i1_fu_72               |   9|          2|   32|         64|
+    |acc_q1_fu_76               |   9|          2|   32|         64|
+    |ap_done_int                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter4    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_acc_i1_2  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_acc_q1_2  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_i_1       |   9|          2|    8|         16|
+    |i_fu_80                    |   9|          2|    8|         16|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      |  72|         16|  146|        292|
+    +---------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------+----+----+-----+-----------+
     |               Name               | FF | LUT| Bits| Const Bits|
     +----------------------------------+----+----+-----+-----------+
-    |acc_i1_fu_64                      |  27|   0|   27|          0|
-    |acc_q1_fu_68                      |  27|   0|   27|          0|
+    |acc_i1_fu_72                      |  32|   0|   32|          0|
+    |acc_q1_fu_76                      |  32|   0|   32|          0|
     |ap_CS_fsm                         |   1|   0|    1|          0|
     |ap_done_reg                       |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
-    |c_load_reg_309                    |   5|   0|    5|          0|
-    |i_fu_72                           |   8|   0|    8|          0|
-    |icmp_ln63_reg_285                 |   1|   0|    1|          0|
-    |shift_i_load_reg_304              |  16|   0|   16|          0|
-    |shift_q_load_reg_314              |  16|   0|   16|          0|
-    |trunc_ln68_reg_319                |  20|   0|   20|          0|
-    |trunc_ln69_reg_324                |  20|   0|   20|          0|
-    |icmp_ln63_reg_285                 |  64|  32|    1|          0|
+    |i_fu_80                           |   8|   0|    8|          0|
+    |icmp_ln51_reg_274                 |   1|   0|    1|          0|
+    |icmp_ln51_reg_274                 |  64|  32|    1|          0|
     +----------------------------------+----+----+-----+-----------+
-    |Total                             | 212|  32|  149|          0|
+    |Total                             | 146|  32|   83|          0|
     +----------------------------------+----+----+-----+-----------+
 
 
@@ -157,7 +151,10 @@
 |ap_done            |  out|    1|  ap_ctrl_hs|  fir_Pipeline_MAC_Loop_1|  return value|
 |ap_idle            |  out|    1|  ap_ctrl_hs|  fir_Pipeline_MAC_Loop_1|  return value|
 |ap_ready           |  out|    1|  ap_ctrl_hs|  fir_Pipeline_MAC_Loop_1|  return value|
-|add_ln53           |   in|    7|     ap_none|                 add_ln53|        scalar|
+|add_ln41           |   in|    7|     ap_none|                 add_ln41|        scalar|
+|coeffs_address0    |  out|    7|   ap_memory|                   coeffs|         array|
+|coeffs_ce0         |  out|    1|   ap_memory|                   coeffs|         array|
+|coeffs_q0          |   in|   16|   ap_memory|                   coeffs|         array|
 |acc_q1_out         |  out|   16|      ap_vld|               acc_q1_out|       pointer|
 |acc_q1_out_ap_vld  |  out|    1|      ap_vld|               acc_q1_out|       pointer|
 |acc_i1_out         |  out|   16|      ap_vld|               acc_i1_out|       pointer|
@@ -165,9 +162,6 @@
 |shift_i_address0   |  out|    7|   ap_memory|                  shift_i|         array|
 |shift_i_ce0        |  out|    1|   ap_memory|                  shift_i|         array|
 |shift_i_q0         |   in|   16|   ap_memory|                  shift_i|         array|
-|c_address0         |  out|    7|   ap_memory|                        c|         array|
-|c_ce0              |  out|    1|   ap_memory|                        c|         array|
-|c_q0               |   in|    5|   ap_memory|                        c|         array|
 |shift_q_address0   |  out|    7|   ap_memory|                  shift_q|         array|
 |shift_q_ce0        |  out|    1|   ap_memory|                  shift_q|         array|
 |shift_q_q0         |   in|   16|   ap_memory|                  shift_q|         array|

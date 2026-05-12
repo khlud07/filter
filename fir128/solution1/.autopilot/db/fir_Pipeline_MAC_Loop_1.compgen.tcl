@@ -11,6 +11,25 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 13 \
+    name coeffs \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename coeffs \
+    op interface \
+    ports { coeffs_address0 { O 7 vector } coeffs_ce0 { O 1 bit } coeffs_q0 { I 16 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'coeffs'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 16 \
     name shift_i \
     reset_level 1 \
@@ -31,25 +50,6 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 17 \
-    name c \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename c \
-    op interface \
-    ports { c_address0 { O 7 vector } c_ce0 { O 1 bit } c_q0 { I 5 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 18 \
     name shift_q \
     reset_level 1 \
     sync_rst true \
@@ -67,15 +67,15 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 13 \
-    name add_ln53 \
+    id 12 \
+    name add_ln41 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_add_ln53 \
+    corename dc_add_ln41 \
     op interface \
-    ports { add_ln53 { I 7 vector } } \
+    ports { add_ln41 { I 7 vector } } \
 } "
 }
 

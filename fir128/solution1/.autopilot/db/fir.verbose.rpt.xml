@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir'" level="0">
-<item name = "Date">Sat May  9 16:31:00 2026
+<item name = "Date">Tue May 12 23:58:29 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">fir128</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
-<item name = "Target device">xc7z010-clg400-1</item>
+<item name = "Target device">xc7z010-clg225-1</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_fir_Pipeline_MAC_Loop_0_fu_191">fir_Pipeline_MAC_Loop_0, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
-<column name="grp_fir_Pipeline_MAC_Loop_1_fu_204">fir_Pipeline_MAC_Loop_1, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_fir_Pipeline_MAC_Loop_0_fu_201">fir_Pipeline_MAC_Loop_0, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_fir_Pipeline_MAC_Loop_1_fu_214">fir_Pipeline_MAC_Loop_1, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -49,22 +49,23 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 30, -</column>
+<column name="Expression">-, -, 0, 32, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 4, 424, 398, -</column>
-<column name="Memory">2, -, 5, 10, -</column>
+<column name="Instance">1, 4, 408, 408, -</column>
+<column name="Memory">2, -, 0, 0, -</column>
 <column name="Multiplexer">-, -, -, 206, -</column>
 <column name="Register">-, -, 136, -, -</column>
 <specialColumn name="Available">120, 80, 35200, 17600, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, 5, 1, 3, 0</specialColumn>
+<specialColumn name="Utilization (%)">2, 5, 1, 3, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_fir_Pipeline_MAC_Loop_0_fu_191">fir_Pipeline_MAC_Loop_0, 0, 2, 212, 199, 0</column>
-<column name="grp_fir_Pipeline_MAC_Loop_1_fu_204">fir_Pipeline_MAC_Loop_1, 0, 2, 212, 199, 0</column>
+<column name="control_s_axi_U">control_s_axi, 1, 0, 116, 110, 0</column>
+<column name="grp_fir_Pipeline_MAC_Loop_0_fu_201">fir_Pipeline_MAC_Loop_0, 0, 2, 146, 149, 0</column>
+<column name="grp_fir_Pipeline_MAC_Loop_1_fu_214">fir_Pipeline_MAC_Loop_1, 0, 2, 146, 149, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -73,7 +74,6 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="c_U">c_ROM_AUTO_1R, 0, 5, 10, 0, 128, 5, 1, 640</column>
 <column name="shift_i_U">shift_i_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 128, 16, 1, 2048</column>
 <column name="shift_q_U">shift_i_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 128, 16, 1, 2048</column>
 </table>
@@ -84,16 +84,17 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln53_fu_287_p2">+, 0, 0, 14, 7, 1</column>
-<column name="add_ln71_fu_275_p2">+, 0, 0, 14, 7, 2</column>
+<column name="add_ln41_fu_297_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln59_fu_285_p2">+, 0, 0, 14, 7, 2</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state8">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">48, 9, 1, 9</column>
-<column name="c_address0">14, 3, 7, 21</column>
-<column name="c_ce0">14, 3, 1, 3</column>
+<column name="coeffs_address0">14, 3, 7, 21</column>
+<column name="coeffs_ce0">14, 3, 1, 3</column>
 <column name="shift_i_address0">14, 3, 7, 21</column>
 <column name="shift_i_address1">14, 3, 7, 21</column>
 <column name="shift_i_ce0">14, 3, 1, 3</column>
@@ -108,20 +109,20 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="acc_i0_loc_fu_104">16, 0, 16, 0</column>
-<column name="acc_i1_loc_fu_96">16, 0, 16, 0</column>
-<column name="acc_q0_loc_fu_108">16, 0, 16, 0</column>
-<column name="acc_q1_loc_fu_100">16, 0, 16, 0</column>
-<column name="add_ln53_reg_373">7, 0, 7, 0</column>
+<column name="acc_i0_loc_fu_114">16, 0, 16, 0</column>
+<column name="acc_i1_loc_fu_106">16, 0, 16, 0</column>
+<column name="acc_q0_loc_fu_118">16, 0, 16, 0</column>
+<column name="acc_q1_loc_fu_110">16, 0, 16, 0</column>
+<column name="add_ln41_reg_383">7, 0, 7, 0</column>
 <column name="ap_CS_fsm">8, 0, 8, 0</column>
-<column name="grp_fir_Pipeline_MAC_Loop_0_fu_191_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_fir_Pipeline_MAC_Loop_1_fu_204_ap_start_reg">1, 0, 1, 0</column>
-<column name="i1_reg_363">16, 0, 16, 0</column>
-<column name="in_sample_keep_reg_347">8, 0, 8, 0</column>
-<column name="in_sample_last_reg_352">1, 0, 1, 0</column>
+<column name="grp_fir_Pipeline_MAC_Loop_0_fu_201_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_fir_Pipeline_MAC_Loop_1_fu_214_ap_start_reg">1, 0, 1, 0</column>
+<column name="i1_reg_373">16, 0, 16, 0</column>
+<column name="in_sample_keep_reg_357">8, 0, 8, 0</column>
+<column name="in_sample_last_reg_362">1, 0, 1, 0</column>
 <column name="ptr">7, 0, 7, 0</column>
-<column name="ptr_load_reg_357">7, 0, 7, 0</column>
-<column name="q1_reg_368">16, 0, 16, 0</column>
+<column name="ptr_load_reg_367">7, 0, 7, 0</column>
+<column name="q1_reg_378">16, 0, 16, 0</column>
 </table>
 </item>
 </section>
@@ -131,8 +132,26 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="ap_clk">in, 1, ap_ctrl_none, fir, return value</column>
-<column name="ap_rst_n">in, 1, ap_ctrl_none, fir, return value</column>
+<column name="s_axi_control_AWVALID">in, 1, s_axi, control, array</column>
+<column name="s_axi_control_AWREADY">out, 1, s_axi, control, array</column>
+<column name="s_axi_control_AWADDR">in, 9, s_axi, control, array</column>
+<column name="s_axi_control_WVALID">in, 1, s_axi, control, array</column>
+<column name="s_axi_control_WREADY">out, 1, s_axi, control, array</column>
+<column name="s_axi_control_WDATA">in, 32, s_axi, control, array</column>
+<column name="s_axi_control_WSTRB">in, 4, s_axi, control, array</column>
+<column name="s_axi_control_ARVALID">in, 1, s_axi, control, array</column>
+<column name="s_axi_control_ARREADY">out, 1, s_axi, control, array</column>
+<column name="s_axi_control_ARADDR">in, 9, s_axi, control, array</column>
+<column name="s_axi_control_RVALID">out, 1, s_axi, control, array</column>
+<column name="s_axi_control_RREADY">in, 1, s_axi, control, array</column>
+<column name="s_axi_control_RDATA">out, 32, s_axi, control, array</column>
+<column name="s_axi_control_RRESP">out, 2, s_axi, control, array</column>
+<column name="s_axi_control_BVALID">out, 1, s_axi, control, array</column>
+<column name="s_axi_control_BREADY">in, 1, s_axi, control, array</column>
+<column name="s_axi_control_BRESP">out, 2, s_axi, control, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, fir, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, fir, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, fir, return value</column>
 <column name="y_TDATA">out, 64, axis, y_V_data_V, pointer</column>
 <column name="y_TVALID">out, 1, axis, y_V_last_V, pointer</column>
 <column name="y_TREADY">in, 1, axis, y_V_last_V, pointer</column>

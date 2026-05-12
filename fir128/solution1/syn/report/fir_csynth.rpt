@@ -3,13 +3,13 @@
 ================================================================
 == Vitis HLS Report for 'fir'
 ================================================================
-* Date:           Sat May  9 16:31:00 2026
+* Date:           Tue May 12 23:58:29 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        fir128
 * Solution:       solution1 (Vivado IP Flow Target)
 * Product family: zynq
-* Target device:  xc7z010-clg400-1
+* Target device:  xc7z010-clg225-1
 
 
 ================================================================
@@ -38,8 +38,8 @@
         |                                    |                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |              Instance              |          Module         |   min   |   max   |    min   |    max   | min | max |   Type  |
         +------------------------------------+-------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |grp_fir_Pipeline_MAC_Loop_0_fu_191  |fir_Pipeline_MAC_Loop_0  |      133|      133|  1.330 us|  1.330 us|  133|  133|       no|
-        |grp_fir_Pipeline_MAC_Loop_1_fu_204  |fir_Pipeline_MAC_Loop_1  |      133|      133|  1.330 us|  1.330 us|  133|  133|       no|
+        |grp_fir_Pipeline_MAC_Loop_0_fu_201  |fir_Pipeline_MAC_Loop_0  |      133|      133|  1.330 us|  1.330 us|  133|  133|       no|
+        |grp_fir_Pipeline_MAC_Loop_1_fu_214  |fir_Pipeline_MAC_Loop_1  |      133|      133|  1.330 us|  1.330 us|  133|  133|       no|
         +------------------------------------+-------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -55,18 +55,18 @@
 |       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
 +-----------------+---------+----+-------+-------+-----+
 |DSP              |        -|   -|      -|      -|    -|
-|Expression       |        -|   -|      0|     30|    -|
+|Expression       |        -|   -|      0|     32|    -|
 |FIFO             |        -|   -|      -|      -|    -|
-|Instance         |        -|   4|    424|    398|    -|
-|Memory           |        2|   -|      5|     10|    -|
+|Instance         |        1|   4|    408|    408|    -|
+|Memory           |        2|   -|      0|      0|    -|
 |Multiplexer      |        -|   -|      -|    206|    -|
 |Register         |        -|   -|    136|      -|    -|
 +-----------------+---------+----+-------+-------+-----+
-|Total            |        2|   4|    565|    644|    0|
+|Total            |        3|   4|    544|    646|    0|
 +-----------------+---------+----+-------+-------+-----+
 |Available        |      120|  80|  35200|  17600|    0|
 +-----------------+---------+----+-------+-------+-----+
-|Utilization (%)  |        1|   5|      1|      3|    0|
+|Utilization (%)  |        2|   5|      1|      3|    0|
 +-----------------+---------+----+-------+-------+-----+
 
 + Detail: 
@@ -74,10 +74,11 @@
     +------------------------------------+-------------------------+---------+----+-----+-----+-----+
     |              Instance              |          Module         | BRAM_18K| DSP|  FF | LUT | URAM|
     +------------------------------------+-------------------------+---------+----+-----+-----+-----+
-    |grp_fir_Pipeline_MAC_Loop_0_fu_191  |fir_Pipeline_MAC_Loop_0  |        0|   2|  212|  199|    0|
-    |grp_fir_Pipeline_MAC_Loop_1_fu_204  |fir_Pipeline_MAC_Loop_1  |        0|   2|  212|  199|    0|
+    |control_s_axi_U                     |control_s_axi            |        1|   0|  116|  110|    0|
+    |grp_fir_Pipeline_MAC_Loop_0_fu_201  |fir_Pipeline_MAC_Loop_0  |        0|   2|  146|  149|    0|
+    |grp_fir_Pipeline_MAC_Loop_1_fu_214  |fir_Pipeline_MAC_Loop_1  |        0|   2|  146|  149|    0|
     +------------------------------------+-------------------------+---------+----+-----+-----+-----+
-    |Total                               |                         |        0|   4|  424|  398|    0|
+    |Total                               |                         |        1|   4|  408|  408|    0|
     +------------------------------------+-------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
@@ -87,11 +88,10 @@
     +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
     |   Memory  |          Module          | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
     +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |c_U        |c_ROM_AUTO_1R             |        0|  5|  10|    0|   128|    5|     1|          640|
     |shift_i_U  |shift_i_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|   128|   16|     1|         2048|
     |shift_q_U  |shift_i_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|   128|   16|     1|         2048|
     +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |Total      |                          |        2|  5|  10|    0|   384|   37|     3|         4736|
+    |Total      |                          |        2|  0|   0|    0|   256|   32|     2|         4096|
     +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
 
     * FIFO: 
@@ -101,11 +101,12 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln53_fu_287_p2  |         +|   0|  0|  14|           7|           1|
-    |add_ln71_fu_275_p2  |         +|   0|  0|  14|           7|           2|
+    |add_ln41_fu_297_p2  |         +|   0|  0|  14|           7|           1|
+    |add_ln59_fu_285_p2  |         +|   0|  0|  14|           7|           2|
+    |ap_block_state1     |        or|   0|  0|   2|           1|           1|
     |ap_block_state8     |        or|   0|  0|   2|           1|           1|
     +--------------------+----------+----+---+----+------------+------------+
-    |Total               |          |   0|  0|  30|          15|           4|
+    |Total               |          |   0|  0|  32|          16|           5|
     +--------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -113,8 +114,8 @@
     |       Name       | LUT| Input Size| Bits| Total Bits|
     +------------------+----+-----------+-----+-----------+
     |ap_NS_fsm         |  48|          9|    1|          9|
-    |c_address0        |  14|          3|    7|         21|
-    |c_ce0             |  14|          3|    1|          3|
+    |coeffs_address0   |  14|          3|    7|         21|
+    |coeffs_ce0        |  14|          3|    1|          3|
     |shift_i_address0  |  14|          3|    7|         21|
     |shift_i_address1  |  14|          3|    7|         21|
     |shift_i_ce0       |  14|          3|    1|          3|
@@ -133,20 +134,20 @@
     +-------------------------------------------------+----+----+-----+-----------+
     |                       Name                      | FF | LUT| Bits| Const Bits|
     +-------------------------------------------------+----+----+-----+-----------+
-    |acc_i0_loc_fu_104                                |  16|   0|   16|          0|
-    |acc_i1_loc_fu_96                                 |  16|   0|   16|          0|
-    |acc_q0_loc_fu_108                                |  16|   0|   16|          0|
-    |acc_q1_loc_fu_100                                |  16|   0|   16|          0|
-    |add_ln53_reg_373                                 |   7|   0|    7|          0|
+    |acc_i0_loc_fu_114                                |  16|   0|   16|          0|
+    |acc_i1_loc_fu_106                                |  16|   0|   16|          0|
+    |acc_q0_loc_fu_118                                |  16|   0|   16|          0|
+    |acc_q1_loc_fu_110                                |  16|   0|   16|          0|
+    |add_ln41_reg_383                                 |   7|   0|    7|          0|
     |ap_CS_fsm                                        |   8|   0|    8|          0|
-    |grp_fir_Pipeline_MAC_Loop_0_fu_191_ap_start_reg  |   1|   0|    1|          0|
-    |grp_fir_Pipeline_MAC_Loop_1_fu_204_ap_start_reg  |   1|   0|    1|          0|
-    |i1_reg_363                                       |  16|   0|   16|          0|
-    |in_sample_keep_reg_347                           |   8|   0|    8|          0|
-    |in_sample_last_reg_352                           |   1|   0|    1|          0|
+    |grp_fir_Pipeline_MAC_Loop_0_fu_201_ap_start_reg  |   1|   0|    1|          0|
+    |grp_fir_Pipeline_MAC_Loop_1_fu_214_ap_start_reg  |   1|   0|    1|          0|
+    |i1_reg_373                                       |  16|   0|   16|          0|
+    |in_sample_keep_reg_357                           |   8|   0|    8|          0|
+    |in_sample_last_reg_362                           |   1|   0|    1|          0|
     |ptr                                              |   7|   0|    7|          0|
-    |ptr_load_reg_357                                 |   7|   0|    7|          0|
-    |q1_reg_368                                       |  16|   0|   16|          0|
+    |ptr_load_reg_367                                 |   7|   0|    7|          0|
+    |q1_reg_378                                       |  16|   0|   16|          0|
     +-------------------------------------------------+----+----+-----+-----------+
     |Total                                            | 136|   0|  136|          0|
     +-------------------------------------------------+----+----+-----+-----------+
@@ -157,22 +158,40 @@
 == Interface
 ================================================================
 * Summary: 
-+----------+-----+-----+--------------+--------------+--------------+
-| RTL Ports| Dir | Bits|   Protocol   | Source Object|    C Type    |
-+----------+-----+-----+--------------+--------------+--------------+
-|ap_clk    |   in|    1|  ap_ctrl_none|           fir|  return value|
-|ap_rst_n  |   in|    1|  ap_ctrl_none|           fir|  return value|
-|y_TDATA   |  out|   64|          axis|    y_V_data_V|       pointer|
-|y_TVALID  |  out|    1|          axis|    y_V_last_V|       pointer|
-|y_TREADY  |   in|    1|          axis|    y_V_last_V|       pointer|
-|y_TLAST   |  out|    1|          axis|    y_V_last_V|       pointer|
-|y_TKEEP   |  out|    8|          axis|    y_V_keep_V|       pointer|
-|y_TSTRB   |  out|    8|          axis|    y_V_strb_V|       pointer|
-|x_TDATA   |   in|   64|          axis|    x_V_data_V|       pointer|
-|x_TVALID  |   in|    1|          axis|    x_V_last_V|       pointer|
-|x_TREADY  |  out|    1|          axis|    x_V_last_V|       pointer|
-|x_TLAST   |   in|    1|          axis|    x_V_last_V|       pointer|
-|x_TKEEP   |   in|    8|          axis|    x_V_keep_V|       pointer|
-|x_TSTRB   |   in|    8|          axis|    x_V_strb_V|       pointer|
-+----------+-----+-----+--------------+--------------+--------------+
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|         array|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|         array|
+|s_axi_control_AWADDR   |   in|    9|       s_axi|       control|         array|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|         array|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|         array|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|         array|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|         array|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|         array|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|         array|
+|s_axi_control_ARADDR   |   in|    9|       s_axi|       control|         array|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|         array|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|         array|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|         array|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|         array|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|         array|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|         array|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|         array|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|           fir|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|           fir|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|           fir|  return value|
+|y_TDATA                |  out|   64|        axis|    y_V_data_V|       pointer|
+|y_TVALID               |  out|    1|        axis|    y_V_last_V|       pointer|
+|y_TREADY               |   in|    1|        axis|    y_V_last_V|       pointer|
+|y_TLAST                |  out|    1|        axis|    y_V_last_V|       pointer|
+|y_TKEEP                |  out|    8|        axis|    y_V_keep_V|       pointer|
+|y_TSTRB                |  out|    8|        axis|    y_V_strb_V|       pointer|
+|x_TDATA                |   in|   64|        axis|    x_V_data_V|       pointer|
+|x_TVALID               |   in|    1|        axis|    x_V_last_V|       pointer|
+|x_TREADY               |  out|    1|        axis|    x_V_last_V|       pointer|
+|x_TLAST                |   in|    1|        axis|    x_V_last_V|       pointer|
+|x_TKEEP                |   in|    8|        axis|    x_V_keep_V|       pointer|
+|x_TSTRB                |   in|    8|        axis|    x_V_strb_V|       pointer|
++-----------------------+-----+-----+------------+--------------+--------------+
 

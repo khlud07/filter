@@ -13,7 +13,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 0
+set HasDSPModule 1
 set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1
@@ -41,7 +41,7 @@ set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
-set TargetInfo xc7z010:-clg400:-1
+set TargetInfo xc7z010:-clg225:-1
 set SourceFiles {sc {} c ../../fir.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}

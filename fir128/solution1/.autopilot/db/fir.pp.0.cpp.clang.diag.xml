@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/csynth.tcl</string>
       <key>line</key>
-      <integer>17</integer>
+      <integer>18</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -77,7 +77,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=ap_ctrl_none port=return_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=s_axilite port=coeffs_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -89,7 +89,39 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>22</integer>
+      <integer>7</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=s_axilite port=return_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>fir.cpp</string>
+      <key>line</key>
+      <integer>8</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>fir.cpp</string>
+      <key>line</key>
+      <integer>12</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,7 +137,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>23</integer>
+      <integer>13</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -121,7 +153,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>46</integer>
+      <integer>34</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -137,7 +169,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>47</integer>
+      <integer>35</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -153,7 +185,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>48</integer>
+      <integer>36</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -169,7 +201,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>64</integer>
+      <integer>52</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -185,7 +217,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>65</integer>
+      <integer>53</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -201,7 +233,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>66</integer>
+      <integer>54</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

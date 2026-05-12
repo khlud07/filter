@@ -15,21 +15,21 @@ set DLRegItemOffset 0
 set C_modelName {fir_Pipeline_MAC_Loop_1}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ add_ln53 int 7 regular  }
+	{ add_ln41 int 7 regular  }
+	{ coeffs int 16 regular {array 128 { 1 } 1 1 }  }
 	{ acc_q1_out int 16 regular {pointer 1}  }
 	{ acc_i1_out int 16 regular {pointer 1}  }
 	{ shift_i int 16 regular {array 128 { 1 3 } 1 1 } {global 0}  }
-	{ c int 5 regular {array 128 { 1 } 1 1 } {global 0}  }
 	{ shift_q int 16 regular {array 128 { 1 3 } 1 1 } {global 0}  }
 }
 set hasAXIMCache 0
 set AXIMCacheInstList { }
 set C_modelArgMapList {[ 
-	{ "Name" : "add_ln53", "interface" : "wire", "bitwidth" : 7, "direction" : "READONLY"} , 
+	{ "Name" : "add_ln41", "interface" : "wire", "bitwidth" : 7, "direction" : "READONLY"} , 
+ 	{ "Name" : "coeffs", "interface" : "memory", "bitwidth" : 16, "direction" : "READONLY"} , 
  	{ "Name" : "acc_q1_out", "interface" : "wire", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
  	{ "Name" : "acc_i1_out", "interface" : "wire", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
  	{ "Name" : "shift_i", "interface" : "memory", "bitwidth" : 16, "direction" : "READONLY", "extern" : 0} , 
- 	{ "Name" : "c", "interface" : "memory", "bitwidth" : 5, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "shift_q", "interface" : "memory", "bitwidth" : 16, "direction" : "READONLY", "extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 20
@@ -40,17 +40,17 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ add_ln53 sc_in sc_lv 7 signal 0 } 
-	{ acc_q1_out sc_out sc_lv 16 signal 1 } 
-	{ acc_q1_out_ap_vld sc_out sc_logic 1 outvld 1 } 
-	{ acc_i1_out sc_out sc_lv 16 signal 2 } 
-	{ acc_i1_out_ap_vld sc_out sc_logic 1 outvld 2 } 
-	{ shift_i_address0 sc_out sc_lv 7 signal 3 } 
-	{ shift_i_ce0 sc_out sc_logic 1 signal 3 } 
-	{ shift_i_q0 sc_in sc_lv 16 signal 3 } 
-	{ c_address0 sc_out sc_lv 7 signal 4 } 
-	{ c_ce0 sc_out sc_logic 1 signal 4 } 
-	{ c_q0 sc_in sc_lv 5 signal 4 } 
+	{ add_ln41 sc_in sc_lv 7 signal 0 } 
+	{ coeffs_address0 sc_out sc_lv 7 signal 1 } 
+	{ coeffs_ce0 sc_out sc_logic 1 signal 1 } 
+	{ coeffs_q0 sc_in sc_lv 16 signal 1 } 
+	{ acc_q1_out sc_out sc_lv 16 signal 2 } 
+	{ acc_q1_out_ap_vld sc_out sc_logic 1 outvld 2 } 
+	{ acc_i1_out sc_out sc_lv 16 signal 3 } 
+	{ acc_i1_out_ap_vld sc_out sc_logic 1 outvld 3 } 
+	{ shift_i_address0 sc_out sc_lv 7 signal 4 } 
+	{ shift_i_ce0 sc_out sc_logic 1 signal 4 } 
+	{ shift_i_q0 sc_in sc_lv 16 signal 4 } 
 	{ shift_q_address0 sc_out sc_lv 7 signal 5 } 
 	{ shift_q_ce0 sc_out sc_logic 1 signal 5 } 
 	{ shift_q_q0 sc_in sc_lv 16 signal 5 } 
@@ -62,7 +62,10 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "add_ln53", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "add_ln53", "role": "default" }} , 
+ 	{ "name": "add_ln41", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "add_ln41", "role": "default" }} , 
+ 	{ "name": "coeffs_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "coeffs", "role": "address0" }} , 
+ 	{ "name": "coeffs_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "coeffs", "role": "ce0" }} , 
+ 	{ "name": "coeffs_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "coeffs", "role": "q0" }} , 
  	{ "name": "acc_q1_out", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "acc_q1_out", "role": "default" }} , 
  	{ "name": "acc_q1_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "acc_q1_out", "role": "ap_vld" }} , 
  	{ "name": "acc_i1_out", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "acc_i1_out", "role": "default" }} , 
@@ -70,9 +73,6 @@ set NewPortList {[
  	{ "name": "shift_i_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "shift_i", "role": "address0" }} , 
  	{ "name": "shift_i_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "shift_i", "role": "ce0" }} , 
  	{ "name": "shift_i_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "shift_i", "role": "q0" }} , 
- 	{ "name": "c_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "c", "role": "address0" }} , 
- 	{ "name": "c_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c", "role": "ce0" }} , 
- 	{ "name": "c_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "c", "role": "q0" }} , 
  	{ "name": "shift_q_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "shift_q", "role": "address0" }} , 
  	{ "name": "shift_q_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "shift_q", "role": "ce0" }} , 
  	{ "name": "shift_q_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "shift_q", "role": "q0" }}  ]}
@@ -93,27 +93,27 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "add_ln53", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln41", "Type" : "None", "Direction" : "I"},
+			{"Name" : "coeffs", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "acc_q1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "acc_i1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "shift_i", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "c", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "shift_q", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "MAC_Loop_1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter3", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter3", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5s_16s_21_1_1_U11", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_5s_21_1_1_U12", "Parent" : "0"},
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter4", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter4", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_32ns_32_4_1_U10", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_32ns_32_4_1_U11", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	fir_Pipeline_MAC_Loop_1 {
-		add_ln53 {Type I LastRead 0 FirstWrite -1}
+		add_ln41 {Type I LastRead 0 FirstWrite -1}
+		coeffs {Type I LastRead 0 FirstWrite -1}
 		acc_q1_out {Type O LastRead -1 FirstWrite 3}
 		acc_i1_out {Type O LastRead -1 FirstWrite 3}
 		shift_i {Type I LastRead 0 FirstWrite -1}
-		c {Type I LastRead 0 FirstWrite -1}
 		shift_q {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
@@ -128,10 +128,10 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	add_ln53 { ap_none {  { add_ln53 in_data 0 7 } } }
+	add_ln41 { ap_none {  { add_ln41 in_data 0 7 } } }
+	coeffs { ap_memory {  { coeffs_address0 mem_address 1 7 }  { coeffs_ce0 mem_ce 1 1 }  { coeffs_q0 in_data 0 16 } } }
 	acc_q1_out { ap_vld {  { acc_q1_out out_data 1 16 }  { acc_q1_out_ap_vld out_vld 1 1 } } }
 	acc_i1_out { ap_vld {  { acc_i1_out out_data 1 16 }  { acc_i1_out_ap_vld out_vld 1 1 } } }
-	shift_i { ap_memory {  { shift_i_address0 mem_address 1 7 }  { shift_i_ce0 mem_ce 1 1 }  { shift_i_q0 mem_dout 0 16 } } }
-	c { ap_memory {  { c_address0 mem_address 1 7 }  { c_ce0 mem_ce 1 1 }  { c_q0 mem_dout 0 5 } } }
-	shift_q { ap_memory {  { shift_q_address0 mem_address 1 7 }  { shift_q_ce0 mem_ce 1 1 }  { shift_q_q0 mem_dout 0 16 } } }
+	shift_i { ap_memory {  { shift_i_address0 mem_address 1 7 }  { shift_i_ce0 mem_ce 1 1 }  { shift_i_q0 in_data 0 16 } } }
+	shift_q { ap_memory {  { shift_q_address0 mem_address 1 7 }  { shift_q_ce0 mem_ce 1 1 }  { shift_q_q0 in_data 0 16 } } }
 }

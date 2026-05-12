@@ -1,13 +1,13 @@
-INFO-FLOW: Workspace /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1 opened at Sat May 09 16:30:50 EEST 2026
+INFO-FLOW: Workspace /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1 opened at Tue May 12 23:58:19 EEST 2026
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xc7z010-clg400-1 
-Execute       create_platform xc7z010-clg400-1 -board  
+Execute     set_part xc7z010-clg225-1 
+Execute       create_platform xc7z010-clg225-1 -board  
 DBG:HLSDevice: Trying to load device library: /home/paket/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/paket/Xilinx/Vivado/2023.2/data/parts/arch.xml
 DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
-Command       create_platform done; 0.28 sec.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg225-1'
+Command       create_platform done; 0.29 sec.
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
@@ -20,9 +20,9 @@ Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xil
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       ap_part_info -name xc7z010-clg225-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.35 sec.
+Command     set_part done; 0.36 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
@@ -34,10 +34,13 @@ Execute     config_export -output=/home/paket/Desktop/vitis/Read_the_docs/projec
 Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 Execute     config_export -rtl=verilog 
-Command   open_solution done; 0.41 sec.
-Execute   set_part xc7z010-clg400-1 
-INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
-Execute     create_platform xc7z010-clg400-1 -board  
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Command   open_solution done; 0.42 sec.
+Execute   set_part xc7z010clg225-1 
+INFO: [HLS 200-1510] Running: set_part xc7z010clg225-1 
+Execute     create_platform xc7z010clg225-1 -board  
 Execute     source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
@@ -50,12 +53,14 @@ Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilin
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xc7z010-clg400-1 -data info 
+Execute     ap_part_info -name xc7z010-clg225-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+Execute   config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
 Execute   source ./fir128/solution1/directives.tcl 
 INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
 Execute     set_directive_top -name fir fir 
@@ -64,7 +69,7 @@ Execute   csynth_design
 INFO: [HLS 200-1510] Running: csynth_design 
 INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 258.336 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 258.449 MB.
 Execute       set_directive_top fir -name=fir 
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -72,32 +77,32 @@ Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/
 INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling fir.cpp as C++
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       ap_part_info -name xc7z010-clg225-1 -data info 
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
-INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang fir.cpp -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/paket/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg400-1 > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.cpp.clang.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.cpp.clang.err.log
+INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang fir.cpp -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/paket/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg225-1 > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.cpp.clang.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.cpp.clang.err.log
 INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
 INFO-FLOW: Source syntax check for synthesis
-INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg400-1 > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/clang.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/clang.err.log
+INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg225-1 > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/clang.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/.systemc_flag -fix-errors /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.24 sec.
+Command       clang_tidy done; 0.23 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/all.directive.json -fix-errors /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.38 sec.
+Command       clang_tidy done; 0.37 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang-tidy.loop-label.err.log
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 0.46 sec.
+Command       clang_tidy done; 0.47 sec.
 INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.xilinx-dataflow-lawyer.err.log
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       ap_part_info -name xc7z010-clg225-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
-INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.bc -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg400-1 > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang.err.log
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.73 seconds. CPU system time: 0.31 seconds. Elapsed time: 2.04 seconds; current allocated memory: 259.484 MB.
+INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot -I /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.bc -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg225-1 > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.7 seconds. CPU system time: 0.29 seconds. Elapsed time: 1.99 seconds; current allocated memory: 259.723 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.g.bc"  
@@ -112,13 +117,13 @@ INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/lib/libhlsm_39.bc /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/lib/libhlsmc++_39.bc 
 INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/lib/libhlsm_39.bc /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/lib/libhlsmc++_39.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.1 sec.
+Command       run_link_or_opt done; 1.06 sec.
 Execute       run_link_or_opt -opt -out /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fir -reflow-float-conversion 
 INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fir -reflow-float-conversion -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.45 sec.
+Command       run_link_or_opt done; 0.44 sec.
 Execute       run_link_or_opt -out /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/lib/libfloatconversion_39.bc 
 INFO-FLOW: run_clang exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/lib/libfloatconversion_39.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 INFO-FLOW: 
@@ -131,67 +136,67 @@ Execute       send_msg_by_id INFO @200-777@%s Vivado
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
-INFO-FLOW: run_clang (background poll_ms 5000) exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=fir -mllvm -hls-db-dir -mllvm /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg400-1 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 3,997 Compile/Link /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 3,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 197 Unroll/Inline (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 151 Unroll/Inline (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 151 Unroll/Inline (step 3) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 151 Unroll/Inline (step 4) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 151 Array/Struct (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 151 Array/Struct (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 151 Array/Struct (step 3) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 151 Array/Struct (step 4) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 151 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 207 Array/Struct (step 5) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 207 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 209 Performance (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 203 Performance (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 163 Performance (step 3) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 163 Performance (step 4) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 138 HW Transforms (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 138 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 139 HW Transforms (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 139 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+INFO-FLOW: run_clang (background poll_ms 5000) exec: /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=fir -mllvm -hls-db-dir -mllvm /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 -device-name-info=xc7z010clg225-1 2> /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 1,689 Compile/Link /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 1,689 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 184 Unroll/Inline (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 184 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 141 Unroll/Inline (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 141 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 141 Unroll/Inline (step 3) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 141 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 141 Unroll/Inline (step 4) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 141 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 142 Array/Struct (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 142 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 142 Array/Struct (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 142 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 142 Array/Struct (step 3) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 142 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 142 Array/Struct (step 4) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 142 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 201 Array/Struct (step 5) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 201 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 203 Performance (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 197 Performance (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 165 Performance (step 3) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 165 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 165 Performance (step 4) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 165 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 142 HW Transforms (step 1) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 142 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 143 HW Transforms (step 2) /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 143 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth_design_size.rpt
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.68 seconds. CPU system time: 0.25 seconds. Elapsed time: 6.66 seconds; current allocated memory: 262.117 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.117 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.64 seconds. CPU system time: 0.24 seconds. Elapsed time: 6.6 seconds; current allocated memory: 262.312 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 262.312 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fir -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.0.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 262.270 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 262.480 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.1.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 262.312 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 262.586 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.g.1.bc to /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.o.1.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.o.1.tmp.bc -f 
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 284.973 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 285.203 MB.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.o.2.bc -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Execute           auto_get_db
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 295.145 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 295.367 MB.
 INFO-FLOW: Finish building internal data model.
-Command     elaborate done; 8.8 sec.
+Command     elaborate done; 8.69 sec.
 Execute     ap_eval exec zip -j /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -233,14 +238,16 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       set_default_model fir_Pipeline_MAC_Loop_0 
 Execute       schedule -model fir_Pipeline_MAC_Loop_0 
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=acc_q0_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=acc_i0_3) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_0'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'MAC_Loop_0'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'MAC_Loop_0'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 296.684 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 296.926 MB.
 Execute       syn_report -verbosereport -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.verbose.sched.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.sched.adb -f 
 INFO-FLOW: Finish scheduling fir_Pipeline_MAC_Loop_0.
 Execute       set_default_model fir_Pipeline_MAC_Loop_0 
@@ -250,11 +257,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 296.684 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 296.926 MB.
 Execute       syn_report -verbosereport -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.verbose.bind.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.bind.adb -f 
 INFO-FLOW: Finish binding fir_Pipeline_MAC_Loop_0.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -263,14 +270,16 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       set_default_model fir_Pipeline_MAC_Loop_1 
 Execute       schedule -model fir_Pipeline_MAC_Loop_1 
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=acc_q1_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=acc_i1_3) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-61] Pipelining loop 'MAC_Loop_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'MAC_Loop_1'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'MAC_Loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 297.395 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.625 MB.
 Execute       syn_report -verbosereport -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.verbose.sched.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.sched.adb -f 
 INFO-FLOW: Finish scheduling fir_Pipeline_MAC_Loop_1.
 Execute       set_default_model fir_Pipeline_MAC_Loop_1 
@@ -280,11 +289,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.395 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.625 MB.
 Execute       syn_report -verbosereport -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.verbose.bind.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.bind.adb -f 
 INFO-FLOW: Finish binding fir_Pipeline_MAC_Loop_1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -294,11 +303,11 @@ Execute       set_default_model fir
 Execute       schedule -model fir 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.828 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 298.133 MB.
 Execute       syn_report -verbosereport -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.verbose.sched.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.sched.adb -f 
 INFO-FLOW: Finish scheduling fir.
 Execute       set_default_model fir 
@@ -308,11 +317,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 297.828 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 298.133 MB.
 Execute       syn_report -verbosereport -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.verbose.bind.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.bind.adb -f 
 INFO-FLOW: Finish binding fir.
 Execute       get_model_list fir -filter all-wo-channel 
@@ -326,25 +335,24 @@ INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_0'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model fir_Pipeline_MAC_Loop_0 -top_prefix fir_ -sub_prefix fir_ -mg_file /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_0' pipeline 'MAC_Loop_0' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_32ns_32_4_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_0'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 297.828 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 298.133 MB.
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
 Execute       gen_rtl fir_Pipeline_MAC_Loop_0 -style xilinx -f -lang vhdl -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/vhdl/fir_fir_Pipeline_MAC_Loop_0 
 Execute       gen_rtl fir_Pipeline_MAC_Loop_0 -style xilinx -f -lang vlog -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/verilog/fir_fir_Pipeline_MAC_Loop_0 
 Execute       syn_report -csynth -model fir_Pipeline_MAC_Loop_0 -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/fir_Pipeline_MAC_Loop_0_csynth.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       syn_report -rtlxml -model fir_Pipeline_MAC_Loop_0 -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/fir_Pipeline_MAC_Loop_0_csynth.xml 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       syn_report -verbosereport -model fir_Pipeline_MAC_Loop_0 -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.verbose.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -model fir_Pipeline_MAC_Loop_0 -f -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.adb 
 Execute       db_write -model fir_Pipeline_MAC_Loop_0 -bindview -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info fir_Pipeline_MAC_Loop_0 -p /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0 
@@ -353,25 +361,24 @@ INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_MAC_Loop_1'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model fir_Pipeline_MAC_Loop_1 -top_prefix fir_ -sub_prefix fir_ -mg_file /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fir_Pipeline_MAC_Loop_1' pipeline 'MAC_Loop_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_16s_5s_21_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5s_16s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_32ns_32_4_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_MAC_Loop_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 299.406 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 299.652 MB.
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
 Execute       gen_rtl fir_Pipeline_MAC_Loop_1 -style xilinx -f -lang vhdl -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/vhdl/fir_fir_Pipeline_MAC_Loop_1 
 Execute       gen_rtl fir_Pipeline_MAC_Loop_1 -style xilinx -f -lang vlog -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/verilog/fir_fir_Pipeline_MAC_Loop_1 
 Execute       syn_report -csynth -model fir_Pipeline_MAC_Loop_1 -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/fir_Pipeline_MAC_Loop_1_csynth.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       syn_report -rtlxml -model fir_Pipeline_MAC_Loop_1 -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/fir_Pipeline_MAC_Loop_1_csynth.xml 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       syn_report -verbosereport -model fir_Pipeline_MAC_Loop_1 -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.verbose.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -model fir_Pipeline_MAC_Loop_1 -f -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.adb 
 Execute       db_write -model fir_Pipeline_MAC_Loop_1 -bindview -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info fir_Pipeline_MAC_Loop_1 -p /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1 
@@ -388,36 +395,37 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_data_V' to 'axis' 
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_keep_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_strb_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/coeffs' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 's_axilite & ap_ctrl_hs'.
 WARNING: [RTGEN 206-101] Register 'ptr' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'coeffs' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
 INFO: [RTMG 210-278] Implementing memory 'fir_shift_i_RAM_2P_BRAM_1R1W' using block RAMs.
-INFO: [RTMG 210-279] Implementing memory 'fir_c_ROM_AUTO_1R' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 301.199 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 301.512 MB.
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
 Execute       gen_rtl fir -istop -style xilinx -f -lang vhdl -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/vhdl/fir 
 Execute       gen_rtl fir -istop -style xilinx -f -lang vlog -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/verilog/fir 
 Execute       syn_report -csynth -model fir -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/fir_csynth.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       syn_report -rtlxml -model fir -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/fir_csynth.xml 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       syn_report -verbosereport -model fir -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.verbose.rpt 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       db_write -model fir -f -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.adb 
 Execute       db_write -model fir -bindview -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info fir -p /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir 
 Execute       export_constraint_db -f -tool general -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.constraint.tcl 
 Execute       syn_report -designview -model fir -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.design.xml 
 Execute       syn_report -csynthDesign -model fir -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth.rpt -MHOut /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
-Execute         list_part -family xc7z010-clg400-1 
-Execute           ap_family_info -name xc7z010-clg400-1 -data names 
-Execute           ap_part_info -quiet -name xc7z010-clg400-1 -data family 
+Execute         list_part -family xc7z010-clg225-1 
+Execute           ap_family_info -name xc7z010-clg225-1 -data names 
+Execute           ap_part_info -quiet -name xc7z010-clg225-1 -data family 
 Execute       syn_report -wcfg -model fir -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model fir -o /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.protoinst 
 Execute       sc_get_clocks fir 
@@ -425,10 +433,8 @@ Execute       sc_get_portdomain fir
 INFO-FLOW: Model list for RTL component generation: fir_Pipeline_MAC_Loop_0 fir_Pipeline_MAC_Loop_1 fir
 INFO-FLOW: Handling components in module [fir_Pipeline_MAC_Loop_0] ... 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.compgen.tcl 
-INFO-FLOW: Found component fir_mul_5s_16s_21_1_1.
-INFO-FLOW: Append model fir_mul_5s_16s_21_1_1
-INFO-FLOW: Found component fir_mul_16s_5s_21_1_1.
-INFO-FLOW: Append model fir_mul_16s_5s_21_1_1
+INFO-FLOW: Found component fir_mac_muladd_16s_16s_32ns_32_4_1.
+INFO-FLOW: Append model fir_mac_muladd_16s_16s_32ns_32_4_1
 INFO-FLOW: Found component fir_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model fir_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [fir_Pipeline_MAC_Loop_1] ... 
@@ -439,8 +445,8 @@ INFO-FLOW: Handling components in module [fir] ...
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.compgen.tcl 
 INFO-FLOW: Found component fir_shift_i_RAM_2P_BRAM_1R1W.
 INFO-FLOW: Append model fir_shift_i_RAM_2P_BRAM_1R1W
-INFO-FLOW: Found component fir_c_ROM_AUTO_1R.
-INFO-FLOW: Append model fir_c_ROM_AUTO_1R
+INFO-FLOW: Found component fir_control_s_axi.
+INFO-FLOW: Append model fir_control_s_axi
 INFO-FLOW: Found component fir_regslice_both.
 INFO-FLOW: Append model fir_regslice_both
 INFO-FLOW: Found component fir_regslice_both.
@@ -461,14 +467,13 @@ INFO-FLOW: Append model fir_Pipeline_MAC_Loop_0
 INFO-FLOW: Append model fir_Pipeline_MAC_Loop_1
 INFO-FLOW: Append model fir
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: fir_mul_5s_16s_21_1_1 fir_mul_16s_5s_21_1_1 fir_flow_control_loop_pipe_sequential_init fir_flow_control_loop_pipe_sequential_init fir_shift_i_RAM_2P_BRAM_1R1W fir_c_ROM_AUTO_1R fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_Pipeline_MAC_Loop_0 fir_Pipeline_MAC_Loop_1 fir
+INFO-FLOW: All models in this session: fir_mac_muladd_16s_16s_32ns_32_4_1 fir_flow_control_loop_pipe_sequential_init fir_flow_control_loop_pipe_sequential_init fir_shift_i_RAM_2P_BRAM_1R1W fir_control_s_axi fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_regslice_both fir_Pipeline_MAC_Loop_0 fir_Pipeline_MAC_Loop_1 fir
 INFO-FLOW: Generating /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/autopilot.rtl.models.txt file...
-INFO-FLOW: To file: write model fir_mul_5s_16s_21_1_1
-INFO-FLOW: To file: write model fir_mul_16s_5s_21_1_1
+INFO-FLOW: To file: write model fir_mac_muladd_16s_16s_32ns_32_4_1
 INFO-FLOW: To file: write model fir_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model fir_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model fir_shift_i_RAM_2P_BRAM_1R1W
-INFO-FLOW: To file: write model fir_c_ROM_AUTO_1R
+INFO-FLOW: To file: write model fir_control_s_axi
 INFO-FLOW: To file: write model fir_regslice_both
 INFO-FLOW: To file: write model fir_regslice_both
 INFO-FLOW: To file: write model fir_regslice_both
@@ -508,12 +513,11 @@ Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xil
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
 Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
-INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/vhdl' dstVlogDir='/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/vlog' tclDir='/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db' modelList='fir_mul_5s_16s_21_1_1
-fir_mul_16s_5s_21_1_1
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/vhdl' dstVlogDir='/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/vlog' tclDir='/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db' modelList='fir_mac_muladd_16s_16s_32ns_32_4_1
 fir_flow_control_loop_pipe_sequential_init
 fir_flow_control_loop_pipe_sequential_init
 fir_shift_i_RAM_2P_BRAM_1R1W
-fir_c_ROM_AUTO_1R
+fir_control_s_axi
 fir_regslice_both
 fir_regslice_both
 fir_regslice_both
@@ -527,14 +531,18 @@ fir_Pipeline_MAC_Loop_1
 fir
 ' expOnly='0'
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
-Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg225-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg225-1 -data info -quiet 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg225-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg225-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg225-1 -data info 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.compgen.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.compgen.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 305.625 MB.
+Execute         source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 306.012 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='fir_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -545,12 +553,11 @@ INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/syn/report/csynth.xml
-INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='fir_mul_5s_16s_21_1_1
-fir_mul_16s_5s_21_1_1
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='fir_mac_muladd_16s_16s_32ns_32_4_1
 fir_flow_control_loop_pipe_sequential_init
 fir_flow_control_loop_pipe_sequential_init
 fir_shift_i_RAM_2P_BRAM_1R1W
-fir_c_ROM_AUTO_1R
+fir_control_s_axi
 fir_regslice_both
 fir_regslice_both
 fir_regslice_both
@@ -567,31 +574,191 @@ Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/proje
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/top-io-be.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.compgen.dataonly.tcl 
+Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.compgen.dataonly.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.compgen.dataonly.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_0.tbgen.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir_Pipeline_MAC_Loop_1.tbgen.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
-Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg225-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg225-1 -data info -quiet 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.constraint.tcl 
 Execute       sc_get_clocks fir 
 Execute       source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST fir MODULE2INSTS {fir fir fir_Pipeline_MAC_Loop_0 grp_fir_Pipeline_MAC_Loop_0_fu_191 fir_Pipeline_MAC_Loop_1 grp_fir_Pipeline_MAC_Loop_1_fu_204} INST2MODULE {fir fir grp_fir_Pipeline_MAC_Loop_0_fu_191 fir_Pipeline_MAC_Loop_0 grp_fir_Pipeline_MAC_Loop_1_fu_204 fir_Pipeline_MAC_Loop_1} INSTDATA {fir {DEPTH 1 CHILDREN {grp_fir_Pipeline_MAC_Loop_0_fu_191 grp_fir_Pipeline_MAC_Loop_1_fu_204}} grp_fir_Pipeline_MAC_Loop_0_fu_191 {DEPTH 2 CHILDREN {}} grp_fir_Pipeline_MAC_Loop_1_fu_204 {DEPTH 2 CHILDREN {}}} MODULEDATA {fir_Pipeline_MAC_Loop_0 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_fu_159_p2 SOURCE fir.cpp:45 VARIABLE add_ln45 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME idx_fu_174_p2 SOURCE fir.cpp:49 VARIABLE idx LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp LATENCY 0 OPTYPE mul PRAGMA yes RTLNAME mul_5s_16s_21_1_1_U1 SOURCE fir.cpp:50 VARIABLE mul_ln50 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME acc_i0_3_fu_239_p2 SOURCE fir.cpp:50 VARIABLE acc_i0_3 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp LATENCY 0 OPTYPE mul PRAGMA yes RTLNAME mul_16s_5s_21_1_1_U2 SOURCE fir.cpp:51 VARIABLE mul_ln51 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME acc_q0_3_fu_248_p2 SOURCE fir.cpp:51 VARIABLE acc_q0_3 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} fir_Pipeline_MAC_Loop_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln63_fu_159_p2 SOURCE fir.cpp:63 VARIABLE add_ln63 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME idx_fu_174_p2 SOURCE fir.cpp:67 VARIABLE idx LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp LATENCY 0 OPTYPE mul PRAGMA yes RTLNAME mul_5s_16s_21_1_1_U11 SOURCE fir.cpp:68 VARIABLE mul_ln68 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME acc_i1_3_fu_239_p2 SOURCE fir.cpp:68 VARIABLE acc_i1_3 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp LATENCY 0 OPTYPE mul PRAGMA yes RTLNAME mul_16s_5s_21_1_1_U12 SOURCE fir.cpp:69 VARIABLE mul_ln69 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME acc_q1_3_fu_248_p2 SOURCE fir.cpp:69 VARIABLE acc_q1_3 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} fir {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_287_p2 SOURCE fir.cpp:53 VARIABLE add_ln53 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln71_fu_275_p2 SOURCE fir.cpp:71 VARIABLE add_ln71 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL bram LATENCY 1 OPTYPE ram_2p PRAGMA pragma RTLNAME shift_i_U SOURCE {} VARIABLE shift_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 STORAGESUBTYPE {} STORAGESIZE {16 128 1} STORAGEUSAGE ram_2p DISPNAME {bind_storage ram_2p}} {BINDTYPE storage ID {} IMPL bram LATENCY 1 OPTYPE ram_2p PRAGMA pragma RTLNAME shift_q_U SOURCE {} VARIABLE shift_q LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 STORAGESUBTYPE {} STORAGESIZE {16 128 1} STORAGEUSAGE ram_2p DISPNAME {bind_storage ram_2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME c_U SOURCE {} VARIABLE c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} STORAGESIZE {5 128 1} STORAGEUSAGE rom_1p DISPNAME {bind_storage rom_1p}}} AREA {DSP 4 BRAM 2 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 1 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} report_dict {TOPINST fir MODULE2INSTS {fir fir fir_Pipeline_MAC_Loop_0 grp_fir_Pipeline_MAC_Loop_0_fu_201 fir_Pipeline_MAC_Loop_1 grp_fir_Pipeline_MAC_Loop_1_fu_214} INST2MODULE {fir fir grp_fir_Pipeline_MAC_Loop_0_fu_201 fir_Pipeline_MAC_Loop_0 grp_fir_Pipeline_MAC_Loop_1_fu_214 fir_Pipeline_MAC_Loop_1} INSTDATA {fir {DEPTH 1 CHILDREN {grp_fir_Pipeline_MAC_Loop_0_fu_201 grp_fir_Pipeline_MAC_Loop_1_fu_214}} grp_fir_Pipeline_MAC_Loop_0_fu_201 {DEPTH 2 CHILDREN {}} grp_fir_Pipeline_MAC_Loop_1_fu_214 {DEPTH 2 CHILDREN {}}} MODULEDATA {fir_Pipeline_MAC_Loop_0 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_fu_167_p2 SOURCE fir.cpp:33 VARIABLE add_ln33 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME idx_fu_182_p2 SOURCE fir.cpp:37 VARIABLE idx LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA yes RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U1 SOURCE fir.cpp:38 VARIABLE mul_ln38 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U1 SOURCE fir.cpp:38 VARIABLE acc_i0_3 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA yes RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U2 SOURCE fir.cpp:39 VARIABLE mul_ln39 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U2 SOURCE fir.cpp:39 VARIABLE acc_q0_3 LOOP MAC_Loop_0 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} fir_Pipeline_MAC_Loop_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln51_fu_167_p2 SOURCE fir.cpp:51 VARIABLE add_ln51 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME idx_fu_182_p2 SOURCE fir.cpp:55 VARIABLE idx LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA yes RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U10 SOURCE fir.cpp:56 VARIABLE mul_ln56 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U10 SOURCE fir.cpp:56 VARIABLE acc_i1_3 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA yes RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U11 SOURCE fir.cpp:57 VARIABLE mul_ln57 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16s_16s_32ns_32_4_1_U11 SOURCE fir.cpp:57 VARIABLE acc_q1_3 LOOP MAC_Loop_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} fir {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln41_fu_297_p2 SOURCE fir.cpp:41 VARIABLE add_ln41 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_fu_285_p2 SOURCE fir.cpp:59 VARIABLE add_ln59 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL bram LATENCY 1 OPTYPE ram_2p PRAGMA pragma RTLNAME shift_i_U SOURCE {} VARIABLE shift_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 STORAGESUBTYPE {} STORAGESIZE {16 128 1} STORAGEUSAGE ram_2p DISPNAME {bind_storage ram_2p}} {BINDTYPE storage ID {} IMPL bram LATENCY 1 OPTYPE ram_2p PRAGMA pragma RTLNAME shift_q_U SOURCE {} VARIABLE shift_q LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 STORAGESUBTYPE {} STORAGESIZE {16 128 1} STORAGEUSAGE ram_2p DISPNAME {bind_storage ram_2p}}} AREA {DSP 4 BRAM 3 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 314.594 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 317.996 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for fir.
 INFO: [VLOG 209-307] Generating Verilog RTL for fir.
 Execute       syn_report -model fir -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 148.99 MHz
-Command     autosyn done; 0.48 sec.
-Command   csynth_design done; 9.34 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 0.62 seconds. Elapsed time: 9.34 seconds; current allocated memory: 56.496 MB.
-Command ap_source done; 9.86 sec.
+Command     autosyn done; 0.55 sec.
+Command   csynth_design done; 9.3 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.99 seconds. CPU system time: 0.58 seconds. Elapsed time: 9.3 seconds; current allocated memory: 59.734 MB.
+Command ap_source done; 9.83 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1 opened at Tue May 12 23:58:45 EEST 2026
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z010clg225-1 
+Execute       create_platform xc7z010clg225-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/paket/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/paket/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg225-1'
+Command       create_platform done; 0.3 sec.
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z010-clg225-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.36 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git 
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git
+Execute     config_export -output=/home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Command   open_solution done; 0.42 sec.
+Execute   set_part xc7z010clg225-1 
+INFO: [HLS 200-1510] Running: set_part xc7z010clg225-1 
+Execute     create_platform xc7z010clg225-1 -board  
+Execute     source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z010-clg225-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/.git -rtl verilog 
+Execute   config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+Execute   source ./fir128/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./fir128/solution1/directives.tcl
+Execute     set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+Execute   cosim_design 
+INFO: [HLS 200-1510] Running: cosim_design 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl
+Execute     source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute       source /home/paket/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     ap_part_info -name xc7z010-clg225-1 -data names -quiet 
+Execute     ap_part_info -name xc7z010-clg225-1 -data info -quiet 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7z010-clg225-1 -data info 
+INFO-FLOW: TB processing: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir_test.cpp /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/./sim/autowrap/testbench/fir_test.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/./sim/autowrap/testbench/fir_test.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/./sim/autowrap/testbench/fir_test.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 1.12 sec.
+Execute     ap_part_info -name xc7z010-clg225-1 -data info 
+INFO-FLOW: TB processing: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir.cpp /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/./sim/autowrap/testbench/fir.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/./sim/autowrap/testbench/fir.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec /home/paket/Xilinx/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/./sim/autowrap/testbench/fir.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 1.07 sec.
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.rtl_wrap.cfg.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     ap_part_info -name xc7z010-clg225-1 -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 0.39 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.DependenceCheck.tcl 
+Execute     source /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source dataflow_monitor_API.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 9.3 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+Command   cosim_design done; 18.61 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 17.11 seconds. CPU system time: 1.68 seconds. Elapsed time: 18.61 seconds; current allocated memory: 18.660 MB.
+Command ap_source done; 19.14 sec.
 Execute cleanup_all 

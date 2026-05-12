@@ -4,32 +4,49 @@
 == Synthesis Summary Report of 'fir'
 ================================================================
 + General Information: 
-    * Date:           Sat May  9 16:31:00 2026
+    * Date:           Tue May 12 23:58:29 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        fir128
     * Solution:       solution1 (Vivado IP Flow Target)
     * Product family: zynq
-    * Target device:  xc7z010-clg400-1
+    * Target device:  xc7z010-clg225-1
     
 
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+----------+-----+
-    |           Modules          | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |        |           |          |     |
-    |           & Loops          | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP  |     FF    |    LUT   | URAM|
-    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+----------+-----+
-    |+ fir                       |     -|  0.59|      273|  2.730e+03|         -|      274|     -|        no|  2 (1%)|  4 (5%)|   565 (1%)|  644 (3%)|    -|
-    | + fir_Pipeline_MAC_Loop_0  |     -|  0.59|      133|  1.330e+03|         -|      133|     -|        no|       -|  2 (2%)|  212 (~0%)|  199 (1%)|    -|
-    |  o MAC_Loop_0              |     -|  7.30|      131|  1.310e+03|         4|        1|   128|       yes|       -|       -|          -|         -|    -|
-    | + fir_Pipeline_MAC_Loop_1  |     -|  0.59|      133|  1.330e+03|         -|      133|     -|        no|       -|  2 (2%)|  212 (~0%)|  199 (1%)|    -|
-    |  o MAC_Loop_1              |     -|  7.30|      131|  1.310e+03|         4|        1|   128|       yes|       -|       -|          -|         -|    -|
-    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+----------+-----+
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+-----------+-----+
+    |           Modules          | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |        |           |           |     |
+    |           & Loops          | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP  |     FF    |    LUT    | URAM|
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+-----------+-----+
+    |+ fir                       |     -|  0.59|      273|  2.730e+03|         -|      274|     -|        no|  3 (2%)|  4 (5%)|   544 (1%)|   646 (3%)|    -|
+    | + fir_Pipeline_MAC_Loop_0  |     -|  0.59|      133|  1.330e+03|         -|      133|     -|        no|       -|  2 (2%)|  146 (~0%)|  149 (~0%)|    -|
+    |  o MAC_Loop_0              |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|       -|       -|          -|          -|    -|
+    | + fir_Pipeline_MAC_Loop_1  |     -|  0.59|      133|  1.330e+03|         -|      133|     -|        no|       -|  2 (2%)|  146 (~0%)|  149 (~0%)|    -|
+    |  o MAC_Loop_1              |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|       -|       -|          -|          -|    -|
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+--------+-----------+-----------+-----+
 
 
 ================================================================
 == HW Interfaces
 ================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 9             | 256    | 0        | BRAM=1            |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
 * AXIS
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
 | Interface | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
@@ -39,13 +56,14 @@
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
 
 * TOP LEVEL CONTROL
-+-----------+--------------+----------+
-| Interface | Type         | Ports    |
-+-----------+--------------+----------+
-| ap_clk    | clock        | ap_clk   |
-| ap_rst_n  | reset        | ap_rst_n |
-| ap_ctrl   | ap_ctrl_none |          |
-+-----------+--------------+----------+
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
 
 
 ================================================================
@@ -57,55 +75,57 @@
 +----------+-----------+---------------------------------------------------------+
 | y        | out       | stream<hls::axis<ap_uint<64>, 0, 0, 0, '8', false>, 0>& |
 | x        | in        | stream<hls::axis<ap_uint<64>, 0, 0, 0, '8', false>, 0>& |
+| coeffs   | in        | ap_int<16>*                                             |
 +----------+-----------+---------------------------------------------------------+
 
 * SW-to-HW Mapping
-+----------+--------------+-----------+
-| Argument | HW Interface | HW Type   |
-+----------+--------------+-----------+
-| y        | y            | interface |
-| x        | x            | interface |
-+----------+--------------+-----------+
++----------+---------------+-----------+----------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                          |
++----------+---------------+-----------+----------------------------------+
+| y        | y             | interface |                                  |
+| x        | x             | interface |                                  |
+| coeffs   | s_axi_control | memory    | name=coeffs offset=256 range=256 |
++----------+---------------+-----------+----------------------------------+
 
 
 ================================================================
 == Bind Op Report
 ================================================================
-+----------------------------+-----+--------+----------+-----+--------+---------+
-| Name                       | DSP | Pragma | Variable | Op  | Impl   | Latency |
-+----------------------------+-----+--------+----------+-----+--------+---------+
-| + fir                      | 4   |        |          |     |        |         |
-|   add_ln53_fu_287_p2       |     |        | add_ln53 | add | fabric | 0       |
-|   add_ln71_fu_275_p2       |     |        | add_ln71 | add | fabric | 0       |
-|  + fir_Pipeline_MAC_Loop_0 | 2   |        |          |     |        |         |
-|    add_ln45_fu_159_p2      |     |        | add_ln45 | add | fabric | 0       |
-|    idx_fu_174_p2           |     |        | idx      | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U1    | 1   | yes    | mul_ln50 | mul | dsp    | 0       |
-|    acc_i0_3_fu_239_p2      |     |        | acc_i0_3 | add | fabric | 0       |
-|    mul_16s_5s_21_1_1_U2    | 1   | yes    | mul_ln51 | mul | dsp    | 0       |
-|    acc_q0_3_fu_248_p2      |     |        | acc_q0_3 | add | fabric | 0       |
-|  + fir_Pipeline_MAC_Loop_1 | 2   |        |          |     |        |         |
-|    add_ln63_fu_159_p2      |     |        | add_ln63 | add | fabric | 0       |
-|    idx_fu_174_p2           |     |        | idx      | sub | fabric | 0       |
-|    mul_5s_16s_21_1_1_U11   | 1   | yes    | mul_ln68 | mul | dsp    | 0       |
-|    acc_i1_3_fu_239_p2      |     |        | acc_i1_3 | add | fabric | 0       |
-|    mul_16s_5s_21_1_1_U12   | 1   | yes    | mul_ln69 | mul | dsp    | 0       |
-|    acc_q1_3_fu_248_p2      |     |        | acc_q1_3 | add | fabric | 0       |
-+----------------------------+-----+--------+----------+-----+--------+---------+
++---------------------------------------+-----+--------+----------+-----+-----------+---------+
+| Name                                  | DSP | Pragma | Variable | Op  | Impl      | Latency |
++---------------------------------------+-----+--------+----------+-----+-----------+---------+
+| + fir                                 | 4   |        |          |     |           |         |
+|   add_ln41_fu_297_p2                  |     |        | add_ln41 | add | fabric    | 0       |
+|   add_ln59_fu_285_p2                  |     |        | add_ln59 | add | fabric    | 0       |
+|  + fir_Pipeline_MAC_Loop_0            | 2   |        |          |     |           |         |
+|    add_ln33_fu_167_p2                 |     |        | add_ln33 | add | fabric    | 0       |
+|    idx_fu_182_p2                      |     |        | idx      | sub | fabric    | 0       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U1  | 1   | yes    | mul_ln38 | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U1  | 1   |        | acc_i0_3 | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U2  | 1   | yes    | mul_ln39 | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U2  | 1   |        | acc_q0_3 | add | dsp_slice | 3       |
+|  + fir_Pipeline_MAC_Loop_1            | 2   |        |          |     |           |         |
+|    add_ln51_fu_167_p2                 |     |        | add_ln51 | add | fabric    | 0       |
+|    idx_fu_182_p2                      |     |        | idx      | sub | fabric    | 0       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U10 | 1   | yes    | mul_ln56 | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U10 | 1   |        | acc_i1_3 | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U11 | 1   | yes    | mul_ln57 | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_32ns_32_4_1_U11 | 1   |        | acc_q1_3 | add | dsp_slice | 3       |
++---------------------------------------+-----+--------+----------+-----+-----------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+-------------+--------+------+------+------+--------+----------+------+---------+------------------+
-| Name        | Usage  | Type | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
-|             |        |      |      |      |        |          |      |         | Banks            |
-+-------------+--------+------+------+------+--------+----------+------+---------+------------------+
-| + fir       |        |      | 2    | 0    |        |          |      |         |                  |
-|   shift_i_U | ram_2p |      | 1    |      | pragma | shift_i  | bram | 1       | 16, 128, 1       |
-|   shift_q_U | ram_2p |      | 1    |      | pragma | shift_q  | bram | 1       | 16, 128, 1       |
-|   c_U       | rom_1p |      |      |      |        | c        | auto | 1       | 5, 128, 1        |
-+-------------+--------+------+------+------+--------+----------+------+---------+------------------+
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + fir             |           |           | 3    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite | 1    |      |        |          |      |         |                  |
+|   shift_i_U       | ram_2p    |           | 1    |      | pragma | shift_i  | bram | 1       | 16, 128, 1       |
+|   shift_q_U       | ram_2p    |           | 1    |      | pragma | shift_q  | bram | 1       | 16, 128, 1       |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
 
 
 ================================================================
@@ -117,15 +137,17 @@
 +--------------+----------------------------------------+----------------------------+
 | interface    | axis port=x                            | fir.cpp:4 in fir, x        |
 | interface    | axis port=y                            | fir.cpp:5 in fir, y        |
-| interface    | ap_ctrl_none port=return               | fir.cpp:6 in fir, return   |
-| bind_storage | variable=shift_i type=ram_2p impl=bram | fir.cpp:22 in fir, shift_i |
-| bind_storage | variable=shift_q type=ram_2p impl=bram | fir.cpp:23 in fir, shift_q |
-| pipeline     | II=1                                   | fir.cpp:46 in fir          |
-| bind_op      | variable=acc_i0 op=mul impl=dsp        | fir.cpp:47 in fir, acc_i0  |
-| bind_op      | variable=acc_q0 op=mul impl=dsp        | fir.cpp:48 in fir, acc_q0  |
-| pipeline     | II=1                                   | fir.cpp:64 in fir          |
-| bind_op      | variable=acc_i1 op=mul impl=dsp        | fir.cpp:65 in fir, acc_i1  |
-| bind_op      | variable=acc_q1 op=mul impl=dsp        | fir.cpp:66 in fir, acc_q1  |
+| interface    | s_axilite port=coeffs                  | fir.cpp:6 in fir, coeffs   |
+| interface    | s_axilite port=return                  | fir.cpp:7 in fir, return   |
+| interface    | ap_ctrl_hs port=return                 | fir.cpp:8 in fir, return   |
+| bind_storage | variable=shift_i type=ram_2p impl=bram | fir.cpp:12 in fir, shift_i |
+| bind_storage | variable=shift_q type=ram_2p impl=bram | fir.cpp:13 in fir, shift_q |
+| pipeline     | II=1                                   | fir.cpp:34 in fir          |
+| bind_op      | variable=acc_i0 op=mul impl=dsp        | fir.cpp:35 in fir, acc_i0  |
+| bind_op      | variable=acc_q0 op=mul impl=dsp        | fir.cpp:36 in fir, acc_q0  |
+| pipeline     | II=1                                   | fir.cpp:52 in fir          |
+| bind_op      | variable=acc_i1 op=mul impl=dsp        | fir.cpp:53 in fir, acc_i1  |
+| bind_op      | variable=acc_q1 op=mul impl=dsp        | fir.cpp:54 in fir, acc_q1  |
 +--------------+----------------------------------------+----------------------------+
 
 

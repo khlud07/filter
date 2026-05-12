@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue May 12 23:59:00 2026
+# Process ID: 9698
+# Current directory: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/fir/xsim_script.tcl}
+# Log file: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/xsim.log
+# Journal file: /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/sim/verilog/xsim.jou
+# Running On: paketpc, OS: Linux, CPU Frequency: 3078.875 MHz, CPU Physical cores: 8, Host memory: 24893 MB
+#-----------------------------------------------------------
+source xsim.dir/fir/xsim_script.tcl
+source fir.tcl
