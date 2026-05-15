@@ -15,7 +15,7 @@
 `define AUTOTB_PER_RESULT_TRANS_FILE "fir.performance.result.transaction.xml"
 `define AUTOTB_TOP_INST AESL_inst_apatb_fir_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
-`define AUTOTB_CLOCK_PERIOD_DIV2 5.00
+`define AUTOTB_CLOCK_PERIOD_DIV2 4.00
 
 `define AESL_DEPTH_y_V_data_V 1
 `define AESL_DEPTH_y_V_keep_V 1
@@ -48,7 +48,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 300;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 273;
+parameter LATENCY_ESTIMATION = 1678;
 parameter LENGTH_coeffs = 128;
 parameter LENGTH_x_V_data_V = 1;
 parameter LENGTH_x_V_keep_V = 1;

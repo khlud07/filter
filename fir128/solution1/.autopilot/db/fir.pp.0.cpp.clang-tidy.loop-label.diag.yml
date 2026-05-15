@@ -46,34 +46,23 @@ Diagnostics:
         Offset:          567584
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      12
-    FilePath:        fir.cpp
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_1:  '
     FileOffset:      13
     FilePath:        fir.cpp
     Replacements:    
+      - FilePath:        /home/paket/Desktop/vitis/Read_the_docs/project_files/project1/fir128/fir128/solution1/.autopilot/db/fir.pp.0.cpp
+        Offset:          1030049
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_1: '
   - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, mul + dsp is invalid combination for bind_op'
-    FileOffset:      35
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      20
     FilePath:        fir.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, mul + dsp is invalid combination for bind_op'
-    FileOffset:      36
-    FilePath:        fir.cpp
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, mul + dsp is invalid combination for bind_op'
-    FileOffset:      53
-    FilePath:        fir.cpp
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, mul + dsp is invalid combination for bind_op'
-    FileOffset:      54
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      21
     FilePath:        fir.cpp
     Replacements:    
 ...

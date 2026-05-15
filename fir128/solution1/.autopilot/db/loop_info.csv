@@ -1,2 +1,3 @@
-grp_fir_Pipeline_MAC_Loop_0_fu_201,MAC_Loop_0,upc_loop_status1.csv
-grp_fir_Pipeline_MAC_Loop_1_fu_214,MAC_Loop_1,upc_loop_status2.csv
+grp_fir_Pipeline_VITIS_LOOP_13_1_fu_211,VITIS_LOOP_13_1,upc_loop_status1.csv
+grp_fir_Pipeline_MAC_Loop_0_fu_221,MAC_Loop_0,upc_loop_status2.csv
+grp_fir_Pipeline_MAC_Loop_1_fu_234,MAC_Loop_1,upc_loop_status3.csv

@@ -1,7 +1,9 @@
+fir_flow_control_loop_pipe_sequential_init
 fir_mac_muladd_16s_16s_32ns_32_4_1
 fir_flow_control_loop_pipe_sequential_init
 fir_flow_control_loop_pipe_sequential_init
 fir_shift_i_RAM_2P_BRAM_1R1W
+fir_c_RAM_AUTO_1R1W
 fir_control_s_axi
 fir_regslice_both
 fir_regslice_both
@@ -11,6 +13,7 @@ fir_regslice_both
 fir_regslice_both
 fir_regslice_both
 fir_regslice_both
+fir_Pipeline_VITIS_LOOP_13_1
 fir_Pipeline_MAC_Loop_0
 fir_Pipeline_MAC_Loop_1
 fir

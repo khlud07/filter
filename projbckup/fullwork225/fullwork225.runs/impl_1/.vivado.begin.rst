@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="8391" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="63047" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="63800" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="81516" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="83097" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="138174" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="138783" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="193848" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="195216" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="579609" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="paket" Host="paketpc" Pid="639152" HostCore="12" HostMemory="24309780">
+    </Process>
+</ProcessHandle>

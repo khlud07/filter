@@ -9042,7 +9042,15 @@ __attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x,
 #pragma HLS INTERFACE s_axilite port=return
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 
- static iq_t shift_i[128];
+ coef_t c[128];
+#pragma HLS ARRAY_PARTITION variable=c cyclic factor=2
+
+ VITIS_LOOP_13_1: for (int i = 0; i < 128; i++) {
+#pragma HLS PIPELINE II=1
+ c[i] = coeffs[i];
+    }
+
+    static iq_t shift_i[128];
     static iq_t shift_q[128];
 #pragma HLS BIND_STORAGE variable=shift_i type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=shift_q type=ram_2p impl=bram
@@ -9057,41 +9065,36 @@ __attribute__((sdx_kernel("fir", 0))) void fir(fir_stream_t &y, fir_stream_t &x,
     iq_t i1 = (iq_t)data.range(47, 32);
     iq_t q1 = (iq_t)data.range(63, 48);
 
+    int ptr0 = ptr;
+    int ptr1 = (ptr + 1) & (128 - 1);
 
-    shift_i[ptr] = i0;
-    shift_q[ptr] = q0;
 
-    acc_t acc_i0 = 0;
-    acc_t acc_q0 = 0;
+    shift_i[ptr0] = i0;
+    shift_q[ptr0] = q0;
 
+    acc_t acc_i0 = 0, acc_q0 = 0;
     MAC_Loop_0:
     for (int i = 0; i < 128; i++) {
-#pragma HLS PIPELINE II=1
-#pragma HLS BIND_OP variable=acc_i0 op=mul impl=dsp
-#pragma HLS BIND_OP variable=acc_q0 op=mul impl=dsp
- int idx = (ptr - i + 128) & (128 - 1);
-        acc_i0 += (acc_t)shift_i[idx] * (acc_t)coeffs[i];
-        acc_q0 += (acc_t)shift_q[idx] * (acc_t)coeffs[i];
+#pragma HLS PIPELINE II=16
+ int idx = (ptr0 - i + 128) & (128 - 1);
+        acc_i0 += (acc_t)shift_i[idx] * (acc_t)c[i];
+        acc_q0 += (acc_t)shift_q[idx] * (acc_t)c[i];
     }
-    ptr = (ptr + 1) & (128 - 1);
 
 
-    shift_i[ptr] = i1;
-    shift_q[ptr] = q1;
+    shift_i[ptr1] = i1;
+    shift_q[ptr1] = q1;
 
-    acc_t acc_i1 = 0;
-    acc_t acc_q1 = 0;
-
+    acc_t acc_i1 = 0, acc_q1 = 0;
     MAC_Loop_1:
     for (int i = 0; i < 128; i++) {
-#pragma HLS PIPELINE II=1
-#pragma HLS BIND_OP variable=acc_i1 op=mul impl=dsp
-#pragma HLS BIND_OP variable=acc_q1 op=mul impl=dsp
- int idx = (ptr - i + 128) & (128 - 1);
-        acc_i1 += (acc_t)shift_i[idx] * (acc_t)coeffs[i];
-        acc_q1 += (acc_t)shift_q[idx] * (acc_t)coeffs[i];
+#pragma HLS PIPELINE II=16
+ int idx = (ptr1 - i + 128) & (128 - 1);
+        acc_i1 += (acc_t)shift_i[idx] * (acc_t)c[i];
+        acc_q1 += (acc_t)shift_q[idx] * (acc_t)c[i];
     }
-    ptr = (ptr + 1) & (128 - 1);
+
+    ptr = (ptr + 2) & (128 - 1);
 
     two_iq_t result;
     result.range(15, 0) = (iq_t)acc_i0;
